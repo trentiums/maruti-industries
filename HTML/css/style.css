@@ -734,7 +734,7 @@ ul.navbar-nav > li.active > a {
 }
 
 .header-two .logo img {
-  height: 30px;
+  height: 50px;
 }
 
 /* header right */
@@ -962,7 +962,7 @@ ul.navbar-nav > li > a {
 
 .navbar-light ul.navbar-nav > li > a {
   color: #000 !important;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 /* Dropdown */
