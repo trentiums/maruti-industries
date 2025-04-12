@@ -104,16 +104,20 @@ FACEBOOK: https://www.facebook.com/themefisher
                           <li><a href="pricing.html">Pricing</a></li>
                         </ul>
                     </li> -->
-                    <li class="nav-item">
-                      <a  class="nav-link" href="product.html">Products <i class="fa fa-angle-down"></i> </a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="product_details.html">Flint Paper </a></li>
-                      <li><a href="product_details.html">Sandpaper Sheets </a></li>
-                      <li><a href="product_details.html">Emery Paper </a></li>
-                      <li><a href="product_details.html">Aloxide Cloth Roll</a></li>
-                      <li><a href="product_details.html">Emery Roll </a></li>
-                    </ul>
-                  </li>
+                    <li class="nav-item dropdown">
+                      <!-- Make "Product" clickable by linking to a main products page -->
+                      <a href="product.html" class="nav-link dropdown-toggle" data-toggle="dropdown" onclick="window.location.href='product.html';">
+                        Product <i class="fa fa-angle-down"></i>
+                      </a>
+                    
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a class="dropdown-item" href="product_details.html">Flint Paper</a></li>
+                        <li><a class="dropdown-item" href="product_details.html">Sandpaper Sheets</a></li>
+                        <li><a class="dropdown-item" href="product_details.html">Emery Paper</a></li>
+                        <li><a class="dropdown-item" href="product_details.html">Aloxide Cloth Roll</a></li>
+                        <li><a class="dropdown-item" href="product_details.html">Emery Roll</a></li>
+                      </ul>
+                    </li>
                   <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                   <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                   <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
@@ -146,7 +150,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                 <h1 class="banner-title">Contact</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                      <!--  <li class="breadcrumb-item"><a href="#">Company</a></li> -->
                       <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
                     </ol>
@@ -209,7 +213,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                   </div>
           
                   <!-- Subject Dropdown -->
-                  <div class="col-md-6">
+                  <div class="col-md-6 mt-2">
                     <div class="form-group">
                       <label for="subject">Subject <span class="text-danger">*</span></label>
                       <select class="form-control" id="subject" name="subject" required>
@@ -269,11 +273,15 @@ FACEBOOK: https://www.facebook.com/themefisher
           </span>
           <div class="ts-service-box-content">
             <h4>Visit Our Office</h4>
-            <p> B, Phase, No 1, 313/8, GIDC Naroda, Ahmedabad, Gujarat 382330</p>
+            <p> B, Phase, No 1, 313/8, GIDC Naroda, Ahmedabad, Gujarat 382330<br>
+              Working-Hours:Mon–Sat, 9:00 AM – 7:00 PM
+            </p>
           </div>
         </div>
       </div><!-- Col 1 end -->
 
+     
+     
       <div class="col-md-4">
         <div class="ts-service-box-bg text-center h-100">
           <span class="ts-service-icon icon-round">
@@ -281,11 +289,11 @@ FACEBOOK: https://www.facebook.com/themefisher
           </span>
           <div class="ts-service-box-content">
             <h4>Email Us</h4>
-            <p>marutinaroda@gmail.com</p>
+            <p><a href="mailto:marutinaroda@gmail.com">marutinaroda@gmail.com</a></p>
           </div>
         </div>
       </div><!-- Col 2 end -->
-
+      
       <div class="col-md-4">
         <div class="ts-service-box-bg text-center h-100">
           <span class="ts-service-icon icon-round">
@@ -293,18 +301,26 @@ FACEBOOK: https://www.facebook.com/themefisher
           </span>
           <div class="ts-service-box-content">
             <h4>Call Us</h4>
-            <p>(+91)9974348216 </p>
+            <p><a href="tel:+919974348216">(+91) 9974348216</a></p>
           </div>
         </div>
       </div><!-- Col 3 end -->
+      
 
     </div><!-- 1st row end -->
 
     <div class="gap-60"></div>
 
-    <div class="google-map">
-      <div id="map" class="map" data-latitude="40.712776" data-longitude="-74.005974" data-marker="images/marker.png" data-marker-name="Constra"></div>
-    </div>    
+    <!-- <div class="google-map">
+      <div  id="map" class="map" data-latitude="40.712776" data-longitude="-74.005974" data-marker="images/marker.png" data-marker-name="Constra"></div>
+    </div>   
+      -->
+     <div class="mt-5 shadow-sm rounded-3 overflow-hidden">
+      <iframe class="w-100" style="height: 300px; border:0;"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.3321815209983!2d72.66688997477209!3d23.084932713999184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e80d0a0d40001%3A0xf528f2bb8e7f33d5!2sB%2C%20Phase%2C%20No%201%2C%20313%2F8%2C%20GIDC%20Naroda%2C%20Ahmedabad%2C%20Gujarat%20382330!5e0!3m2!1sen!2sin!4v1744113101222!5m2!1sen!2sin"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
   <!-- Content row -->
   </div><!-- Conatiner end -->
 </section><!-- Main container end -->
@@ -314,15 +330,15 @@ FACEBOOK: https://www.facebook.com/themefisher
           <div class="row">
             <div class="col-md-6 text-center text-md-left">
                 <div class="call-to-action-text">
-                  <h3 class="action-title">Have a question about grit, quantity, or pricing? Let’s talk.</h3>
+                  <h3 class="action-title">Have a question about grit, quantity or pricing? Let’s talk.</h3>
                 </div>
             </div><!-- Col end -->
             <div class="col-md-6 text-center text-md-right mt-3 mt-md-0 gap-5">
                 <div class="call-to-action-btn">
-                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callbackModal">
-                        Request a Callback
-                      </a>
-                      <a href="#inquiry-form" class="btn btn-primary">Send Inquiry</a>
+                  <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callbackModal">
+                    Request a Callback
+                  </a>
+                  <a href="#inquiry-form" class="btn btn-primary">Send Inquiry</a>
                       <a href="https://wa.me/1234567890" target="_blank">
                         <img src="images/whatsapp.png" alt="WhatsApp" >
                       </a>
@@ -378,88 +394,96 @@ FACEBOOK: https://www.facebook.com/themefisher
     </div>
 
     <!--call back end-->
-<footer id="footer" class="footer bg-overlay mt-5">
-    <div class="footer-main">
-      <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-lg-4 col-md-6 footer-widget footer-about">
-           <!--  <h3 class="widget-title">About Us</h3> -->
-            <img  class="footer-logo" src="images/maruti-industries-logo-footer.png" alt="Constra" width="300px">
-            <p> B, Phase, No 1, 313/8, GIDC Naroda, Ahmedabad, Gujarat 382330</p>
-            <div class="footer-social">
-              <ul>
-                <li><a href=" https://www.facebook.com/share/1f5hMwhzvf/" aria-label="Facebook"><i
-                      class="fab fa-facebook-f"></i></a></li>
-            
-                </li>
-                <li><a href="https://www.instagram.com/maruti_industries_?igsh=MW82cXJldmRvZ2huNg==" aria-label="Instagram"><i
-                      class="fab fa-instagram"></i></a></li>
-               
-                <li><a href="https://wa.me/9974348216" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                </li>
-              </ul>
-            </div>
-            <!-- Footer social end -->
-          </div><!-- Col end -->
-          <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
-            <h3 class="widget-title">Contact Info</h3>
-            <div class="contact-buttons">
-              <div class="mb-2">
-                <a href="https://wa.me/9974348216" class="btn btn-success w-100" aria-label="WhatsApp">
-                  <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-              </div>
-              <div class="mb-2">
-                <a href="mailto:marutinaroda@gmail.com" class="btn btn-primary w-100" aria-label="Email">
-                  <i class="fas fa-envelope"></i> Email
-                </a>
-              </div>
-              <div>
-                <a href="tel:+ 9974348216" class="btn btn-dark w-100" aria-label="Phone">
-                  <i class="fas fa-phone"></i> Call Us
-                </a>
-              </div>
-            </div>
-          </div>
-  
-          <!-- Col end -->
-  
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
-            <h3 class="widget-title">Quick links</h3>
-            <ul class="list-arrow">
-              <li><a href="product.html">Products</a></li>
-              <li><a href="blog.html">Blogs</a></li>
-              <li><a href="contact.html">Contact US</a></li>
-              <li><a href="terms.html">About Us</a></li>
-              <li><a href="faqs.html">FAQs </a></li>
-              <li><a href="privacypolicy.html">Privacy Policy </a></li>
-              <li><a href="terms.html">Terms</a></li>
+    <footer id="footer" class="footer bg-overlay mt-5">
+      <div class="footer-main">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-lg-4 col-md-6 footer-widget footer-about">
+             <!--  <h3 class="widget-title">About Us</h3> -->
+              <img  class="footer-logo" src="images/maruti-industries-logo-footer.png" alt="Constra" width="300px">
+              <p> B, Phase, No 1, 313/8, GIDC Naroda, Ahmedabad, Gujarat 382330</p>
+              <div class="footer-social">
+                <ul>
+                  <li><a href=" https://www.facebook.com/share/1f5hMwhzvf/" aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a></li>
               
-            </ul>
-          </div><!-- Col end -->
-        </div><!-- Row end -->
-      </div><!-- Container end -->
-    </div><!-- Footer main end -->
-  
-    <div class="copyright">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-12">
-            <div class="copyright-info">
-              © 2025<a href="https://Marutiindustries.com/" target="_blank" title="vulcanengineer">Maruti Industries</a>. Developed By <a href="https://www.trentiums.com/" title="Trentium Solution" target="_blank"
-                    title="trentiums">Trentium Solution.</a>
+                  </li>
+                  <li><a href="https://www.instagram.com/maruti_industries_?igsh=MW82cXJldmRvZ2huNg==" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a></li>
+                 
+                  <li><a href="https://wa.me/9974348216" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Footer social end -->
+            </div><!-- Col end -->
+            <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
+              <h3 class="widget-title">Contact Info</h3>
+              <div class="contact-buttons">
+                <div class="mb-2">
+                  <a href="https://wa.me/9974348216" class="btn btn-success w-100" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                  </a>
+                </div>
+                <div class="mb-2">
+                  <a href="mailto:marutinaroda@gmail.com" class="btn btn-primary w-100" aria-label="Email">
+                    <i class="fas fa-envelope"></i> Email
+                  </a>
+                </div>
+                <div>
+                  <a href="tel:+ 9974348216" class="btn btn-dark w-100" aria-label="Phone">
+                    <i class="fas fa-phone"></i> Call Us
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-  <!-- Row end -->
-        <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
-          <button class="btn btn-primary" title="Back to Top">
-            <i class="fa fa-angle-double-up"></i>
-          </button>
-        </div>
+    
+            <!-- Col end -->
+    
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
+              <h3 class="widget-title">Quick links</h3>
+              <ul class="list-arrow">
+                <li><a href="product.html">Products</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="contact.html">Contact US</a></li>
+                <li><a href="terms.html">About Us</a></li>
+                <li><a href="faqs.html">FAQs </a></li>      
+              </ul>
+            </div><!-- Col end -->
+          </div><!-- Row end -->
+        </div><!-- Container end -->
+      </div><!-- Footer main end -->
+    
+      <div class="copyright">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="copyright-info">
+                © 2025<a href="https://Marutiindustries.com/" target="_blank" title="vulcanengineer">Maruti Industries</a>. Developed By <a href="https://www.trentiums.com/" title="Trentium Solution" target="_blank"
+                title="trentiums">Trentium Solution.</a>
+              </div>
+            </div>
   
-      </div><!-- Container end -->
-    </div><!-- Copyright end -->
-  </footer>
+            <div class="col-md-6">
+              <div class="footer-menu text-center text-md-right">
+                <ul class="list-unstyled">
+                  <li><a href="news-left-sidebar.html">Privacy Policy</a></li>
+                  <li><a href="pricing.html">Terms&Condition</a></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- Row end -->
+  
+          <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+            <button class="btn btn-primary" title="Back to Top">
+              <i class="fa fa-angle-double-up"></i>
+            </button>
+          </div>
+  
+        </div><!-- Container end -->
+      </div>
+     <!-- Copyright end -->
+    </footer>
 <!-- Footer end -->
 
 
@@ -500,6 +524,7 @@ FACEBOOK: https://www.facebook.com/themefisher
   <script src="js/script.js"></script>
 
   </div><!-- Body inner end -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 
   </html>
