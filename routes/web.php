@@ -55,10 +55,14 @@ Route::resource('users', 'UsersController');
    Route::delete('inquiries/destroy', 'InquiryController@massDestroy')->name('inquiries.massDestroy');
    Route::resource('inquiries', 'InquiryController');
 });
-
-
-
+Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'App\\Http\\Controllers\\Auth', 'middleware' => ['auth']], function () {
+    // Change password
+    if (file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php'))) {
+        Route::get('password', 'ChangePasswordController@edit')->name('password.edit');
+        Route::post('password', 'ChangePasswordController@update')->name('password.update');
+        Route::post('profile', 'ChangePasswordController@updateProfile')->name('password.updateProfile');
+        Route::post('profile/destroy', 'ChangePasswordController@destroy')->name('password.destroyProfile');
+    }
 });
-
 
 ?>

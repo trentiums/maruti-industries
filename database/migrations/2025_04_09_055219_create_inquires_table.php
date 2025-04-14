@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('inquires', function (Blueprint $table) {
+        Schema::create('inquiries', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('ip')->nullable();
             $table->string('mobile')->nullable();

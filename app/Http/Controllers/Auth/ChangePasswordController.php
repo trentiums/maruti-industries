@@ -3,40 +3,47 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\VerifiesEmails;
+use App\Http\Requests\UpdatePasswordRequest;
+use App\Http\Requests\UpdateProfileRequest;
+use Gate;
+use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 
-class VerificationController extends Controller
+class ChangePasswordController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Email Verification Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller is responsible for handling email verification for any
-    | user that recently registered with the application. Emails may also
-    | be re-sent if the user didn't receive the original email message.
-    |
-    */
-
-    use VerifiesEmails;
-
-    /**
-     * Where to redirect users after verification.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function edit()
     {
-        $this->middleware('auth');
-        $this->middleware('signed')->only('verify');
-        $this->middleware('throttle:6,1')->only('verify', 'resend');
+        abort_if(Gate::denies('profile_password_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        return view('auth.passwords.edit');
+    }
+
+    public function update(UpdatePasswordRequest $request)
+    {
+        auth()->user()->update($request->validated());
+
+        return redirect()->route('profile.password.edit')->with('message', __('global.change_password_success'));
+    }
+
+    public function updateProfile(UpdateProfileRequest $request)
+    {
+        $user = auth()->user();
+
+        $user->update($request->validated());
+
+        return redirect()->route('profile.password.edit')->with('message', __('global.update_profile_success'));
+    }
+
+    public function destroy()
+    {
+        $user = auth()->user();
+
+        $user->update([
+            'email' => time() . '_' . $user->email,
+        ]);
+
+        $user->delete();
+
+        return redirect()->route('login')->with('message', __('global.delete_account_success'));
     }
 }

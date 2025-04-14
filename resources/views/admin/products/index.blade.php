@@ -4,7 +4,7 @@
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route('admin.products.create') }}">
-                {{ trans('global.add') }} {{ trans('cruds.category.title_singular') }}
+                {{ trans('global.add') }} {{ trans('cruds.product.title_singular') }}
             </a>
         </div>
     </div>
