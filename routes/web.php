@@ -50,9 +50,14 @@ Route::resource('users', 'UsersController');
  Route::post('blog-posts/ckmedia', 'BlogPostController@storeCKEditorImages')->name('blog-posts.storeCKEditorImages');
  Route::resource('blog-posts', 'BlogPostController');
 
+
    // Inquiry
    Route::delete('inquiries/destroy', 'InquiryController@massDestroy')->name('inquiries.massDestroy');
    Route::resource('inquiries', 'InquiryController');
+});
+
+
+
 });
 
 
