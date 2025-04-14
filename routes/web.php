@@ -51,6 +51,14 @@ Route::resource('users', 'UsersController');
  Route::resource('blog-posts', 'BlogPostController');
 
 
+   // Inquiry
+   Route::delete('inquiries/destroy', 'InquiryController@massDestroy')->name('inquiries.massDestroy');
+   Route::resource('inquiries', 'InquiryController');
 });
+
+
+
+});
+
 
 ?>
