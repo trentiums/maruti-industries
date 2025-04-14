@@ -258,7 +258,7 @@ return [
             'question_helper'          => ' ',
             'answer'                   => 'Answer',
             'answer_helper'            => ' ',
-            'product_id'          =>     'Product Id', 
+            'product_id'          =>     'Product', 
             'product_helper'   => ' ',
             'created_at'               => 'Created at',
             'created_at_helper'        => ' ',

@@ -39,17 +39,17 @@
                             {{ $faq->answer }}
                         </td>
                     </tr>
-                   {{--  <tr>
+                      <tr>
 
                         <th>
                             {{ trans('cruds.faq.fields.product_id') }}
                         </th>
                         <td>
-                            @foreach($faq->product_id as $key => $product)
+                            @foreach($faq->products as $key => $product)
                                 <span class="label label-info">{{ $product->title }}</span>
                             @endforeach
                         </td>
-                    </tr> --}}
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">
