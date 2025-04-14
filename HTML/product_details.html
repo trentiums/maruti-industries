@@ -94,14 +94,18 @@
                         <li><a href="pricing.html">Pricing</a></li>
                       </ul>
                   </li> -->
-                  <li class="nav-item">
-                    <a  class="nav-link" href="product.html">Products <i class="fa fa-angle-down"></i> </a>
+                  <li class="nav-item dropdown">
+                    <!-- Make "Product" clickable by linking to a main products page -->
+                    <a href="product.html" class="nav-link dropdown-toggle" data-toggle="dropdown" onclick="window.location.href='product.html';">
+                      Product <i class="fa fa-angle-down"></i>
+                    </a>
+                  
                     <ul class="dropdown-menu" role="menu">
-                      <li><a href="product_details.html">Flint Paper</a></li>
-                      <li><a href="product_details.html">Sandpaper Sheets</a></li>
-                      <li><a href="product_details.html">Emery Paper</a></li>
-                      <li><a href="product_details.html">Aloxide Cloth Roll</a></li>
-                      <li><a href="product_details.html">Emery Roll</a></li>
+                      <li><a class="dropdown-item" href="product_details.html">Flint Paper</a></li>
+                      <li><a class="dropdown-item" href="product_details.html">Sandpaper Sheets</a></li>
+                      <li><a class="dropdown-item" href="product_details.html">Emery Paper</a></li>
+                      <li><a class="dropdown-item" href="product_details.html">Aloxide Cloth Roll</a></li>
+                      <li><a class="dropdown-item" href="product_details.html">Emery Roll</a></li>
                     </ul>
                   </li>
                   
@@ -135,8 +139,8 @@
                 <h1 class="banner-title">Products</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item"><a href="#">Products</a></li>
+                      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                      <li class="breadcrumb-item"><a href="product.html">Products</a></li>
                       <li class="breadcrumb-item active" aria-current="page">EmeryRoll</li>
                     </ol>
                 </nav>
@@ -146,29 +150,6 @@
     </div><!-- Container end -->
   </div><!-- Banner text end -->
 </div><!-- Banner area end --> 
-<section class="content-section py-0">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <!-- Section Title -->
-                <h2 class="section-title text-white">Why Choose Our Products?</h2>
-                <p class="text-muted">
-                    Our industrial-grade materials ensure durability, efficiency, and precision. 
-                    Here’s why our customers trust us:
-                </p>
-
-                <!-- Bullet Points -->
-                <ul class="feature-list">
-                    <li><i class="fas fa-check-circle"></i> High-quality abrasive materials</li>
-                    <li><i class="fas fa-check-circle"></i> Available in multiple sizes and forms</li>
-                    <li><i class="fas fa-check-circle"></i> Suitable for various industrial applications</li>
-                    <li><i class="fas fa-check-circle"></i> Custom solutions for specific needs</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section id="main-container" class="main-container">
     <div class="container">
         <div class="row">
@@ -193,40 +174,41 @@
                 <div class="card-body">
                   <h4 class="card-title text-center text-warning mb-4">Product Information</h4>
                   <table class="table table-bordered align-middle">
-                    <tbody>
+    
+                    <tbody class="bg-light text-dark">
                       <tr>
-                        <th scope="row">Available Forms</th>
+                        <th scope="row" class="bg-warning text-dark">Available Forms</th>
                         <td>Roll / Sheet</td>
                       </tr>
                       <tr>
-                        <th scope="row">Available Sizes</th>
+                        <th scope="row" class="bg-warning text-dark">Available Sizes</th>
                         <td>9" x 11", 230mm x 50m</td>
                       </tr>
                       <tr>
-                        <th scope="row">Grit Range</th>
+                        <th scope="row" class="bg-warning text-dark">Grit Range</th>
                         <td>60 to 1200</td>
                       </tr>
                       <tr>
-                        <th scope="row">Material Type</th>
+                        <th scope="row" class="bg-warning text-dark">Material Type</th>
                         <td>Aluminum Oxide / Silicon Carbide</td>
                       </tr>
                       <tr>
-                        <th scope="row">Backing</th>
+                        <th scope="row" class="bg-warning text-dark">Backing</th>
                         <td>Paper / Cloth</td>
                       </tr>
                       <tr>
-                        <th scope="row">Bond</th>
+                        <th scope="row" class="bg-warning text-dark">Bond</th>
                         <td>Resin / Glue</td>
                       </tr>
                       <tr>
-                        <th scope="row">Application</th>
+                        <th scope="row" class="bg-warning text-dark">Application</th>
                         <td>Wood | Metal | Plastic | Paint Removal</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
-            
+
               <!-- Inquiry Form -->
               <div class="card shadow-sm bg-light">
                 <div class="card-body p-4">
@@ -234,27 +216,23 @@
                   <form action="submit_form.php" method="POST" id="inquiry-form">
                     <div class="row g-3">
                       <div class="col-md-6">
-                        <label for="name" class="form-label">Name</label>
+                        <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
                         <input type="text" class="form-control form-control-sm" id="name" name="name" required>
                       </div>
                       <div class="col-md-6">
-                        <label for="email" class="form-label">Email</label>
+                        <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
                         <input type="email" class="form-control form-control-sm" id="email" name="email" required>
                       </div>
                       <div class="col-md-6">
-                        <label for="phone" class="form-label">Phone</label>
+                        <label for="phone" class="form-label">Phone <span class="text-danger">*</span></label>
                         <input type="tel" class="form-control form-control-sm" id="phone" name="phone" required>
                       </div>
                       <div class="col-md-6">
-                        <label for="quantity" class="form-label">Quantity Required</label>
+                        <label for="quantity" class="form-label">Quantity Required <span class="text-danger">*</span></label>
                         <input type="text" class="form-control form-control-sm" id="quantity" name="quantity" required>
                       </div>
                       <div class="col-md-12">
-                        <label for="size" class="form-label">Grit Size Needed</label>
-                        <input type="text" class="form-control form-control-sm" id="size" name="size" required>
-                      </div>
-                      <div class="col-md-12">
-                        <label for="message" class="form-label">Message</label>
+                        <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
                         <textarea class="form-control form-control-sm" id="message" name="message" rows="4" required></textarea>
                       </div>
                       <div class="col-md-12">
@@ -270,6 +248,162 @@
         </div>
     </div>
 </section>
+                <!--gallery-->
+                <section id="project-area" class="project-area solid-bg">
+                  <div class="container">
+                    <div class="row text-center">
+                      <div class="col-lg-12">
+                       <!--  <h2 class="section-title">Work of Excellence</h2> -->
+                        <h3 class="section-sub-title">My Work Gallery</h3>
+                      </div>
+                    </div>
+                    <!--/ Title row end -->
+                
+                    <div class="row">
+                      <div class="col-12">
+                       <!--  <div class="shuffle-btn-group">
+                          <label class="active" for="all">
+                            <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Show All
+                          </label>
+                          <label for="commercial">
+                            <input type="radio" name="shuffle-filter" id="commercial" value="commercial">Commercial
+                          </label>
+                          <label for="education">
+                            <input type="radio" name="shuffle-filter" id="education" value="education">Education
+                          </label>
+                          <label for="government">
+                            <input type="radio" name="shuffle-filter" id="government" value="government">Government
+                          </label>
+                          <label for="infrastructure">
+                            <input type="radio" name="shuffle-filter" id="infrastructure" value="infrastructure">Infrastructure
+                          </label>
+                          <label for="residential">
+                            <input type="radio" name="shuffle-filter" id="residential" value="residential">Residential
+                          </label>
+                          <label for="healthcare">
+                            <input type="radio" name="shuffle-filter" id="healthcare" value="healthcare">Healthcare
+                          </label>
+                        </div> --><!-- project filter end -->
+                
+                
+                        <div class="row shuffle-wrapper">
+                          <div class="col-1 shuffle-sizer"></div>
+                
+                          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;government&quot;,&quot;healthcare&quot;]">
+                            <div class="project-img-container">
+                              <a class="gallery-popup" href="images/projects/project1.jpg" aria-label="project-img">
+                                <img class="img-fluid" src="images/projects/project1.jpg" alt="project-img">
+                                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                              </a>
+                              <div class="project-item-info">
+                                <div class="project-item-info-content">
+                                  <h3 class="project-item-title">
+                                    <a href="projects-single.html">Capital Teltway Building</a>
+                                  </h3>
+                                  <p class="project-cat">Commercial, Interiors</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!-- shuffle item 1 end -->
+                
+                          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;healthcare&quot;]">
+                            <div class="project-img-container">
+                              <a class="gallery-popup" href="images/projects/project2.jpg" aria-label="project-img">
+                                <img class="img-fluid" src="images/projects/project2.jpg" alt="project-img">
+                                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                              </a>
+                              <div class="project-item-info">
+                                <div class="project-item-info-content">
+                                  <h3 class="project-item-title">
+                                    <a href="projects-single.html">Ghum Touch Hospital</a>
+                                  </h3>
+                                  <p class="project-cat">Healthcare</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!-- shuffle item 2 end -->
+                
+                          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;infrastructure&quot;,&quot;commercial&quot;]">
+                            <div class="project-img-container">
+                              <a class="gallery-popup" href="images/projects/project3.jpg" aria-label="project-img">
+                                <img class="img-fluid" src="images/projects/project3.jpg" alt="project-img">
+                                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                              </a>
+                              <div class="project-item-info">
+                                <div class="project-item-info-content">
+                                  <h3 class="project-item-title">
+                                    <a href="projects-single.html">TNT East Facility</a>
+                                  </h3>
+                                  <p class="project-cat">Government</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!-- shuffle item 3 end -->
+                
+                          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;education&quot;,&quot;infrastructure&quot;]">
+                            <div class="project-img-container">
+                              <a class="gallery-popup" href="images/projects/project4.jpg" aria-label="project-img">
+                                <img class="img-fluid" src="images/projects/project4.jpg" alt="project-img">
+                                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                              </a>
+                              <div class="project-item-info">
+                                <div class="project-item-info-content">
+                                  <h3 class="project-item-title">
+                                    <a href="projects-single.html">Narriot Headquarters</a>
+                                  </h3>
+                                  <p class="project-cat">Infrastructure</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!-- shuffle item 4 end -->
+                
+                          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;infrastructure&quot;,&quot;education&quot;]">
+                            <div class="project-img-container">
+                              <a class="gallery-popup" href="images/projects/project5.jpg" aria-label="project-img">
+                                <img class="img-fluid" src="images/projects/project5.jpg" alt="project-img">
+                                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                              </a>
+                              <div class="project-item-info">
+                                <div class="project-item-info-content">
+                                  <h3 class="project-item-title">
+                                    <a href="projects-single.html">Kalas Metrorail</a>
+                                  </h3>
+                                  <p class="project-cat">Infrastructure</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!-- shuffle item 5 end -->
+                
+                          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;]">
+                            <div class="project-img-container">
+                              <a class="gallery-popup" href="images/projects/project6.jpg" aria-label="project-img">
+                                <img class="img-fluid" src="images/projects/project6.jpg" alt="project-img">
+                                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                              </a>
+                              <div class="project-item-info">
+                                <div class="project-item-info-content">
+                                  <h3 class="project-item-title">
+                                    <a href="projects-single.html">Ancraft Avenue House</a>
+                                  </h3>
+                                  <p class="project-cat">Residential</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!-- shuffle item 6 end -->
+                        </div><!-- shuffle end -->
+                      </div>
+                
+                    <!--   <div class="col-12">
+                        <div class="general-btn text-center">
+                          <a class="btn btn-primary" href="projects.html">View All Projects</a>
+                        </div>
+                      </div> -->
+                
+                    </div><!-- Content row end -->
+                  </div>
+                  <!--/ Container end -->
+                </section>
+                <!--end gallery-->
 
 
 <!--usecases-->
@@ -384,7 +518,7 @@
             <img src="images/projects/project2.jpg" class="card-img-top" alt="Emery Paper">
             <div class="card-body text-center">
               <h5 class="card-title">Emery Paper</h5>
-              <a href="emery-paper.html" class="btn btn-primary">View Details</a>
+              <a href="product_details.html" class="btn btn-primary">View Details</a>
             </div>
           </div>
         </div>
@@ -395,7 +529,7 @@
             <img src="images/projects/project3.jpg" class="card-img-top" alt="Aloxide Roll">
             <div class="card-body text-center">
               <h5 class="card-title">Aloxide Roll</h5>
-              <a href="aloxide-roll.html" class="btn btn-primary">View Details</a>
+              <a href="product.html" class="btn btn-primary">View Details</a>
             </div>
           </div>
         </div>
@@ -406,7 +540,7 @@
             <img src="images/projects/project4.jpg" class="card-img-top" alt="Flint Paper">
             <div class="card-body text-center">
               <h5 class="card-title">Flint Paper</h5>
-              <a href="flint-paper.html" class="btn btn-primary">View Details</a>
+              <a href="product_details.html" class="btn btn-primary">View Details</a>
             </div>
           </div>
         </div>
@@ -470,10 +604,7 @@
             <li><a href="blog.html">Blogs</a></li>
             <li><a href="contact.html">Contact US</a></li>
             <li><a href="terms.html">About Us</a></li>
-            <li><a href="faqs.html">FAQs </a></li>
-            <li><a href="privacypolicy.html">Privacy Policy </a></li>
-            <li><a href="terms.html">Terms</a></li>
-            
+            <li><a href="faqs.html">FAQs </a></li>      
           </ul>
         </div><!-- Col end -->
       </div><!-- Row end -->
@@ -483,13 +614,23 @@
   <div class="copyright">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-12">
+        <div class="col-md-6">
           <div class="copyright-info">
             © 2025<a href="https://Marutiindustries.com/" target="_blank" title="vulcanengineer">Maruti Industries</a>. Developed By <a href="https://www.trentiums.com/" title="Trentium Solution" target="_blank"
-                  title="trentiums">Trentium Solution.</a>
+            title="trentiums">Trentium Solution.</a>
           </div>
         </div>
-<!-- Row end -->
+
+        <div class="col-md-6">
+          <div class="footer-menu text-center text-md-right">
+            <ul class="list-unstyled">
+              <li><a href="news-left-sidebar.html">Privacy Policy</a></li>
+              <li><a href="pricing.html">Terms&Condition</a></li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- Row end -->
+
       <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
         <button class="btn btn-primary" title="Back to Top">
           <i class="fa fa-angle-double-up"></i>
@@ -497,8 +638,8 @@
       </div>
 
     </div><!-- Container end -->
-  </div><!-- Copyright end -->
-  
+  </div>
+ <!-- Copyright end -->
 </footer>
 <!-- Footer end -->
 
