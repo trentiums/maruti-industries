@@ -52,7 +52,7 @@
           <nav class="navbar navbar-expand-lg navbar-light p-0">
 
             <div class="logo">
-              <a class="d-block" href="index-2.html">
+              <a class="d-block" href="index.html">
                 <img loading="lazy" src="images/maruti-industries-logo-header.png" alt="Constra" height="400px" width="200px">
               </a>
             </div><!-- logo end -->
@@ -82,27 +82,69 @@
                         <li><a href="pricing.html">Pricing</a></li>
                       </ul>
                   </li> -->
-                  <li class="nav-item dropdown">
-                    <!-- Make "Product" clickable by linking to a main products page -->
-                    <a href="product.html" class="nav-link dropdown-toggle" data-toggle="dropdown" onclick="window.location.href='product.html';">
-                      Product <i class="fa fa-angle-down"></i>
-                    </a>
-                  
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a class="dropdown-item" href="product_details.html">Flint Paper</a></li>
-                      <li><a class="dropdown-item" href="product_details.html">Sandpaper Sheets</a></li>
-                      <li><a class="dropdown-item" href="product_details.html">Emery Paper</a></li>
-                      <li><a class="dropdown-item" href="product_details.html">Aloxide Cloth Roll</a></li>
-                      <li><a class="dropdown-item" href="product_details.html">Emery Roll</a></li>
-                    </ul>
-                  </li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+             <!--    <li class="nav-item dropdown">
+             
+                  <a href="product.html" class="nav-link dropdown-toggle" data-toggle="dropdown" onclick="window.location.href='product.html';">
+                    Product <i class="fa fa-angle-down"></i>
+                  </a>
+                
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a class="dropdown-item" href="product_details.html">Flint Paper</a></li>
+                    <li><a class="dropdown-item" href="product_details.html">Sandpaper Sheets</a></li>
+                    <li><a class="dropdown-item" href="product_details.html">Emery Paper</a></li>
+                    <li><a class="dropdown-item" href="product_details.html">Aloxide Cloth Roll</a></li>
+                    <li><a class="dropdown-item" href="product_details.html">Emery Roll</a></li>
+                  </ul>
+                </li>
+                 -->
+                 <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="product.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Product <i class="fa fa-angle-down"></i>
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="product_details.html">Flint Paper</a>
+                    <a class="dropdown-item" href="product_details.html">Sandpaper Sheets</a>
+                    <a class="dropdown-item" href="product_details.html">Emery Paper</a>
+                    <a class="dropdown-item" href="product_details.html">Aloxide Cloth Roll</a>
+                    <a class="dropdown-item" href="product_details.html">Emery Roll</a>
+                  </div>
+                </li> -->
+                <li class="nav-item dropdown d-flex align-items-center">
+                  <!-- Link to product.html -->
+                  <a class="nav-link" href="product.html">
+                    Product
+                  </a>
+                
+                  <!-- Dropdown toggle only for the arrow -->
+                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-angle-down"></i>
+                  </a>
+                
+                  <!-- Dropdown menu -->
+                  <div class="dropdown-menu" aria-labelledby="productDropdown">
+                    <a class="dropdown-item" href="product_details.html?type=flint">Flint Paper</a>
+                    <a class="dropdown-item" href="product_details.html?type=sandpaper">Sandpaper Sheets</a>
+                    <a class="dropdown-item" href="product_details.html?type=emery">Emery Paper</a>
+                    <a class="dropdown-item" href="product_details.html?type=aloxide">Aloxide Cloth Roll</a>
+                    <a class="dropdown-item" href="product_details.html?type=emeryroll">Emery Roll</a>
+                  </div>
+                </li>
+                
+                
+                
+                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="header-get-a-quote">
+              <!--   <li class="header-get-a-quote">
                   <a class="btn btn-primary" href="#inquiry-form">Send Inquiry</a>
+                </li> -->
+                <li class="header-get-a-quote">
+                  <a class="btn btn-primary" href="#inquiry-form" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    Send Inquiry
+                  </a>
                 </li>
+                
               </ul>
             </div>
           </nav>
@@ -230,7 +272,7 @@
       <div class="col-md-4 col-sm-6 mb-4">
         <div class="core-box p-4 shadow rounded bg-light h-100">
           <div class="core-icon mb-3">
-            <img src="images/icons/quality.png" alt="Quality Control" style="height: 50px;">
+            <img src="images/bulk-buying.png" alt="Quality Control" style="height: 50px;">
           </div>
           <h5 class="core-label">In-House Quality Control</h5>
         </div>
@@ -239,7 +281,7 @@
       <div class="col-md-4 col-sm-6 mb-4">
         <div class="core-box p-4 shadow rounded bg-light h-100">
           <div class="core-icon mb-3">
-            <img src="images/icons/bulk-order.png" alt="Bulk Order" style="height: 50px;">
+            <img src="images/grit.png" alt="Bulk Order" style="height: 50px;">
           </div>
           <h5 class="core-label">Bulk Order Capability</h5>
         </div>
@@ -248,7 +290,7 @@
       <div class="col-md-4 col-sm-6 mb-4">
         <div class="core-box p-4 shadow rounded bg-light h-100">
           <div class="core-icon mb-3">
-            <img src="images/icons/grit-sizes.png" alt="Grit Sizes" style="height: 50px;">
+            <img src="images/bulk-buying.png" alt="Grit Sizes" style="height: 50px;">
           </div>
           <h5 class="core-label">Wide Range of Grit Sizes</h5>
         </div>
@@ -257,7 +299,7 @@
       <div class="col-md-4 col-sm-6 mb-4">
         <div class="core-box p-4 shadow rounded bg-light h-100">
           <div class="core-icon mb-3">
-            <img src="images/icons/delivery.png" alt="Delivery" style="height: 50px;">
+            <img src="images/bulk-buying.png" alt="Delivery" style="height: 50px;">
           </div>
           <h5 class="core-label">Timely Dispatch & Delivery</h5>
         </div>
@@ -266,7 +308,7 @@
       <div class="col-md-4 col-sm-6 mb-4">
         <div class="core-box p-4 shadow rounded bg-light h-100">
           <div class="core-icon mb-3">
-            <img src="images/icons/custom-cut.png" alt="Custom Cut" style="height: 50px;">
+            <img src="images/delivery-icon.jpg" alt="Custom Cut" style="height: 50px;">
           </div>
           <h5 class="core-label">Custom Cut & Size Options</h5>
         </div>
@@ -275,7 +317,7 @@
       <div class="col-md-4 col-sm-6 mb-4">
         <div class="core-box p-4 shadow rounded bg-light h-100">
           <div class="core-icon mb-3">
-            <img src="images/icons/trusted.png" alt="Trusted Clients" style="height: 50px;">
+            <img src="images/grit.png "alt="Trusted Clients" style="height: 50px;">
           </div>
           <h5 class="core-label">Trusted by 100+ Industrial Clients</h5>
         </div>
@@ -446,12 +488,12 @@
                       <h3 class="ts-name">Nats Stenman</h3>
                       <p class="ts-designation">Chief Operating Officer</p>
                       <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
+                      <!-- <div class="team-social-icons">
                           <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
+                      </div -->><!--/ social-icons-->
                     </div>
                 </div><!--/ Team wrapper end -->
               </div><!-- Team 1 end -->
@@ -465,11 +507,11 @@
                       <h3 class="ts-name">Angela Lyouer</h3>
                       <p class="ts-designation">Innovation Officer</p>
                       <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
+                     <!--  <div class="team-social-icons">
                           <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
+                      </div> --><!--/ social-icons-->
                     </div>
                 </div><!--/ Team wrapper end -->
               </div><!-- Team 2 end -->
@@ -483,11 +525,11 @@
                       <h3 class="ts-name">Mark Conter</h3>
                       <p class="ts-designation">Safety Officer</p>
                       <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
+                     <!--  <div class="team-social-icons">
                           <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
+                      </div> --><!--/ social-icons-->
                     </div>
                 </div><!--/ Team wrapper end -->
               </div><!-- Team 3 end -->
@@ -501,12 +543,12 @@
                       <h3 class="ts-name">Ayesha Stewart</h3>
                       <p class="ts-designation">Finance Officer</p>
                       <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
+                     <!--  <div class="team-social-icons">
                           <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
+                      </div> --><!--/ social-icons-->
                     </div>
                 </div><!--/ Team wrapper end -->
               </div><!-- Team 4 end -->
@@ -520,11 +562,11 @@
                       <h3 class="ts-name">Dave Clarkte</h3>
                       <p class="ts-designation">Civil Engineer</p>
                       <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
+                      <!-- <div class="team-social-icons">
                           <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
+                      </div> --><!--/ social-icons-->
                     </div>
                 </div><!--/ Team wrapper end -->
               </div><!-- Team 5 end -->
@@ -538,12 +580,12 @@
                       <h3 class="ts-name">Elton Joe</h3>
                       <p class="ts-designation">Site Supervisor</p>
                       <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
+                     <!--  <div class="team-social-icons">
                           <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
                           <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
+                      </div> --><!--/ social-icons-->
                     </div>
                 </div><!--/ Team wrapper end -->
               </div><!-- Team 6 end -->
@@ -616,18 +658,19 @@ data-bs-backdrop="static" data-bs-keyboard="false">
       <div class="row justify-content-between">
         <div class="col-lg-4 col-md-6 footer-widget footer-about">
          <!--  <h3 class="widget-title">About Us</h3> -->
-          <img  class="footer-logo" src="images/maruti-industries-logo-footer.png" alt="Constra" width="300px">
+         <a href="index.html">
+          <img  class="footer-logo" src="images/maruti-industries-logo-footer.png" alt="Constra" width="300px"> </a>
           <p> B, Phase, No 1, 313/8, GIDC Naroda, Ahmedabad, Gujarat 382330</p>
           <div class="footer-social">
             <ul>
-              <li><a href=" https://www.facebook.com/share/1f5hMwhzvf/" aria-label="Facebook"><i
+              <li><a href=" https://www.facebook.com/share/1f5hMwhzvf/" aria-label="Facebook" target="_blank"><i
                     class="fab fa-facebook-f"></i></a></li>
           
               </li>
-              <li><a href="https://www.instagram.com/maruti_industries_?igsh=MW82cXJldmRvZ2huNg==" aria-label="Instagram"><i
-                    class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.instagram.com/maruti_industries_?igsh=MW82cXJldmRvZ2huNg==" aria-label="Instagram" target="_blank"><i
+                    class="fab fa-instagram" ></i></a></li>
              
-              <li><a href="https://wa.me/9974348216" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <li><a href="https://wa.me/9974348216" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
               </li>
             </ul>
           </div>
@@ -662,7 +705,7 @@ data-bs-backdrop="static" data-bs-keyboard="false">
             <li><a href="product.html">Products</a></li>
             <li><a href="blog.html">Blogs</a></li>
             <li><a href="contact.html">Contact US</a></li>
-            <li><a href="terms.html">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="faqs.html">FAQs </a></li>      
           </ul>
         </div><!-- Col end -->
@@ -673,18 +716,24 @@ data-bs-backdrop="static" data-bs-keyboard="false">
   <div class="copyright">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-6">
+        <!-- <div class="col-md-6">
           <div class="copyright-info">
             © 2025<a href="https://Marutiindustries.com/" target="_blank" title="vulcanengineer">Maruti Industries</a>. Developed By <a href="https://www.trentiums.com/" title="Trentium Solution" target="_blank"
             title="trentiums">Trentium Solution.</a>
           </div>
+        </div> -->
+        <div class="col-md-6 d-flex justify-content-center justify-content-md-start align-items-center text-center">
+          <div class="copyright-info">
+            © 2025 <a href="https://Marutiindustries.com/" target="_blank" title="vulcanengineer">Maruti Industries</a>. Developed By <a href="https://www.trentiums.com/" title="Trentium Solution" target="_blank">Trentium Solution</a>.
+          </div>
         </div>
+        
 
         <div class="col-md-6">
           <div class="footer-menu text-center text-md-right">
             <ul class="list-unstyled">
-              <li><a href="news-left-sidebar.html">Privacy Policy</a></li>
-              <li><a href="pricing.html">Terms&Condition</a></li>
+              <li><a href="privacyPolicy.html">Privacy Policy</a></li>
+              <li><a href="terms_condition.html">Terms & Condition</a></li>
             </ul>
           </div>
         </div>
