@@ -11,16 +11,15 @@
               <p class="banner-subtitle text-white">Delivering quality abrasives for industrial precision and long-lasting performance.</p>
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
-                  <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                  <!-- <li class="breadcrumb-item"><a href="#">company</a></li> -->
+                  <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li   <!-- <li class="breadcrumb-item"><a href="#">company</a></li> -->
                   <li class="breadcrumb-item active" aria-current="page">About Us</li>
                 </ol>
               </nav>
             </div>
-          </div><!-- Col end -->
-        </div><!-- Row end -->
-      </div><!-- Container end -->
-    </div><!-- Banner text end -->
+          </div><
+        </div>
+      </div>
+    </div>
   </div>
   <!-- Banner area end --> 
   <section id="main-container" class="main-container">
@@ -52,17 +51,6 @@
                   </div>
                 </div><!-- Item 1 end -->
   
-                <!-- <div class="item" style="background-image:url(images/slider-pages/slide-page2.jpg)">
-                  <div class="container">
-                      <div class="box-slider-content">
-                        <div class="box-slider-text">
-                            <h2 class="box-slide-title">Relationships</h2>
-                        </div>    
-                      </div>
-                  </div>
-                </div> --><!-- Item 1 end -->
-  
-                <!-- Item 1 end -->
             </div><!-- Page slider end-->          
           
   
@@ -96,8 +84,8 @@
           </div>
         </div>
   
-      </div> <!-- Row end -->
-    </div> <!-- Container end -->
+      </div> 
+    </div>
   </section>
   <section id="core-strengths" class="core-strengths-area py-5">
     <div class="container">
@@ -218,8 +206,8 @@
             </div>
           </div>
   
-        </div> <!-- row end -->
-      </div> <!-- facts-wrapper end -->
+        </div> 
+      </div> 
     </div> <!-- container end -->
   </section>
   <section id="main-container" class="main-container">
@@ -233,8 +221,7 @@
       <!--/ Title row end -->
       <div class="row">
         <div class="col-md-12">
-          <!-- contact form works with formspree.io  -->
-          <!-- contact form activation doc: https://docs.themefisher.com/constra/contact-form/ -->
+         
           <form id="inquiry-form" action="#" method="post" role="form">
             <div class="error-container"></div>
             <div class="row">
@@ -321,12 +308,7 @@
                         <h3 class="ts-name">Nats Stenman</h3>
                         <p class="ts-designation">Chief Operating Officer</p>
                         <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                        <!-- <div class="team-social-icons">
-                            <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                        </div -->><!--/ social-icons-->
+                       
                       </div>
                   </div><!--/ Team wrapper end -->
                 </div><!-- Team 1 end -->
@@ -340,11 +322,7 @@
                         <h3 class="ts-name">Angela Lyouer</h3>
                         <p class="ts-designation">Innovation Officer</p>
                         <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                       <!--  <div class="team-social-icons">
-                            <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                        </div> --><!--/ social-icons-->
+                     
                       </div>
                   </div><!--/ Team wrapper end -->
                 </div><!-- Team 2 end -->
@@ -357,12 +335,7 @@
                       <div class="ts-team-content">
                         <h3 class="ts-name">Mark Conter</h3>
                         <p class="ts-designation">Safety Officer</p>
-                        <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                       <!--  <div class="team-social-icons">
-                            <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                        </div> --><!--/ social-icons-->
+                      
                       </div>
                   </div><!--/ Team wrapper end -->
                 </div><!-- Team 3 end -->
@@ -376,12 +349,7 @@
                         <h3 class="ts-name">Ayesha Stewart</h3>
                         <p class="ts-designation">Finance Officer</p>
                         <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                       <!--  <div class="team-social-icons">
-                            <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                        </div> --><!--/ social-icons-->
+                      
                       </div>
                   </div><!--/ Team wrapper end -->
                 </div><!-- Team 4 end -->
@@ -395,11 +363,7 @@
                         <h3 class="ts-name">Dave Clarkte</h3>
                         <p class="ts-designation">Civil Engineer</p>
                         <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                        <!-- <div class="team-social-icons">
-                            <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                        </div> --><!--/ social-icons-->
+                      
                       </div>
                   </div><!--/ Team wrapper end -->
                 </div><!-- Team 5 end -->
@@ -413,20 +377,15 @@
                         <h3 class="ts-name">Elton Joe</h3>
                         <p class="ts-designation">Site Supervisor</p>
                         <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                       <!--  <div class="team-social-icons">
-                            <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                            <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                        </div> --><!--/ social-icons-->
+                       
                       </div>
-                  </div><!--/ Team wrapper end -->
-                </div><!-- Team 6 end -->
+                  </div>
+                </div>
   
-            </div><!-- Team slide end -->
+            </div>
           </div>
-      </div><!--/ Content row end -->
-    </div><!--/ Container end -->
+      </div>
+    </div>
   </section><!--/ Team end -->
   <section class="call-to-action no-padding">
     <div class="container">
@@ -443,15 +402,15 @@
                     <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callbackModal">
                         Request a Callback
                       </a>
-                     <!--  <a href="#main-container" class="btn btn-primary">Browse Product</a> -->
+                     
               <a href="https://wa.me/1234567890" target="_blank">
                         <img src="{{asset('assets/images/whatsapp.png')}}" alt="WhatsApp" >
                       </a>   
                 </div>
-            </div><!-- col end -->
-          </div><!-- row end -->
-      </div><!-- Action style box -->
-    </div><!-- Container end -->
+            </div>
+          </div>
+      </div>
+    </div>
   </section>
   <!--model popu-->
 <div class="modal fade enquiry-modal" id="callbackModal" tabindex="-1" role="dialog" aria-hidden="true"

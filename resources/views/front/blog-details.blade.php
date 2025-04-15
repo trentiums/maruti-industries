@@ -10,15 +10,15 @@
                   <nav aria-label="breadcrumb">
                       <ol class="breadcrumb justify-content-center">
                         <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                        <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('blog')}}">Blog</a></li>
                         <li class="breadcrumb-item active" aria-current="page">EmeryPaper</li>
                       </ol>
                   </nav>
                 </div>
-            </div><!-- Col end -->
-          </div><!-- Row end -->
-      </div><!-- Container end -->
-    </div><!-- Banner text end -->
+            </div>
+          </div>
+      </div>
+    </div>
   </div><!-- Banner area end --> 
   
   <section id="main-container" class="main-container">
@@ -42,13 +42,12 @@
                     <i class="far fa-folder-open"></i><a href="#"> News</a>
                   </span>
                   <span class="post-meta-date"><i class="far fa-calendar"></i> June 14, 2016</span>
-                  <!-- <span class="post-comment"><i class="far fa-comment"></i> 03<a href="#"
-                      class="comments-link">Comments</a></span> -->
+              
                 </div>
                 <h2 class="entry-title">
                   We Just Completes $17.6 million Medical Clinic in Mid-Missouri
                 </h2>
-              </div><!-- header end -->
+              </div>
   
               <div class="entry-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -81,25 +80,10 @@
                   incidunt ue magnam aliquam quaerat voluptatem.</p>
               </div>
   
-              <!-- <div class="tags-area d-flex align-items-center justify-content-between">
-                <div class="post-tags">
-                  <a href="#">Construction</a>
-                  <a href="#">Safety</a>
-                  <a href="#">Planning</a>
-                </div>
-                <div class="share-items">
-                  <ul class="post-social-icons list-unstyled">
-                    <li class="social-icons-head">Share:</li>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                  </ul>
-                </div>
-              </div> -->
+           
   
-            </div><!-- post-body end -->
-          </div><!-- post content end -->
+            </div>
+          </div>
   
          
          
@@ -108,7 +92,7 @@
           
               <form role="form" id="inquiry-form">
                   <div class="row">
-                      <!-- Name -->
+                     
                       <div class="col-md-6">
                           <div class="form-group">
                               <label for="name">Name</label>
@@ -116,7 +100,7 @@
                           </div>
                       </div>
           
-                      <!-- Phone -->
+                      
                       <div class="col-md-6">
                           <div class="form-group">
                               <label for="phone">Phone</label>
@@ -132,7 +116,7 @@
                           </div>
                       </div>
           
-                      <!-- Product/Topic of Interest -->
+                    
                       <div class="col-md-6">
                           <div class="form-group">
                               <label for="product">Product/Topic of Interest</label>
@@ -146,7 +130,7 @@
                           </div>
                       </div>
           
-                      <!-- Subject -->
+                      
                       <div class="col-md-12">
                           <div class="form-group">
                               <label for="subject">Subject</label>
@@ -154,7 +138,7 @@
                           </div>
                       </div>
           
-                      <!-- Message Box -->
+                      
                       <div class="col-md-12">
                           <div class="form-group">
                               <label for="message">Message</label>
@@ -162,22 +146,21 @@
                           </div>
                       </div>
           
-                  </div><!-- Form row end -->
+                  </div><
                   
-                  <!-- Submit Button -->
+                  
                   <div class="clearfix text-center">
                       <button class="btn btn-primary" type="submit" aria-label="send-inquiry">Send Inquiry</button>
                   </div>
-              </form><!-- Form end -->
           </div>  
           
-         <!-- Comments form end -->
-        </div><!-- Content Col end -->
+      
+        </div>
   
-        <!--  --><!-- Sidebar Col end -->
+     
   
-      </div><!-- Main row end -->
+      </div>
   
-    </div><!-- Conatiner end -->
-  </section><!-- Main container end -->
+    </div>
+  </section>
 @endsection

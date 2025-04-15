@@ -8,7 +8,7 @@
                         <img class="footer-logo" src="{{asset
                         ('assets/images/maruti-industries-logo-footer.png')}}" alt="Constra"
                             width="300px"> </a>
-                    <p> B, Phase, No 1, 313/8, GIDC Naroda, Ahmedabad, Gujarat 382330</p>
+                    <p>  {{config('settings.address')}}</p>
                     <div class="footer-social">
                         <ul>
                             <li><a href=" https://www.facebook.com/share/1f5hMwhzvf/" aria-label="Facebook"
@@ -34,12 +34,12 @@
                             </a>
                         </div>
                         <div class="mb-2">
-                            <a href="mailto:marutinaroda@gmail.com" class="btn btn-primary w-100" aria-label="Email">
+                            <a href="mailto:{{config('settings.email')}}" class="btn btn-primary w-100" aria-label="Email">
                                 <i class="fas fa-envelope"></i> Email
                             </a>
                         </div>
                         <div>
-                            <a href="tel:+ 9974348216" class="btn btn-dark w-100" aria-label="Phone">
+                            <a href="tel:{{config('settings.tel_code')}}"class="btn btn-dark w-100" aria-label="Phone">
                                 <i class="fas fa-phone"></i> Call Us
                             </a>
                         </div>

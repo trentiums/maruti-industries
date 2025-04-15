@@ -2,25 +2,20 @@
 <html lang="en">
 
 <head>
-  <!-- Basic Page Needs
-================================================== -->
+
   <meta charset="utf-8">
   <title>{{ $data['meta_title'] }}</title>
 
-  <!-- Mobile Specific Metas
-================================================== -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="{{ $data['meta_description'] }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name=author content="Themefisher">
   <meta name=generator content="Themefisher Constra HTML Template v1.0">
 
-  <!-- Favicon
-================================================== -->
+  <!-- Favicon-->
   <link rel="icon" type="image/png" href="{{asset('assets/images/favicon.png')}}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- CSS
-================================================== -->
+  <!-- CSS-->
   <!-- Bootstrap -->
   <link rel="stylesheet" href="{{asset('assets/plugins/bootstrap/bootstrap.min.css')}}">
   <!-- FontAwesome -->
@@ -41,7 +36,7 @@
 @yield('content')
 @include('partials.front.footer')
 <!-- Javascript Files
-  ================================================== -->
+ -->
 
   <!-- initialize jQuery Library -->
   <script src="{{asset('assets/plugins/jQuery/jquery.min.js')}}"></script>

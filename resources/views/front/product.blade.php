@@ -16,10 +16,10 @@
                       </ol>
                   </nav>
                 </div>
-            </div><!-- Col end -->
-          </div><!-- Row end -->
-      </div><!-- Container end -->
-    </div><!-- Banner text end -->
+            </div>
+          </div>
+      </div>
+    </div>
   </div><!-- Banner area end --> 
   
   <section id="main-container" class="main-container pb-2 ">
@@ -48,7 +48,7 @@
   </a>
                 </div>
               </div>
-          </div><!-- Service1 end -->
+          </div>
         </div><!-- Col 1 end -->
   
         <div class="col-lg-4 col-md-6 mb-5 mt-5">
@@ -68,7 +68,7 @@
                     </a>
                 </div>
               </div>
-          </div><!-- Service2 end -->
+          </div>
         </div><!-- Col 2 end -->
   
         <div class="col-lg-4 col-md-6 mb-5 mt-5">
@@ -88,7 +88,7 @@
                     </a>
                 </div>
               </div>
-          </div><!-- Service3 end -->
+          </div>
         </div><!-- Col 3 end -->
   
         <div class="col-lg-4 col-md-6 mb-5">
@@ -108,7 +108,7 @@
                     </a>
                 </div>
               </div>
-          </div><!-- Service1 end -->
+          </div>
         </div><!-- Col 4 end -->
   
         <div class="col-lg-4 col-md-6 mb-5">
@@ -128,11 +128,11 @@
                     </a>
                 </div>
               </div>
-          </div><!-- Service2 end -->
+          </div>
         </div><!-- Col 5 end -->
   
-      </div><!-- Main row end -->
-    </div><!-- Conatiner end -->
+      </div>
+    </div>
   </section><!-- Main container end -->
   
   <!---inquiry section form-->
@@ -140,7 +140,7 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-12">
-           <!--    <h2 class="section-title"></h2> -->
+          
               <h3 class="section-sub-title">Get in Touch with Us</h3>
             </div>
           </div>
@@ -152,7 +152,7 @@
                 <div class="error-container"></div>
           
                 <div class="row">
-                  <!-- Name -->
+               
                   <div class="col-md-4">
                     <div class="form-group">
                       <label for="name">Name <span class="text-danger">*</span></label>
@@ -160,7 +160,7 @@
                     </div>
                   </div>
           
-                  <!-- Email -->
+              
                   <div class="col-md-4">
                     <div class="form-group">
                       <label for="email">Email <span class="text-danger">*</span></label>
@@ -168,7 +168,7 @@
                     </div>
                   </div>
           
-                  <!-- Phone -->
+              
                   <div class="col-md-4">
                     <div class="form-group">
                       <label for="phone">Phone Number <span class="text-danger">*</span></label>
@@ -178,7 +178,7 @@
                 </div>
           
                 <div class="row">
-                  <!-- Company -->
+                
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="company">Company Name</label>
@@ -186,7 +186,7 @@
                     </div>
                   </div>
           
-                  <!-- Subject Dropdown -->
+                  
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="subject">Subject <span class="text-danger">*</span></label>
@@ -200,7 +200,7 @@
                   </div>
                 </div>
           
-                <!-- Product of Interest -->
+               
                 <div class="form-group">
                   <label for="product">Product of Interest</label>
                   <select class="form-control" id="product" name="product">
@@ -212,13 +212,13 @@
                   </select>
                 </div>
           
-                <!-- Message -->
+                
                 <div class="form-group">
                   <label for="message">Message</label>
                   <textarea class="form-control form-control-message" name="message" id="message" rows="6" required></textarea>
                 </div>
           
-                <!-- Submit -->
+               
                 <div class="text-right mt-3">
                   <button class="btn btn-primary solid blank" type="submit">Send Message</button>
                 </div>
@@ -248,10 +248,10 @@
                       <img src="{{asset('assets/images/whatsapp.png')}}" alt="WhatsApp" >
                     </a>
                   </div>
-              </div><!-- col end -->
-            </div><!-- row end -->
-        </div><!-- Action style box -->
-      </div><!-- Container end -->
+              </div>
+            </div>
+        </div>
+      </div>
     </section>
   <!--inquiry end-->
   <!--model popu-->
@@ -276,16 +276,7 @@
                       <label for="phone" class="form-label">Phone Number</label>
                       <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
                     </div>
-                  <!--   <div class="mb-3">
-                      <label for="preferred-time" class="form-label">Preferred Time</label>
-                      <select class="form-control" id="preferred-time">
-                        <option value="" disabled selected>Select a preferred time</option>
-                        <option value="anytime">Anytime</option>
-                        <option value="morning">Morning</option>
-                        <option value="afternoon">Afternoon</option>
-                        <option value="evening">Evening</option>
-                      </select>
-                  </div> -->
+                  
   
                   <div class="mb-3">
                     <label for="message" class="form-label">Message</label>

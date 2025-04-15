@@ -14,10 +14,10 @@
                       </ol>
                   </nav>
                 </div>
-            </div><!-- Col end -->
-          </div><!-- Row end -->
-      </div><!-- Container end -->
-    </div><!-- Banner text end -->
+            </div>
+          </div>
+      </div>
+    </div>
   </div>
   <section id="main-container" class="main-container">
     <div class="container">
@@ -123,8 +123,8 @@
                       </div>
                       <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
                   </form>
-              </div><!-- Inquiry form end -->
-          </div><!-- Sidebar end -->
+              </div>
+          </div>
       </div><!-- Sidebar Column end -->
       
         <div class="col-lg-8 mb-5 mb-lg-0 order-0 order-lg-1">
@@ -142,14 +142,12 @@
                   <span class="post-cat">
                     <i class="far fa-folder-open"></i><a href="#">Categories</a>
                   </span>
-                  <span class="post-meta-date"><i class="far fa-calendar"></i> June 14, 2016</span>
-                 <!--  <span class="post-comment"><i class="far fa-comment"></i> 03<a href="#"
-                      class="comments-link">Comments</a></span> -->
+              
                 </div>
                 <h1 class="entry-title">
                   <a href="blog_details.html">We Just Completes $17.6 million Medical Clinic in Mid-Missouri</a>
                 </h1>
-              </div><!-- header end -->
+              </div>
   
               <div class="entry-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -162,7 +160,7 @@
                 <a href="blog_details.html" class="btn btn-primary">Read More</a>
               </div>
   
-            </div><!-- post-body end -->
+            </div>
           </div><!-- 1st post end -->
   
           <div class="post">
@@ -179,13 +177,12 @@
                     <i class="far fa-folder-open"></i><a href="#"> Categories</a>
                   </span>
                   <span class="post-meta-date"><i class="far fa-calendar"></i> June 14, 2016</span>
-                <!--   <span class="post-comment"><i class="far fa-comment"></i> 03<a href="#"
-                      class="comments-link">Comments</a></span> -->
+                
                 </div>
                 <h1 class="entry-title">
                   <a href="blog_details.html">Thandler Airport Water Reclamation Facility Expansion Project Named</a>
                 </h1>
-              </div><!-- header end -->
+              </div>
   
               <div class="entry-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -198,7 +195,7 @@
                 <a href="blog_details.html" class="btn btn-primary">Read More</a>
               </div>
   
-            </div><!-- post-body end -->
+            </div>
           </div><!-- 2nd post end -->
   
           <div class="post">
@@ -216,14 +213,13 @@
                     <i class="far fa-folder-open"></i><a href="#"> Categories</a>
                   </span>
                   <span class="post-meta-date"><i class="far fa-calendar"></i> June 14, 2016</span>
-                  <!-- <span class="post-comment"><i class="far fa-comment"></i> 03<a href="#"
-                      class="comments-link">Comments</a></span> -->
+                  
                 </div>
                 <h1 class="entry-title">
                   <a href="blog_details.html">Silicon Bench and Cornike Begin Construction of Large-Scale Solar Facilities
                     for Trade</a>
                 </h1>
-              </div><!-- header end -->
+              </div>
   
               <div class="entry-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -250,9 +246,9 @@
             </ul>
           </nav>
   
-        </div><!-- Content Col end -->
+        </div>
   
-      </div><!-- Main row end -->
+      </div>
   
     </div><!-- Container end -->
   </section>
@@ -265,7 +261,7 @@ data-bs-backdrop="static" data-bs-keyboard="false">
       <div>
         <h5 class="modal-title">Prefer a Call?</h5>
       </div>
-      <!--  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      
       <button type="button" class="custom-close" data-bs-dismiss="modal" aria-label="Close">✖</button>
     </div>
     <div class="modal-body">
@@ -278,16 +274,7 @@ data-bs-backdrop="static" data-bs-keyboard="false">
           <label for="phone" class="form-label">Phone Number</label>
           <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
         </div>
-       <!--  <div class="mb-3">
-          <label for="preferred-time" class="form-label">Preferred Time</label>
-          <select class="form-control" id="preferred-time">
-            <option value="" disabled selected>Select a preferred time</option>
-            <option value="anytime">Anytime</option>
-            <option value="morning">Morning</option>
-            <option value="afternoon">Afternoon</option>
-            <option value="evening">Evening</option>
-          </select>
-        </div> -->
+      
         <div class="mb-3">
           <label for="message" class="form-label">Message</label>
           <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
@@ -321,9 +308,9 @@ data-bs-backdrop="static" data-bs-keyboard="false">
                       
                       
                 </div>
-            </div><!-- col end -->
-          </div><!-- row end -->
-      </div><!-- Action style box -->
+            </div>
+          </div>
+      </div>
     </div><!-- Container end -->
   </section>
 @endsection

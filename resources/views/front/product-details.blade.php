@@ -3,19 +3,18 @@
     <style>
         .use-case-item {
             background-color: #ffffff;
-            /* White background */
+           
             padding: 10px 15px;
-            /* Padding for spacing */
+            
             border-radius: 8px;
-            /* Rounded corners */
-            margin-bottom: 10px;
-            /* Spacing between items */
+            
+            margin-bottom: 10px;  /* Spacing between items */
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            /* Soft shadow */
+           
             display: flex;
-            /* Align icon with text */
+          
             align-items: center;
-            /* Center icon vertically */
+           
         }
     </style>
 @endsection
@@ -30,20 +29,20 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center">
                                     <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="product.html">Products</a></li>
+                                    <li class="breadcrumb-item"><a href="{{route('product')}}">Products</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">EmeryRoll</li>
                                 </ol>
                             </nav>
                         </div>
-                    </div><!-- Col end -->
-                </div><!-- Row end -->
-            </div><!-- Container end -->
-        </div><!-- Banner text end -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div><!-- Banner area end -->
     <section id="main-container" class="main-container">
         <div class="container">
             <div class="row">
-                <!-- Left Side: Product Image + Description -->
+               
                 <div class="col-xl-8 col-lg-8">
                     <div class="product-image">
                         <img class="img-fluid" src="{{assset('assets/images/projects/project1.jpg')}}')}}" alt="project-image" />
@@ -56,7 +55,6 @@
                     </div>
                 </div>
 
-                <!-- Right Side: Product Info Table + Inquiry Form -->
                 <div class="col-xl-4 col-lg-4">
 
                     <!-- Product Information -->
@@ -152,11 +150,11 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-12">
-                    <!--  <h2 class="section-title">Work of Excellence</h2> -->
+                   
                     <h3 class="section-sub-title">My Work Gallery</h3>
                 </div>
             </div>
-            <!--/ Title row end -->
+        
 
             <div class="row">
                 <div class="col-12">
@@ -269,12 +267,12 @@
                                 </div>
                             </div>
                         </div><!-- shuffle item 6 end -->
-                    </div><!-- shuffle end -->
+                    </div>
                 </div>
 
-            </div><!-- Content row end -->
+            </div>
         </div>
-        <!--/ Container end -->
+        
     </section>
     <!--end gallery-->
 

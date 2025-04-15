@@ -11,21 +11,21 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center">
                                     <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                                    <!--  <li class="breadcrumb-item"><a href="#">Company</a></li> -->
+                                  
                                     <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
                                 </ol>
                             </nav>
                         </div>
-                    </div><!-- Col end -->
-                </div><!-- Row end -->
-            </div><!-- Container end -->
-        </div><!-- Banner text end -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div><!-- Banner area end -->
     <section id="main-container" class="main-container">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
-                    <!--    <h2 class="section-title"></h2> -->
+                  
                     <h3 class="section-sub-title">Get in Touch with Us</h3>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                         <div class="error-container"></div>
 
                         <div class="row">
-                            <!-- Name -->
+                        
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="name">Name <span class="text-danger">*</span></label>
@@ -46,13 +46,6 @@
                                 </div>
                             </div>
 
-                            <!-- Email -->
-                            <!-- <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="email">Email <span class="text-danger">*</span></label>
-                          <input type="email" class="form-control form-control-email" id="email" name="email" required>
-                        </div>
-                      </div> -->
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="form-group">
                                     <label for="email">Email <span class="text-danger">*</span></label>
@@ -62,7 +55,7 @@
                             </div>
 
 
-                            <!-- Phone -->
+                          
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="phone">Phone Number <span class="text-danger">*</span></label>
@@ -72,7 +65,7 @@
                         </div>
 
                         <div class="row">
-                            <!-- Company -->
+                           
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="company">Company Name</label>
@@ -80,7 +73,7 @@
                                 </div>
                             </div>
 
-                            <!-- Subject Dropdown -->
+                         
                             <div class="col-md-6 mt-2">
                                 <div class="form-group">
                                     <label for="subject">Subject <span class="text-danger">*</span></label>
@@ -94,7 +87,7 @@
                             </div>
                         </div>
 
-                        <!-- Product of Interest -->
+                      
                         <div class="form-group">
                             <label for="product">Product of Interest</label>
                             <select class="form-control" id="product" name="product">
@@ -106,13 +99,13 @@
                             </select>
                         </div>
 
-                        <!-- Message -->
+                        
                         <div class="form-group">
                             <label for="message">Message</label>
                             <textarea class="form-control form-control-message" name="message" id="message" rows="6" required></textarea>
                         </div>
 
-                        <!-- Submit -->
+                        
                         <div class="text-right mt-3">
                             <button class="btn btn-primary solid blank" type="submit">Send Message</button>
                         </div>
@@ -130,7 +123,7 @@
                     <h3 class="section-sub-title">Find Our Location</h3>
                 </div>
             </div>
-            <!--/ Title row end -->
+        
 
             <div class="row">
                 <div class="col-md-4">
@@ -140,8 +133,7 @@
                         </span>
                         <div class="ts-service-box-content">
                             <h4>Visit Our Office</h4>
-                            <p> B, Phase, No 1, 313/8, GIDC Naroda, Ahmedabad, Gujarat 382330<br>
-                                Working-Hours:Mon–Sat, 9:00 AM – 7:00 PM
+                            <p>   {{config('settings.address')}}
                             </p>
                         </div>
                     </div>
@@ -156,7 +148,7 @@
                         </span>
                         <div class="ts-service-box-content">
                             <h4>Email Us</h4>
-                            <p><a href="mailto:marutinaroda@gmail.com">marutinaroda@gmail.com</a></p>
+                            <p><a href="mailto:{{config('settings.email')}}" title="Email"> {{config('settings.email')}}</a></p>
                         </div>
                     </div>
                 </div><!-- Col 2 end -->
@@ -168,7 +160,7 @@
                         </span>
                         <div class="ts-service-box-content">
                             <h4>Call Us</h4>
-                            <p><a href="tel:+919974348216">(+91) 9974348216</a></p>
+                            <p><a href="tel:{{config('settings.tel_code')}}" title="Mobile Number">{{config('settings.mobile_number')}}</a></p>
                         </div>
                     </div>
                 </div><!-- Col 3 end -->
@@ -178,17 +170,13 @@
 
             <div class="gap-60"></div>
 
-            <!-- <div class="google-map">
-            <div  id="map" class="map" data-latitude="40.712776" data-longitude="-74.005974" data-marker="images/marker.png" data-marker-name="Constra"></div>
-          </div>
-            -->
             <div class="mt-5 shadow-sm rounded-3 overflow-hidden">
                 <iframe class="w-100" style="height: 300px; border:0;"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.3321815209983!2d72.66688997477209!3d23.084932713999184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e80d0a0d40001%3A0xf528f2bb8e7f33d5!2sB%2C%20Phase%2C%20No%201%2C%20313%2F8%2C%20GIDC%20Naroda%2C%20Ahmedabad%2C%20Gujarat%20382330!5e0!3m2!1sen!2sin!4v1744113101222!5m2!1sen!2sin"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-            <!-- Content row -->
+           
         </div><!-- Conatiner end -->
     </section>
     <section class="call-to-action no-padding">
@@ -212,9 +200,9 @@
                             </a>
 
                         </div>
-                    </div><!-- col end -->
-                </div><!-- row end -->
-            </div><!-- Action style box -->
+                    </div>
+                </div>
+            </div>
         </div><!-- Container end -->
     </section>
     <!--call back form-->
@@ -226,7 +214,7 @@
                     <div>
                         <h5 class="modal-title">Prefer a Call?</h5>
                     </div>
-                    <!--  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                   
                     <button type="button" class="custom-close" data-bs-dismiss="modal" aria-label="Close">✖</button>
                 </div>
                 <div class="modal-body">
@@ -241,20 +229,6 @@
                             <input type="tel" class="form-control" id="phone"
                                 placeholder="Enter your phone number" required>
                         </div>
-                        <!--        <div class="mb-3">
-                 <label for="preferred-time" class="form-label">Preferred Time</label>
-                 <select class="form-control" id="preferred-time">
-                   <option value="" disabled selected>Select a preferred time</option>
-                   <option value="anytime">Anytime</option>
-                   <option value="morning">Morning</option>
-                   <option value="afternoon">Afternoon</option>
-                   <option value="evening">Evening</option>
-                 </select>
-               </div>  -->
-                        <!--   <div class="mb-3">
-                 <label for="message" class="form-label">Message</label>
-                 <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
-               </div> -->
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
                             <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"
