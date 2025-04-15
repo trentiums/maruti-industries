@@ -1,6 +1,17 @@
 <?php
 
-// Route::redirect('/', '/login');
+use App\Http\Controllers\Front\HomeController;
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('contact-us', [HomeController::class, 'contact_us'])->name('contact-us');
+Route::get('about-us', [HomeController::class, 'about_us'])->name('about-us');
+Route::get('faq',[HomeController::class,'faq'])->name('faq');
+Route::get('blog',[HomeController::class,'blog'])->name('blog');
+Route::get('product',[HomeController::class,'product'])->name('product');
+
+
+
+
 
 use App\Http\Middleware\AuthGates;
 
