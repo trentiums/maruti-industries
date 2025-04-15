@@ -126,19 +126,8 @@
                             <li><a href="pricing.html">Pricing</a></li>
                           </ul>
                       </li> -->
-                    <!--   <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">product <i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="">Flint Paper</a></li>
-                          <li><a href="">Sandpaper Sheets</a></li>
-                          <li><a href="">Emery Paper</a></li>
-                          <li><a href="">Aloxide Cloth Roll</a></li>
-                          <li><a href="">Emery Roll</a></li>
-                        </ul>
-                    </li>
-                    -->
-                    <li class="nav-item dropdown">
-                      <!-- Make "Product" clickable by linking to a main products page -->
+                 <!--    <li class="nav-item dropdown">
+                 
                       <a href="product.html" class="nav-link dropdown-toggle" data-toggle="dropdown" onclick="window.location.href='product.html';">
                         Product <i class="fa fa-angle-down"></i>
                       </a>
@@ -151,14 +140,55 @@
                         <li><a class="dropdown-item" href="product_details.html">Emery Roll</a></li>
                       </ul>
                     </li>
+                     -->
+                     <!-- <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="product.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Product <i class="fa fa-angle-down"></i>
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="product_details.html">Flint Paper</a>
+                        <a class="dropdown-item" href="product_details.html">Sandpaper Sheets</a>
+                        <a class="dropdown-item" href="product_details.html">Emery Paper</a>
+                        <a class="dropdown-item" href="product_details.html">Aloxide Cloth Roll</a>
+                        <a class="dropdown-item" href="product_details.html">Emery Roll</a>
+                      </div>
+                    </li> -->
+                    <li class="nav-item dropdown d-flex align-items-center">
+                      <!-- Link to product.html -->
+                      <a class="nav-link" href="product.html">
+                        Product
+                      </a>
                     
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                      <!-- Dropdown toggle only for the arrow -->
+                      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-angle-down"></i>
+                      </a>
+                    
+                      <!-- Dropdown menu -->
+                      <div class="dropdown-menu" aria-labelledby="productDropdown">
+                        <a class="dropdown-item" href="product_details.html?type=flint">Flint Paper</a>
+                        <a class="dropdown-item" href="product_details.html?type=sandpaper">Sandpaper Sheets</a>
+                        <a class="dropdown-item" href="product_details.html?type=emery">Emery Paper</a>
+                        <a class="dropdown-item" href="product_details.html?type=aloxide">Aloxide Cloth Roll</a>
+                        <a class="dropdown-item" href="product_details.html?type=emeryroll">Emery Roll</a>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="header-get-a-quote">
+                  <!--   <li class="header-get-a-quote">
                       <a class="btn btn-primary" href="#inquiry-form">Send Inquiry</a>
+                    </li> -->
+                    <li class="header-get-a-quote">
+                      <a class="btn btn-primary" href="#inquiry-form" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        Send Inquiry
+                      </a>
                     </li>
+                    
                   </ul>
                 </div>
               </nav>
@@ -285,8 +315,7 @@
                 </div>
                 <div class="ts-service-info">
                   <h3 class="service-box-title"><a href="product_details.html">Sandpaper Sheets</a></h3>
-                  <p>Sandpaper Sheets are coated abrasive papers used for smoothing, finishing, and polishing surfaces
-                    like wood, metal, and plastic.</p>
+                  <p>Coated abrasive paper for smoothing, finishing, and polishing wood, metal, and plastic surfaces.</p>
                     <a class="btn btn-primary mt-2" href="product_details.html" aria-label="service-details">
                       View Details
                     </a>
@@ -325,8 +354,7 @@
                 </div>
                 <div class="ts-service-info">
                   <h3 class="service-box-title"><a href="product_details.html">Aloxide Cloth Roll</a></h3>
-                  <p>Aloxide Cloth Roll is a durable, flexible abrasive material made with aluminum oxide grains bonded
-                    to a sturdy cloth backing. </p>
+                  <p>Aloxide Cloth Roll is a flexible, durable abrasive material with aluminum oxide grains bonded.</p>
                     <a class="btn btn-primary mt-2" href="product_details.html" aria-label="service-details">
                       View Details
                     </a>
@@ -810,7 +838,8 @@
                 <h3 class="action-title">Have a question about grit, quantity, or pricing? Let’s talk.</h3>
               </div>
           </div><!-- Col end -->
-          <div class="col-md-6 text-center text-md-right mt-3 mt-md-0 gap-5">
+         <!-- 
+        
               <div class="call-to-action-btn">
                   <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callbackModal">
                       Request Callback
@@ -821,7 +850,21 @@
                     </a>
                     
               </div>
-          </div><!-- col end -->
+          </div> --><!-- col end -->
+          <div class="col-md-6 text-center text-md-right mt-3 mt-md-0 gap-5">
+            <div class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end">
+              <a href="#" class="btn btn-primary mb-2 mb-md-0 me-md-2" data-bs-toggle="modal" data-bs-target="#callbackModal">
+                Request Callback
+              </a>
+              <a href="#inquiry-form" class="btn btn-primary mb-2 mb-md-0 me-md-2">
+                Send Inquiry
+              </a>
+              <a href="https://wa.me/1234567890" target="_blank">
+                <img src="images/whatsapp.png" alt="WhatsApp" class="mt-2 mt-md-0" />
+              </a>
+            </div>
+          </div>
+          
         </div><!-- row end -->
     </div><!-- Action style box -->
   </div><!-- Container end -->
@@ -893,18 +936,24 @@
     <div class="copyright">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-6">
+          <!-- <div class="col-md-6">
             <div class="copyright-info">
               © 2025<a href="https://Marutiindustries.com/" target="_blank" title="vulcanengineer">Maruti Industries</a>. Developed By <a href="https://www.trentiums.com/" title="Trentium Solution" target="_blank"
               title="trentiums">Trentium Solution.</a>
             </div>
+          </div> -->
+          <div class="col-md-6 d-flex justify-content-center justify-content-md-start align-items-center text-center">
+            <div class="copyright-info">
+              © 2025 <a href="https://Marutiindustries.com/" target="_blank" title="vulcanengineer">Maruti Industries</a>. Developed By <a href="https://www.trentiums.com/" title="Trentium Solution" target="_blank">Trentium Solution</a>.
+            </div>
           </div>
+          
 
           <div class="col-md-6">
             <div class="footer-menu text-center text-md-right">
               <ul class="list-unstyled">
-                <li><a href="news-left-sidebar.html">Privacy Policy</a></li>
-                <li><a href="pricing.html">Terms & Condition</a></li>
+                <li><a href="privacyPolicy.html">Privacy Policy</a></li>
+                <li><a href="terms_condition.html">Terms & Condition</a></li>
               </ul>
             </div>
           </div>
