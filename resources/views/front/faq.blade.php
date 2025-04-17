@@ -26,7 +26,7 @@
   
       <div class="row">
         <div class="col-lg-12">
-          <h3 class="border-title border-left mar-t0">Construction general</h3>
+          <h3 class="border-title border-left mar-t0">Frequently Ask Questions</h3>
   
           <div class="accordion accordion-group accordion-classic" id="construction-accordion">
             <div class="card">
@@ -34,7 +34,7 @@
                 <h2 class="mb-0">
                   <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne"
                     aria-expanded="true" aria-controls="collapseOne">
-                    Does the law require head protection on construction sites?
+                    Is flint paper waterproof?
                   </button>
                 </h2>
               </div>
@@ -42,8 +42,7 @@
               <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                 data-parent="#construction-accordion">
                 <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-                  moon officia aute, non cupidata
+                  No, it’s designed only for dry sanding applications.
                 </div>
               </div>
             </div>
@@ -52,16 +51,43 @@
                 <h2 class="mb-0">
                   <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
                     data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    What are the first aid requirements for sites?
+                    What makes emery rolls different from sandpaper rolls?
                   </button>
                 </h2>
               </div>
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#construction-accordion">
                 <div class="card-body">
-                  Anemi nim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                  Excepteur sint occaecat cupid henderit in voluptate velit esse cillu oris nisi ut aliquip ex ea com
-                  matat.
+                  Emery rolls are cloth-backed and more flexible. They are better for precision work and tool polishing.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header p-0 bg-transparent" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                     Can I use aloxide roll on stainless steel?
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#construction-accordion">
+                <div class="card-body">
+                  Yes, it performs well on stainless steel. Choose finer grit to avoid deep scratch marks.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header p-0 bg-transparent" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Can I use emery paper for wet sanding?
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#construction-accordion">
+                <div class="card-body">
+                  No, emery paper is designed for dry use. For wet polishing, consider silicon carbide abrasive paper.
                 </div>
               </div>
             </div>
@@ -70,16 +96,14 @@
                 <h2 class="mb-0">
                   <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
                     data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    What is an appointed person?
+                    Can sandpaper be used for both wood and metal?
                   </button>
                 </h2>
               </div>
               <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                 data-parent="#construction-accordion">
                 <div class="card-body">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book.
+                  Yes, depending on the grit and abrasive type. Use silicon carbide for metals.
                 </div>
               </div>
             </div>

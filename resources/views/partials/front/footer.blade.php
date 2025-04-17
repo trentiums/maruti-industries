@@ -50,11 +50,11 @@
                 <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
                     <h3 class="widget-title">Quick links</h3>
                     <ul class="list-arrow">
-                        <li><a href="product.html">Products</a></li>
-                        <li><a href="blog.html">Blogs</a></li>
-                        <li><a href="contact.html">Contact US</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="faqs.html">FAQs </a></li>
+                        <li><a href="{{route('product')}}">Products</a></li>
+                        <li><a href="{{route('blog')}}">Blogs</a></li>
+                        <li><a href="{{route('contact-us')}}">Contact US</a></li>
+                        <li><a href="{{route('about-us')}}">About Us</a></li>
+                        <li><a href="{{route('faq')}}">FAQs </a></li>
                     </ul>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                 <div
                     class="col-md-6 d-flex justify-content-center justify-content-md-start align-items-center text-center">
                     <div class="copyright-info">
-                        © 2025 <a href="https://Marutiindustries.com/" target="_blank" title="vulcanengineer">Maruti
+                        © {{date("Y")}} <a href="https://Marutiindustries.com/" target="_blank" title="vulcanengineer">Maruti
                             Industries</a>. Developed By <a href="https://www.trentiums.com/" title="Trentium Solution"
                             target="_blank">Trentium Solution</a>.
                     </div>
@@ -77,8 +77,8 @@
                 <div class="col-md-6">
                     <div class="footer-menu text-center text-md-right">
                         <ul class="list-unstyled">
-                            <li><a href="privacyPolicy.html">Privacy Policy</a></li>
-                            <li><a href="terms_condition.html">Terms & Condition</a></li>
+                            <li><a href="{{route('privacy-policy')}}">Privacy Policy</a></li>
+                            <li><a href="{{route('terms-condition')}}">Terms & Condition</a></li>
                         </ul>
                     </div>
                 </div>

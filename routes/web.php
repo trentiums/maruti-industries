@@ -6,8 +6,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('contact-us', [HomeController::class, 'contact_us'])->name('contact-us');
 Route::get('about-us', [HomeController::class, 'about_us'])->name('about-us');
 Route::get('faq',[HomeController::class,'faq'])->name('faq');
-Route::get('blog',[HomeController::class,'blog'])->name('blog');
-Route::get('product',[HomeController::class,'product'])->name('product');
+Route::get('privacy-policy',[HomeController::class,'privacy_policy'])->name('privacy-policy');
+Route::get('terms-condition',[HomeController::class,'terms_condition'])->name('terms-condition');
+Route::get('blog/{any?}',[HomeController::class,'blog'])->name('blog');
+Route::get('product/{product?}',[HomeController::class,'product'])->name('product');
 
 
 

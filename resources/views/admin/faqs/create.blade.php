@@ -6,6 +6,7 @@
         </div>
         <div class="card-body">
             <form method="POST" action="{{ route('admin.faqs.store') }}" enctype="multipart/form-data">
+                @csrf
                 <div class="form-group">
                     <label class="required" for="product_ids">{{ trans('cruds.faq.fields.product_id') }}</label>
                     <div style="padding-bottom: 4px">
