@@ -65,125 +65,38 @@
                 </div>
             </div>
             <div class="row">
+                @foreach($products as $product)
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="ts-service-box">
                         <div class="ts-service-image-wrapper">
-                            <img loading="lazy" class="w-100" src="{{ asset('assets/images/services/service1.jpg') }}"
-                                alt="service-image">
-                        </div>
+                            @if($product->main_image)
+                       <img loading="lazy" class="w-100" src="{{ $product->main_image->getUrl() }}" alt="{{ $product->title }}">
+                       @else
+                        <img src="{{asset('assets/images/services/service2.jpg')}}" alt="{{ $product->title }}">
+                        @endif   
+                    </div>
                         <div class="d-flex">
-                            <div class="ts-service-box-img">
+                           {{--  <div class="ts-service-box-img">
                                 <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon1.png') }}"
                                     alt="service-icon" />
-                            </div>
+                            </div> --}}
                             <div class="ts-service-info">
-                                <h3 class="service-box-title"><a href="product_details.html"> Flint Paper </a></h3>
-                                <p>
-                                    Flint Paper is a type of sandpaper made with a natural flint abrasive bonded to a sturdy
-                                    paper
-                                    backing.</p>
-                                <a class="btn btn-primary mt-2" href="product_details.html" aria-label="service-details">
-                                    View Details
-                                </a>
-                            </div>
-                        </div>
-                    </div><!-- Service1 end -->
-                </div><!-- Col 1 end -->
-
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="ts-service-box">
-                        <div class="ts-service-image-wrapper">
-                            <img loading="lazy" class="w-100" src="{{ asset('assets/images/services/service2.jpg') }}"
-                                alt="service-image">
-                        </div>
-                        <div class="d-flex">
-                            <div class="ts-service-box-img">
-                                <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon2.png') }}"
-                                    alt="service-icon" />
-                            </div>
-                            <div class="ts-service-info">
-                                <h3 class="service-box-title"><a href="product_details.html">Sandpaper Sheets</a></h3>
-                                <p>Coated abrasive paper for smoothing, finishing, and polishing wood, metal, and plastic
-                                    surfaces.</p>
-                                <a class="btn btn-primary mt-2" href="product_details.html" aria-label="service-details">
-                                    View Details
-                                </a>
-                            </div>
-                        </div>
-                    </div><!-- Service2 end -->
-                </div><!-- Col 2 end -->
-
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="ts-service-box">
-                        <div class="ts-service-image-wrapper">
-                            <img loading="lazy" class="w-100" src="{{ asset('assets/images/services/service3.jpg') }}"
-                                alt="service-image">
-                        </div>
-                        <div class="d-flex">
-                            <div class="ts-service-box-img">
-                                <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon3.png') }}"
-                                    alt="service-icon" />
-                            </div>
-                            <div class="ts-service-info">
-                                <h3 class="service-box-title"><a href="product_details.html">Emery Paper</a></h3>
-                                <p>Emery Paper is a type of coated abrasive paper made with natural emery grains bonded to a
-                                    flexible
-                                    <a class="btn btn-primary mt-2" href="product_details.html"
-                                        aria-label="service-details">
-                                        View Details
-                                    </a>
-                            </div>
-                        </div>
-                    </div><!-- Service3 end -->
-                </div><!-- Col 3 end -->
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="ts-service-box">
-                        <div class="ts-service-image-wrapper">
-                            <img loading="lazy" class="w-100" src="{{ asset('assets/images/services/service3.jpg') }}"
-                                alt="service-image">
-                        </div>
-                        <div class="d-flex">
-                            <div class="ts-service-box-img">
-                                <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon3.png') }}"
-                                    alt="service-icon" />
-                            </div>
-                            <div class="ts-service-info">
-                                <h3 class="service-box-title"><a href="product_details.html">Aloxide Cloth Roll</a></h3>
-                                <p>Aloxide Cloth Roll is a flexible, durable abrasive material with aluminum oxide grains
-                                    bonded.</p>
-                                <a class="btn btn-primary mt-2" href="product_details.html" aria-label="service-details">
+                                <h3 class="service-box-title"><a href="{{route('product', $product->slug)}}"
+                                    title="{{$product->title}}"> {{ $product->title }} </a></h3>
+                                   <p>
+                                    {{$product->sort_description}}
+                                   </p>
+                                <a class="btn btn-primary mt-2" href="{{route('product', $product->slug)}}" title="{{$product->title}}">
                                     View Details
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="ts-service-box">
-                        <div class="ts-service-image-wrapper">
-                            <img loading="lazy" class="w-100" src="{{ asset('assets/images/services/service3.jpg') }}"
-                                alt="service-image">
-                        </div>
-                        <div class="d-flex">
-                            <div class="ts-service-box-img">
-                                <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon3.png') }}"
-                                    alt="service-icon" />
-                            </div>
-                            <div class="ts-service-info">
-                                <h3 class="service-box-title"><a href="product_details.html">Emery Roll</a></h3>
-                                <p>Emery Roll is a flexible abrasive material made with emery grains bonded to a sturdy
-                                    cloth backing.
-                                </p>
-                                <a class="btn btn-primary mt-2" href="product_details.html" aria-label="service-details">
-                                    View Details
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
-    </section><!-- Feature are end -->
+    </section>
 
 
 
@@ -450,30 +363,37 @@
     <section id="main-container" class="main-container pb-2 ">
         <div class="container">
             <div class="row">
+                
                 <div class="row text-center">
                     <div class="col-12">
                         <h1 class="section-sub-title">Abrasive Tips & Industry Insights</h1>
                     </div>
                 </div>
+                @foreach ($blogs as $blog)
                 <div class="col-lg-4 col-md-6 mb-5 mt-5">
                     <div class="ts-service-box">
                         <div class="ts-service-image-wrapper">
-                            <img loading="lazy" class="w-100" src="{{ asset('assets/images/team/team1') }}.jpg"
-                                alt="service-image">
+                            @if ($blog->main_image && $blog->main_image->getUrl())
+                            <img loading="lazy" class="w-100" src="{{ $blog->main_image->getUrl() }}"
+                                alt="{{ $blog->title }} img">
+                                @else
+                                <img src="{{asset('assets/images/team/team2.jpg')}}" alt="{{ $blog->title }} img">
+                                @endif
                         </div>
                         <div class="d-flex">
 
                             <div class="ts-service-info">
-                                <h2 class="service-box-title"><a href="blog.html">Flint Paper</a></h2>
-                                <p>High-adhesion</p>
-                                <a class="btn btn-primary mt-2" href="blog.html" aria-label="service-details">
+                                <h2 class="service-box-title"><a href="{{route('blog',$blog->slug)}}" title="{{$blog->title}}">{{$blog->title}}</a></h2>
+                                <p>{{ $blog->sort_description }}</p>
+                                <a class="btn btn-primary mt-2" href="{{route('blog',$blog->slug)}}" title="{{$blog->title}}">
                                     Read More
                                 </a>
                             </div>
                         </div>
                     </div><!-- Service1 end -->
                 </div>
-                <div class="col-lg-4 col-md-6 mb-5 mt-5">
+                @endforeach
+                {{-- <div class="col-lg-4 col-md-6 mb-5 mt-5">
                     <div class="ts-service-box">
                         <div class="ts-service-image-wrapper">
                             <img loading="lazy" class="w-100" src="{{ asset('assets/images/team/team2') }}.jpg"
@@ -509,7 +429,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
         </div><!-- Conatiner end -->

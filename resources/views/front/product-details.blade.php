@@ -30,7 +30,7 @@
                                 <ol class="breadcrumb justify-content-center">
                                     <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
                                     <li class="breadcrumb-item"><a href="{{route('product')}}">Products</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">EmeryRoll</li>
+                                    <li class="breadcrumb-item active" aria-current="page">{{$product->title}}</li>
                                 </ol>
                             </nav>
                         </div>
@@ -45,13 +45,16 @@
                
                 <div class="col-xl-8 col-lg-8">
                     <div class="product-image">
-                        <img class="img-fluid" src="{{assset('assets/images/projects/project1.jpg')}}')}}" alt="project-image" />
+                        @if($product->main_image)
+                        <img class="img-fluid" src="{{ $product->main_image->getUrl() }}">
+                        @else
+                        <img src="{{ asset('assets/images/services/service2.jpg')}}" alt="img">
+                        @endif
+                     
                     </div>
                     <div class="product-description mt-3">
-                        <h3 class="column-title">Product Overview</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus
-                            sollicitudin pellentesque et non erat.</p>
-                        <p>Pellentesque ultrices ultrices sapien, nec tincidunt nunc posuere ut.</p>
+                        <h3 class="column-title"> {{$product->title}}</h3>
+                        <p>  {!!$product->description !!}</p>
                     </div>
                 </div>
 
@@ -61,7 +64,8 @@
                     <div class="card shadow-sm mb-4">
                         <div class="card-body">
                             <h4 class="card-title text-center text-warning mb-4">Product Information</h4>
-                            <table class="table table-bordered align-middle">
+                            {!! $product->features !!}
+                            {{-- <table class="table table-bordered align-middle">
 
                                 <tbody class="bg-light text-dark">
                                     <tr>
@@ -93,7 +97,7 @@
                                         <td>Wood | Metal | Plastic | Paint Removal</td>
                                     </tr>
                                 </tbody>
-                            </table>
+                            </table> --}}
                         </div>
                     </div>
 
@@ -161,119 +165,35 @@
 
                     <div class="row shuffle-wrapper">
                         <div class="col-1 shuffle-sizer"></div>
-
+                        @foreach ($product->gallery as $gallery)
                         <div class="col-lg-4 col-md-6 shuffle-item"
                             data-groups="[&quot;government&quot;,&quot;healthcare&quot;]">
                             <div class="project-img-container">
-                                <a class="gallery-popup" href="{{assset('assets/images/projects/project1.jpg')}}')}}" aria-label="project-img">
-                                    <img class="img-fluid" src="{{assset('assets/images/projects/project1.jpg')}}')}}" alt="project-img">
+                               
+                                <a class="gallery-popup" href="{{ $gallery->url }}"  aria-label="{{$product->title}}">
+                                    <img class="img-fluid" src="{{ $gallery->url }}"  alt="{{$product->title}}">
                                     <span class="gallery-icon"><i class="fa fa-plus"></i></span>
                                 </a>
-                                <div class="project-item-info">
-                                    <div class="project-item-info-content">
-                                        <h3 class="project-item-title">
-                                            <a href="projects-single.html">Capital Teltway Building</a>
-                                        </h3>
-                                        <p class="project-cat">Commercial, Interiors</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- shuffle item 1 end -->
 
-                        <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;healthcare&quot;]">
-                            <div class="project-img-container">
-                                <a class="gallery-popup" href="{{assset('assets/images/projects/project2.jpg')}}')}}" aria-label="project-img">
-                                    <img class="img-fluid" src="{{assset('assets/images/projects/project2.jpg')}}')}}" alt="project-img">
-                                    <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-                                </a>
                                 <div class="project-item-info">
                                     <div class="project-item-info-content">
                                         <h3 class="project-item-title">
-                                            <a href="projects-single.html">Ghum Touch Hospital</a>
+                                            {{-- //<a href="projects-single.html">Capital Teltway Building</a> --}}
                                         </h3>
-                                        <p class="project-cat">Healthcare</p>
+                                        <p class="project-cat">{{$product->title}}</p>
                                     </div>
                                 </div>
+                               
                             </div>
-                        </div><!-- shuffle item 2 end -->
-
-                        <div class="col-lg-4 col-md-6 shuffle-item"
-                            data-groups="[&quot;infrastructure&quot;,&quot;commercial&quot;]">
-                            <div class="project-img-container">
-                                <a class="gallery-popup" href="{{assset('assets/images/projects/project3.jpg')}}')}}" aria-label="project-img">
-                                    <img class="img-fluid" src="{{assset('assets/images/projects/project3.jpg')}}')}}" alt="project-img">
-                                    <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-                                </a>
-                                <div class="project-item-info">
-                                    <div class="project-item-info-content">
-                                        <h3 class="project-item-title">
-                                            <a href="projects-single.html">TNT East Facility</a>
-                                        </h3>
-                                        <p class="project-cat">Government</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- shuffle item 3 end -->
-
-                        <div class="col-lg-4 col-md-6 shuffle-item"
-                            data-groups="[&quot;education&quot;,&quot;infrastructure&quot;]">
-                            <div class="project-img-container">
-                                <a class="gallery-popup" href="{{assset('assets/images/projects/project4.jpg')}}')}}" aria-label="project-img">
-                                    <img class="img-fluid" src="{{assset('assets/images/projects/project4.jpg')}}')}}" alt="project-img">
-                                    <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-                                </a>
-                                <div class="project-item-info">
-                                    <div class="project-item-info-content">
-                                        <h3 class="project-item-title">
-                                            <a href="projects-single.html">Narriot Headquarters</a>
-                                        </h3>
-                                        <p class="project-cat">Infrastructure</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- shuffle item 4 end -->
-
-                        <div class="col-lg-4 col-md-6 shuffle-item"
-                            data-groups="[&quot;infrastructure&quot;,&quot;education&quot;]">
-                            <div class="project-img-container">
-                                <a class="gallery-popup" href="{{assset('assets/images/projects/project5.jpg')}}')}}" aria-label="project-img">
-                                    <img class="img-fluid" src="{{assset('assets/images/projects/project5.jpg')}}')}}" alt="project-img">
-                                    <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-                                </a>
-                                <div class="project-item-info">
-                                    <div class="project-item-info-content">
-                                        <h3 class="project-item-title">
-                                            <a href="projects-single.html">Kalas Metrorail</a>
-                                        </h3>
-                                        <p class="project-cat">Infrastructure</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- shuffle item 5 end -->
-
-                        <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;]">
-                            <div class="project-img-container">
-                                <a class="gallery-popup" href="{{assset('assets/images/projects/project6.jpg')}}')}}" aria-label="project-img">
-                                    <img class="img-fluid" src="{{assset('assets/images/projects/project6.jpg')}}')}}" alt="project-img">
-                                    <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-                                </a>
-                                <div class="project-item-info">
-                                    <div class="project-item-info-content">
-                                        <h3 class="project-item-title">
-                                            <a href="projects-single.html">Ancraft Avenue House</a>
-                                        </h3>
-                                        <p class="project-cat">Residential</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- shuffle item 6 end -->
+                        </div>
+                        @endforeach
                     </div>
                 </div>
 
             </div>
         </div>
         
-    </section>
+    </section> 
     <!--end gallery-->
 
 
@@ -324,8 +244,86 @@
             </div>
         </div>
     </section>
+     <!----faqs---->
+     <section id="main-container" class="main-container">
+        <div class="container">
+            @if (count($product->faqs) > 0)
+          <div class="row">
+            <div class="col-lg-12">
+              <h3 class="border-title border-left mar-t0">FAQ’s</h3>
+      
+              <div class="accordion accordion-group accordion-classic" id="construction-accordion">
+                @foreach ($product->faqs as $k => $faq)
+                @if ($k % 2 == 0)
+                <div class="card"> 
+                  <div class="card-header p-0 bg-transparent" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        {{ $faq->question }}
+                      </button>
+                    </h2>
+                  </div>
+      
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#construction-accordion">
+                    <div class="card-body">
+                        {{ $faq->answer }}
+                    </div>
+                  </div>
+                </div>
+                @endif
+                @endforeach
+                {{-- <div class="card">
+                  <div class="card-header p-0 bg-transparent" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What are the first aid requirements for sites?
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#construction-accordion">
+                    <div class="card-body">
+                      Anemi nim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      Excepteur sint occaecat cupid henderit in voluptate velit esse cillu oris nisi ut aliquip ex ea com
+                      matat.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header p-0 bg-transparent" id="headingThree">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What is an appointed person?
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                    data-parent="#construction-accordion">
+                    <div class="card-body">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                      industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                      scrambled it to make a type specimen book.
+                    </div>
+                  </div>
+                </div> --}}
+              </div>
+              <!--/ Accordion end -->
+      
+              <div class="gap-40"></div>
+     
+            </div>
+      
+           
+          </div>
+      @endif
+        </div>
+      </section>
     <!--technical spacification-->
-    <section id="technical-specifications" class="technical-specifications py-5">
+{{--     <section id="technical-specifications" class="technical-specifications py-5">
         <div class="container">
             <h2 class="text-center mb-4 text-dark">Technical Specifications</h2>
             <div class="table-responsive">
@@ -374,11 +372,11 @@
             </div>
         </div>
     </section>
-
+ --}}
 
 
     <!--related products-->
-    <section id="related-products" class="related-products-section py-5" style="background-color: #f8f9fa;">
+  {{--   <section id="related-products" class="related-products-section py-5" style="background-color: #f8f9fa;">
         <div class="container">
             <h3 class="text-center mb-4">You Might Also Be Interested In</h3>
             <div class="row justify-content-center">
@@ -418,5 +416,5 @@
 
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection

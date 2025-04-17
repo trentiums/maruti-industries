@@ -35,11 +35,9 @@
                   
                     <!-- Dropdown menu -->
                     <div class="dropdown-menu" aria-labelledby="productDropdown">
-                      <a class="dropdown-item" href="product_details.html?type=flint">Flint Paper</a>
-                      <a class="dropdown-item" href="product_details.html?type=sandpaper">Sandpaper Sheets</a>
-                      <a class="dropdown-item" href="product_details.html?type=emery">Emery Paper</a>
-                      <a class="dropdown-item" href="product_details.html?type=aloxide">Aloxide Cloth Roll</a>
-                      <a class="dropdown-item" href="product_details.html?type=emeryroll">Emery Roll</a>
+                      @foreach($products as $product)
+                      <a class="dropdown-item" href="{{route('product', $product->slug)}}" title="{{$product->title}}"> {{$product->title}}</a>
+                     @endforeach
                     </div>
                   </li>
                   
