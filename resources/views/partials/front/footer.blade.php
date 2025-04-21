@@ -67,7 +67,7 @@
                 <div
                     class="col-md-6 d-flex justify-content-center justify-content-md-start align-items-center text-center">
                     <div class="copyright-info">
-                        © {{date("Y")}}<a href="https://marutiindustries.com/" target="_blank" title="MarutiIndustries">Maruti
+                        © {{date("Y")}}<a href="https://emeryroll.in//" target="_blank" title="MarutiIndustries">Maruti
                             Industries. Developed By</a> <a href="https://www.trentiums.com/" title="Trentium Solution"
                             target="_blank">Trentium Solution</a>.
                     </div>
