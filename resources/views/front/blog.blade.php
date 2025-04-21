@@ -45,7 +45,7 @@
                                                 <a href="{{ $blog->main_image->getUrl() }}"><img loading="lazy" alt="{{ $blog->title }}"
                                                         src="{{ $blog->main_image->getUrl() }}"></a>
                                             @else
-                                                <a href="{{ asset('assets/images/news/news1.jpg') }}"> <img loading="lazy" alt="img"
+                                                <a href="javascript:void(0)"> <img loading="lazy" alt="img"
                                                         src="{{ asset('assets/images/news/news1.jpg') }}"></a>
                                             @endif
                                         </div>

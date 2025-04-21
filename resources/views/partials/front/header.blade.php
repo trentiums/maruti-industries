@@ -1,19 +1,5 @@
   <!-- Header start -->
-  <style>
-  /* Make dropdown full width below nav item on mobile */
-  @media (min-width: 992px) {
-  .dropdown-menu {
-    display: none;
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
-  .nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-    opacity: 1;
-    margin-top: 0;
-  }
-}
-    </style>
+ 
   <header id="header" class="header-two">
     <div class="site-navigation">
       <div class="container">

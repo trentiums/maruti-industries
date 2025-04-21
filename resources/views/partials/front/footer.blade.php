@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-lg-4 col-md-6 footer-widget footer-about">
-                    <a href="index.html">
+                    <a href="{{route('home')}}">
                         <img class="footer-logo" src="{{asset
                         ('assets/images/maruti-industries-logo-footer.png')}}" alt="Constra"
                             width="300px"> </a>
