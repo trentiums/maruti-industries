@@ -105,60 +105,6 @@
                     <div class="card shadow-sm bg-light">
                         <div class="card-body p-4">
                             <h4 class="text-center text-warning fw-bold mb-4">Inquiry Form</h4>
-                         {{--    <form action="{{ route('save-inquiry') }}" method="POST" id="inquiry-form">
-                                @csrf
-                                @if ($errors->count() > 0)
-                                    <div class="alert alert-danger alert-block">
-                                        <ul class="list-unstyled">
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                @endif
-                                <input type="hidden" name="page_url" value="{{ url()->current() }}">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label for="name" class="form-label">Name <span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control form-control-sm" id="name"
-                                            name="name" required value="{{ old('name') }}">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="email" class="form-label">Email <span
-                                                class="text-danger">*</span></label>
-                                        <input type="email" class="form-control form-control-sm" id="email"
-                                            name="email" required value="{{ old('email') }}">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="phone" class="form-label">Phone <span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control form-control-sm" id="phone"
-                                            name="phone" minlength="10" maxlength="10" value="{{ old('mobile') }}">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="quantity" class="form-label">Quantity Required</label>
-                                        <input type="text" class="form-control form-control-sm" id="quantity"
-                                            name="quantity" value="{{ old('qty') }}">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <label for="message" class="form-label">Message</label>
-                                        <textarea class="form-control form-control-sm" id="message" name="message" rows="4" {{ old('description') }}></textarea>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="g-recaptcha" data-sitekey="{{ config('settings.captcha_site_key') }}"></div>
-                                        <div><input type="hidden" name="hiddenRecaptcha" id="hiddenRecaptcha"></div>
-                                        @if ($errors->has('g-recaptcha-response'))
-                                        <div class="text-danger">
-                                            {{ $errors->first('g-recaptcha-response') }}
-                                        </div>
-                                        @endif
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button type="submit" class="btn btn-primary w-100 mt-2">Request a Quote</button>
-                                    </div>
-                                </div>
-                            </form> --}}
                             <form action="{{ route('save-inquiry') }}" method="POST" id="inquiry-form">
                                 @csrf
                             
@@ -191,8 +137,8 @@
                                     </div>
                             
                                     <div class="col-md-6">
-                                        <label for="quantity" class="form-label">Quantity Required</label>
-                                        <input type="text" class="form-control form-control-sm" id="quantity" name="quantity" value="{{ old('quantity') }}">
+                                        <label for="qty">Quantity (optional)</label>
+                                        <input type="number" class="form-control" name="qty" id="qty" value="{{ old('qty') }}">
                                     </div>
                             
                                     <div class="col-md-12">
@@ -214,7 +160,7 @@
                                         <button type="submit" class="btn btn-primary w-100 mt-2">Request a Quote</button>
                                     </div>
                                 </div>
-                            </form>
+                           </form> 
                             
                         </div>
                     </div>

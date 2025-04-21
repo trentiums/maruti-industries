@@ -432,59 +432,25 @@
                         </div><!-- Col end -->
                         <div class="col-md-6 text-center text-md-right mt-3 mt-md-0 gap-5">
                             <div
-                                class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end">
-                                <a href="#" class="btn btn-primary mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
-                                    data-bs-target="#callbackModal">
-                                    Request Callback
-                                </a>
-                                <a href="#inquiry-form" class="btn btn-primary mb-2 mb-md-0 me-md-2">
-                                    Send Inquiry
-                                </a>
-                                <a href="https://wa.me/1234567890" target="_blank">
-                                    <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp"
-                                        class="mt-2 mt-md-0" />
-                                </a>
-                            </div>
+                            class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end">
+                            <a href="javascript:void(0)" class="btn btn-primary mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
+                                data-bs-target="#callbackModal">
+                                Request Callback
+                            </a>
+                            <a href="#inquiry-form" class="btn btn-primary mb-2 mb-md-0 me-md-2">
+                                Send Inquiry
+                            </a>
+                            <a href="https://wa.me/1234567890" target="_blank">
+                                <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp"
+                                    class="mt-2 mt-md-0" />
+                            </a>
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--model popu-->
-       {{--  <div class="modal fade enquiry-modal" id="callbackModal" tabindex="-1" role="dialog" aria-hidden="true"
-            data-bs-backdrop="static" data-bs-keyboard="false">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div>
-                            <h5 class="modal-title">Prefer a Call?</h5>
-                        </div>
-
-                        <button type="button" class="custom-close" data-bs-dismiss="modal"
-                            aria-label="Close">✖</button>
-                    </div>
-                    <div class="modal-body">
-                        <form name="form1" id="form1" method="post">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter your name"
-                                    required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone"
-                                    placeholder="Enter your phone number" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Request Callback</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
+      
         @include('front.pop-modal')
     
         @endsection

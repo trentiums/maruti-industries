@@ -61,14 +61,14 @@
                 <span class="help-block">{{ trans('cruds.inquiry.fields.subject_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="subject">{{ trans('cruds.inquiry.fields.product_intrest') }}</label>
-                <input class="form-control {{ $errors->has('product_intrest') ? 'is-invalid' : '' }}" type="text" name="product_intrest" id="product_intrest" value="{{ old('product_intrest', $inquiry->product_intrest) }}">
-                @if($errors->has('product_intrest'))
+                <label for="subject">{{ trans('cruds.inquiry.fields.product_interest') }}</label>
+                <input class="form-control {{ $errors->has('product_interest') ? 'is-invalid' : '' }}" type="text" name="product_intrest" id="product_intrest" value="{{ old('product_interest', $inquiry->product_intrest) }}">
+                @if($errors->has('product_interest'))
                     <div class="invalid-feedback">
-                        {{ $errors->first('product_intrest') }}
+                        {{ $errors->first('product_interest') }}
                     </div>
                 @endif
-                <span class="help-block">{{ trans('cruds.inquiry.fields.product_intrest_helper') }}</span>
+                <span class="help-block">{{ trans('cruds.inquiry.fields.product_interest_helper') }}</span>
             </div>
             <div class="form-group">
                 <label for="subject">{{ trans('cruds.inquiry.fields.qty') }}</label>

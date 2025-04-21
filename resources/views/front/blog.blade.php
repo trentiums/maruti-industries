@@ -42,10 +42,10 @@
                                     <li class="d-flex align-items-center">
                                         <div class="posts-thumb">
                                             @if ($blog->main_image && $blog->main_image->getUrl())
-                                                <a href="#"><img loading="lazy" alt="{{ $blog->title }}"
+                                                <a href="{{ $blog->main_image->getUrl() }}"><img loading="lazy" alt="{{ $blog->title }}"
                                                         src="{{ $blog->main_image->getUrl() }}"></a>
                                             @else
-                                                <a href="#"> <img loading="lazy" alt="img"
+                                                <a href="javascript:void(0)"> <img loading="lazy" alt="img"
                                                         src="{{ asset('assets/images/news/news1.jpg') }}"></a>
                                             @endif
                                         </div>
@@ -190,17 +190,12 @@
                                     <input type="text" class="form-control" id="mobile" name="mobile" maxlength="10" minlength="10" required value="{{ old('mobile') }}">
                                 </div>
                             
+                           
                                 <div class="mb-3">
-                                    <label for="quantity" class="form-label">Quantity Required</label>
-                                    <input type="text" class="form-control" id="quantity" name="quantity" value="{{ old('quantity') }}">
+                                    <label for="qty">Quantity (optional)</label>
+                                    <input type="number" class="form-control" name="qty" id="qty" value="{{ old('qty') }}">
                                 </div>
-                            
-                                {{-- Uncomment if needed
-                                <div class="mb-3">
-                                    <label for="size" class="form-label">Grit Size Needed</label>
-                                    <input type="text" class="form-control" id="size" name="size" value="{{ old('size') }}">
-                                </div>
-                                --}}
+                                
                             
                                 <div class="mb-3">
                                     <label for="description" class="form-label">Message</label>
@@ -457,7 +452,7 @@
                     <div class="col-md-6 text-center text-md-right mt-3 mt-md-0 gap-5">
                         <div
                             class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end">
-                            <a href="#" class="btn btn-primary mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
+                            <a href="javascript:void(0)" class="btn btn-primary mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
                                 data-bs-target="#callbackModal">
                                 Request Callback
                             </a>

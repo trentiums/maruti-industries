@@ -112,9 +112,10 @@
 { data: 'mobile', name: 'mobile' },
 { data: 'email', name: 'email' },
 { data: 'name', name: 'name' },
+{ data: 'subject', name: 'subject' },
 { data: 'product_interest', name: 'product_interest' },
 { data: 'qty', name: 'qty' },
-{ data: 'subject', name: 'subject' },
+
 { data: 'description', name: 'description' },
 { data: 'page_url', name: 'page_url' },
 { data: 'actions', name: '{{ trans('global.actions') }}' }

@@ -285,7 +285,7 @@
                     <div class="col-md-6 text-center text-md-right mt-3 mt-md-0 gap-5">
                         <div
                             class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end">
-                            <a href="#" class="btn btn-primary mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
+                            <a href="javascript:void(0)" class="btn btn-primary mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
                                 data-bs-target="#callbackModal">
                                 Request Callback
                             </a>
