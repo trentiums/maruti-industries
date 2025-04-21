@@ -69,7 +69,7 @@
 
 
 
-                    <div class="comments-form border-box mt-5">
+                    {{-- <div class="comments-form border-box mt-5">
                         <h3 class="title-normal">Ask Us About [Flint Paper / Emery Roll / Sandpaper, etc.]</h3>
 
                         <form role="form" id="inquiry-form">
@@ -136,7 +136,7 @@
                             < <div class="clearfix text-center">
                                 <button class="btn btn-primary" type="submit" aria-label="send-inquiry">Send
                                     Inquiry</button>
-                    </div>
+                    </div> --}}
                 </div>
 
 
@@ -148,4 +148,5 @@
 
         </div>
     </section>
+    @include('front.inquiry')
 @endsection
