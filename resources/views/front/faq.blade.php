@@ -119,9 +119,9 @@
   
     </div>
   </section><!-- Main container end -->
-  
+  @include('front.inquiry')
   <!---inquiry form-->
-  <section id="main-container" class="main-container">
+ {{--  <section id="main-container" class="main-container">
     <div class="container">
   
       <div class="row text-center">
@@ -197,5 +197,5 @@
   
       </div>
     </div>
-  </section>
+  </section> --}}
   @endsection

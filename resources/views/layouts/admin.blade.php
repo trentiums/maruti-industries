@@ -7,12 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <meta name="DC.title" content="VEDANSHICAB" />
-    <meta name="geo.region" content="IN-RJ" />
-    <meta name="geo.placename" content="Rajasthan" />
-    <meta name="geo.position" content="24.5929892;73.7441088" />
-    <meta name="ICBM" content="24.5929892, 73.7441088" />
-
     <title>{{ trans('panel.site_title') }}</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />

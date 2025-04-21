@@ -25,7 +25,7 @@
                 <div class="col-lg-4 order-1 order-lg-0">
                     <div class="sidebar sidebar-left">
                         <!-- Search Bar -->
-                       {{--  <div class="widget">
+                        {{--  <div class="widget">
                             <h3 class="widget-title">Search</h3>
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Search articles…"
@@ -101,45 +101,125 @@
                         </div><!-- Categories end -->
 
                         <!-- Tags -->
-                        <div class="widget">
+                        {{--     <div class="widget">
                             <h3 class="widget-title">Tags</h3>
                             <ul class="arrow nav nav-tabs">
-                                <li><a href="#">EmeryPaper</a></li>
-                                <li><a href="#">Polishing</a></li>
-                                <li><a href="#">AloxideRoll</a></li>
+                                <li>EmeryPaper</li>
+                                <li>Polishing<</li>
+                                <li>AloxideRoll</li>
                             </ul>
-                        </div><!-- Tags end -->
+                        </div> --}}<!-- Tags end -->
 
                         <!-- Inquiry Form -->
                         <div id="inquiry-form" class="widget p-3 border rounded">
                             <h3 class="widget-title">Inquiry Form</h3>
-                            <form action="submit_form.php" method="POST">
+                           {{--   <form action="{{ route('save-inquiry') }}" method="POST">
+                                @csrf
+                                @if ($errors->count() > 0)
+                                    <div class="alert alert-danger alert-block">
+                                        <ul class="list-unstyled">
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+                                <input type="hidden" name="page_url" value="{{ url()->current() }}">
                                 <div class="mb-3">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" required>
+                                    <label for="name" class="form-label">Name<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="name" name="name" required value="{{ old('name') }}">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="email" required value="{{ old('email') }}">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="phone" class="form-label">Phone</label>
-                                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                                    <label for="phone" class="form-label">Phone<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="phone" name="phone" maxlength="10" minlength="10" required value="{{ old('mobile') }}">
                                 </div>
                                 <div class="mb-3">
                                     <label for="quantity" class="form-label">Quantity Required</label>
-                                    <input type="text" class="form-control" id="quantity" name="quantity" required>
+                                    <input type="text" class="form-control" id="quantity" name="quantity">
                                 </div>
-                                <div class="mb-3">
+                                 <div class="mb-3">
                                     <label for="size" class="form-label">Grit Size Needed</label>
                                     <input type="text" class="form-control" id="size" name="size" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                                    <textarea class="form-control" id="message" name="message" rows="3" {{ old('description') }}></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="g-recaptcha" data-sitekey="{{ config('settings.captcha_site_key') }}"></div>
+                                    <div><input type="hidden" name="hiddenRecaptcha" id="hiddenRecaptcha"></div>
+                                    @if ($errors->has('g-recaptcha-response'))
+                                    <div class="text-danger">
+                                        {{ $errors->first('g-recaptcha-response') }}
+                                    </div>
+                                    @endif
                                 </div>
                                 <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
+                            </form>  --}}
+                            <form action="{{ route('save-inquiry') }}" method="POST">
+                                @csrf
+                            
+                                @if ($errors->count() > 0)
+                                    <div class="alert alert-danger alert-block">
+                                        <ul class="list-unstyled">
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+                            
+                                <input type="hidden" name="page_url" value="{{ url()->current() }}">
+                            
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="name" name="name" required value="{{ old('name') }}">
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="email" required value="{{ old('email') }}">
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <label for="mobile" class="form-label">Phone <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="mobile" name="mobile" maxlength="10" minlength="10" required value="{{ old('mobile') }}">
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <label for="quantity" class="form-label">Quantity Required</label>
+                                    <input type="text" class="form-control" id="quantity" name="quantity" value="{{ old('quantity') }}">
+                                </div>
+                            
+                                {{-- Uncomment if needed
+                                <div class="mb-3">
+                                    <label for="size" class="form-label">Grit Size Needed</label>
+                                    <input type="text" class="form-control" id="size" name="size" value="{{ old('size') }}">
+                                </div>
+                                --}}
+                            
+                                <div class="mb-3">
+                                    <label for="description" class="form-label">Message</label>
+                                    <textarea class="form-control" id="description" name="description" rows="3">{{ old('description') }}</textarea>
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <div class="g-recaptcha" data-sitekey="{{ config('settings.captcha_site_key') }}"></div>
+                                    <input type="hidden" name="hiddenRecaptcha" id="hiddenRecaptcha">
+                                    @if ($errors->has('g-recaptcha-response'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('g-recaptcha-response') }}
+                                        </div>
+                                    @endif
+                                </div>
+                            
+                                <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
                             </form>
+                            
                         </div>
                     </div>
                 </div><!-- Sidebar Column end -->
@@ -162,23 +242,23 @@
                                         <span class="post-author">
                                             <i class="far fa-user"></i> Admin
                                         </span>
-                                      
-                                            <span class="post-cat">
-                                                <i class="far fa-folder-open"></i>
-                                            
-                                                @foreach ($blog->blog_categories as $categories)
-                                                
-                                                  {{ $categories->title }}
-                                                    @endforeach
-                                              
-                                            </span>
-                                            <span class="post-meta-date"><i class="far fa-calendar"></i>
-                                                {{ $blog->created_at->format('d M Y') }}</span>
-        
+
+                                        <span class="post-cat">
+                                            <i class="far fa-folder-open"></i>
+
+                                            @foreach ($blog->blog_categories as $categories)
+                                                {{ $categories->title }}
+                                            @endforeach
+
+                                        </span>
+                                        <span class="post-meta-date"><i class="far fa-calendar"></i>
+                                            {{ $blog->created_at->format('d M Y') }}</span>
+
 
                                     </div>
                                     <h1 class="entry-title">
-                                        <a href="{{route('blog',$blog->slug)}}" title="{{$blog->title}}">"{{ $blog->title }}</a>
+                                        <a href="{{ route('blog', $blog->slug) }}"
+                                            title="{{ $blog->title }}">"{{ $blog->title }}</a>
                                     </h1>
                                 </div>
 
@@ -274,7 +354,7 @@
 
             </div>><!-- 3rd post end --> --}}
 
-                   {{-- <nav class="paging" aria-label="Page navigation example">
+                    {{-- <nav class="paging" aria-label="Page navigation example">
                         <ul class="pagination">
 
                             <li class="page-item"><a class="page-link" href="#"><i
@@ -287,45 +367,50 @@
                         </ul>
                     </nav>  --}}
                     @if ($blogs->lastPage() > 1)
-    <nav class="paging" aria-label="Page navigation">
-        <ul class="pagination">
+                        <nav class="paging" aria-label="Page navigation">
+                            <ul class="pagination">
 
-            {{-- Previous Page Link --}}
-            @if ($blogs->onFirstPage())
-                <li class="page-item disabled"><span class="page-link"><i class="fas fa-angle-double-left"></i></span></li>
-            @else
-                <li class="page-item">
-                    <a class="page-link" href="{{ $blogs->previousPageUrl() }}" rel="prev"><i class="fas fa-angle-double-left"></i></a>
-                </li>
-            @endif
+                                {{-- Previous Page Link --}}
+                                @if ($blogs->onFirstPage())
+                                    <li class="page-item disabled"><span class="page-link"><i
+                                                class="fas fa-angle-double-left"></i></span></li>
+                                @else
+                                    <li class="page-item">
+                                        <a class="page-link" href="{{ $blogs->previousPageUrl() }}" rel="prev"><i
+                                                class="fas fa-angle-double-left"></i></a>
+                                    </li>
+                                @endif
 
-            {{-- Pagination Elements --}}
-            @for ($i = 1; $i <= $blogs->lastPage(); $i++)
-                <li class="page-item {{ $blogs->currentPage() == $i ? 'active' : '' }}">
-                    <a class="page-link" href="{{ $blogs->url($i) }}">{{ $i }}</a>
-                </li>
-            @endfor
+                                {{-- Pagination Elements --}}
+                                @for ($i = 1; $i <= $blogs->lastPage(); $i++)
+                                    <li class="page-item {{ $blogs->currentPage() == $i ? 'active' : '' }}">
+                                        <a class="page-link" href="{{ $blogs->url($i) }}">{{ $i }}</a>
+                                    </li>
+                                @endfor
 
-            {{-- Next Page Link --}}
-            @if ($blogs->hasMorePages())
-                <li class="page-item">
-                    <a class="page-link" href="{{ $blogs->nextPageUrl() }}" rel="next"><i class="fas fa-angle-double-right"></i></a>
-                </li>
-            @else
-                <li class="page-item disabled"><span class="page-link"><i class="fas fa-angle-double-right"></i></span></li>
-            @endif
+                                {{-- Next Page Link --}}
+                                @if ($blogs->hasMorePages())
+                                    <li class="page-item">
+                                        <a class="page-link" href="{{ $blogs->nextPageUrl() }}" rel="next"><i
+                                                class="fas fa-angle-double-right"></i></a>
+                                    </li>
+                                @else
+                                    <li class="page-item disabled"><span class="page-link"><i
+                                                class="fas fa-angle-double-right"></i></span></li>
+                                @endif
 
-        </ul>
-    </nav>
-@endif
+                            </ul>
+                        </nav>
+                    @endif
 
 
-        </div><!-- Container end -->
+                </div><!-- Container end -->
 
 
     </section>
     <!--call back form-->
-    <div class="modal fade enquiry-modal" id="callbackModal" tabindex="-1" role="dialog" aria-hidden="true"
+
+    {{--     <div class="modal fade enquiry-modal" id="callbackModal" tabindex="-1" role="dialog" aria-hidden="true"
         data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -358,7 +443,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!---request quote-->
     <section class="call-to-action no-padding">
         <div class="container">
@@ -370,22 +455,24 @@
                         </div>
                     </div><!-- Col end -->
                     <div class="col-md-6 text-center text-md-right mt-3 mt-md-0 gap-5">
-
-                        <div class="call-to-action-btn">
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                        <div
+                            class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end">
+                            <a href="#" class="btn btn-primary mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
                                 data-bs-target="#callbackModal">
-                                Request a Callback
+                                Request Callback
                             </a>
-                            <a href="#inquiry-form" class="btn btn-primary">Send Inquiry</a>
+                            <a href="#inquiry-form" class="btn btn-primary mb-2 mb-md-0 me-md-2">
+                                Send Inquiry
+                            </a>
                             <a href="https://wa.me/1234567890" target="_blank">
-                                <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp">
+                                <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp"
+                                    class="mt-2 mt-md-0" />
                             </a>
-
-
                         </div>
                     </div>
                 </div>
             </div>
         </div><!-- Container end -->
     </section>
+    @include('front.pop-modal')
 @endsection

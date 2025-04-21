@@ -21,7 +21,7 @@
     </div>
 
     <!--call back form-->
-    <div class="modal fade enquiry-modal" id="callbackModal" tabindex="-1" aria-hidden="true">
+    {{-- <div class="modal fade enquiry-modal" id="callbackModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -50,14 +50,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
 
 
     <!--call back end-->
 
-    <section id="ts-features" class="ts-features pb-2">
+ {{--    <section id="ts-features" class="ts-features pb-2">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
@@ -76,10 +76,10 @@
                         @endif   
                     </div>
                         <div class="d-flex">
-                           {{--  <div class="ts-service-box-img">
+                            <div class="ts-service-box-img">
                                 <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon1.png') }}"
                                     alt="service-icon" />
-                            </div> --}}
+                            </div>
                             <div class="ts-service-info">
                                 <h3 class="service-box-title"><a href="{{route('product', $product->slug)}}"
                                     title="{{$product->title}}"> {{ $product->title }} </a></h3>
@@ -96,11 +96,11 @@
                 @endforeach
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
 
-    <section id="ts-service-area" class="ts-service-area pb-0">
+   {{--  <section id="ts-service-area" class="ts-service-area pb-0">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
@@ -112,16 +112,17 @@
 
             <div class="row">
                 <div class="col-lg-4 mt-5">
+                    <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
                     <div class="ts-service-box d-flex">
                         <div class="ts-service-box-img">
                             <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon1.png') }}"
                                 alt="service-icon">
                         </div>
                         <div class="ts-service-box-info">
-                            <h3 class="service-box-title"><a href="#"> Industrial-Grade Abrasive Materials</a></h3>
+                            <h3 class="service-box-title"> Industrial-Grade Abrasive Materials</a></h3>
 
                         </div>
-                    </div><!-- Service 1 end -->
+                    </div>
 
                     <div class="ts-service-box d-flex">
                         <div class="ts-service-box-img">
@@ -129,10 +130,10 @@
                                 alt="service-icon">
                         </div>
                         <div class="ts-service-box-info">
-                            <h3 class="service-box-title"><a href="#">Bulk Supply Across India</a></h3>
+                            <h3 class="service-box-title">Bulk Supply Across India</a></h3>
 
                         </div>
-                    </div><!-- Service 2 end -->
+                    </div>
 
                     <div class="ts-service-box d-flex">
                         <div class="ts-service-box-img">
@@ -140,11 +141,12 @@
                                 alt="service-icon">
                         </div>
                         <div class="ts-service-box-info">
-                            <h3 class="service-box-title"><a href="#">Custom Sizes & Grit Options</a></h3>
+                            <h3 class="service-box-title">Custom Sizes & Grit Options</a></h3>
 
                         </div>
                     </div>
 
+                    </div>
                 </div>
 
                 <div class="col-lg-4 text-center">
@@ -160,10 +162,10 @@
                                     alt="service-icon">
                             </div>
                             <div class="ts-service-box-info">
-                                <h3 class="service-box-title"><a href="#">Quick Turnaround Times</a></h3>
+                                <h3 class="service-box-title">Quick Turnaround Times</a></h3>
 
                             </div>
-                        </div><!-- Service 4 end -->
+                        </div>
 
                         <div class="ts-service-box d-flex">
                             <div class="ts-service-box-img">
@@ -171,18 +173,18 @@
                                     src="{{ asset('assets/images/icon-image/service-icon5.png') }}"alt="service-icon">
                             </div>
                             <div class="ts-service-box-info">
-                                <h3 class="service-box-title"><a href="#">Technical Support Available</a></h3>
+                                <h3 class="service-box-title">Technical Support Available</a></h3>
 
                             </div>
-                        </div><!-- Service 5 end -->
+                        </div>
 
                         <div class="ts-service-box d-flex">
                             <div class="ts-service-box-img">
                                 <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon6.png') }}"
-                                    alt="service-icon")">
+                                    alt="service-icon">
                             </div>
                             <div class="ts-service-box-info">
-                                <h3 class="service-box-title"><a href="#">Safety Management</a></h3>
+                                <h3 class="service-box-title">Safety Management</a></h3>
 
                             </div>
                         </div>
@@ -192,11 +194,142 @@
 
         </div>
 
-    </section><!-- Service end -->
+    </section> --}}
+    <section id="ts-features" class="ts-features pb-2">
+        <div class="container">
+            <!-- Section Heading -->
+            <div class="row text-center mb-4">
+                <div class="col-12">
+                    <h1 class="section-sub-title">Our Core Abrasive Products</h1>
+                </div>
+            </div>
+    
+            <!-- Products Grid -->
+            <div class="row g-4">
+                @foreach($products as $product)
+                <div class="col-lg-4 col-md-6">
+                    <div class="ts-service-box h-100 d-flex flex-column">
+                        
+                        <!-- Product Image -->
+                        <div class="ts-service-image-wrapper mb-3">
+                            @if($product->main_image)
+                                <img loading="lazy" class="w-100" src="{{ $product->main_image->getUrl() }}" alt="{{ $product->title }}">
+                            @else
+                                <img class="w-100" src="{{ asset('assets/images/services/service2.jpg') }}" alt="{{ $product->title }}">
+                            @endif
+                        </div>
+    
+                        <!-- Inline Content -->
+                        <div class="d-flex align-items-start">
+                            {{-- Optional Icon Section --}}
+                            {{-- 
+                            <div class="ts-service-box-img me-3">
+                                <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon1.png') }}" alt="icon" />
+                            </div>
+                            --}}
+                            <div class="ts-service-info">
+                                <h3 class="service-box-title mb-2">
+                                    <a href="{{ route('product', $product->slug) }}" title="{{ $product->title }}">
+                                        {{ $product->title }}
+                                    </a>
+                                </h3>
+                                <p class="mb-3">{{ $product->sort_description }}</p>
+                                <a class="btn btn-primary" href="{{ route('product', $product->slug) }}" title="{{ $product->title }}">
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    
+    <!-- Service end -->
+    <section id="ts-service-area" class="ts-service-area pb-0">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h3 class="section-sub-title">Why work with us?</h3>
+                </div>
+            </div>
+    
+            <div class="row align-items-center py-5">
+                <!-- Left Column -->
+                <div class="col-lg-4 mt-4">
+                    <div class="ts-service-box d-flex mb-4">
+                        <div class="ts-service-box-img">
+                            <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon1.png') }}" alt="service-icon">
+                        </div>
+                        <div class="ts-service-box-info ps-3">
+                            <h3 class="service-box-title">Industrial-Grade Abrasive Materials</h3>
+                        </div>
+                    </div>
+    
+                    <div class="ts-service-box d-flex mb-4">
+                        <div class="ts-service-box-img">
+                            <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon2.png') }}" alt="service-icon">
+                        </div>
+                        <div class="ts-service-box-info ps-3">
+                            <h3 class="service-box-title">Bulk Supply Across India</h3>
+                        </div>
+                    </div>
+    
+                    <div class="ts-service-box d-flex mb-4">
+                        <div class="ts-service-box-img">
+                            <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon3.png') }}" alt="service-icon">
+                        </div>
+                        <div class="ts-service-box-info ps-3">
+                            <h3 class="service-box-title">Custom Sizes & Grit Options</h3>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Center Image -->
+                <div class="col-lg-4 text-center mt-4 mb-4">
+                    <img loading="lazy" class="img-fluid" src="{{ asset('assets/images/services/service-center.jpg') }}"
+                        alt="service-avatar-image" height="100px" width="200px">
+                </div>
+    
+                <!-- Right Column -->
+                <div class="col-lg-4 mt-4">
+                    <div class="ts-service-box d-flex mb-4">
+                        <div class="ts-service-box-img">
+                            <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon4.png') }}" alt="service-icon">
+                        </div>
+                        <div class="ts-service-box-info ps-3">
+                            <h3 class="service-box-title">Quick Turnaround Times</h3>
+                        </div>
+                    </div>
+    
+                    <div class="ts-service-box d-flex mb-4">
+                        <div class="ts-service-box-img">
+                            <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon5.png') }}" alt="service-icon">
+                        </div>
+                        <div class="ts-service-box-info ps-3">
+                            <h3 class="service-box-title">Technical Support Available</h3>
+                        </div>
+                    </div>
+    
+                    <div class="ts-service-box d-flex mb-4">
+                        <div class="ts-service-box-img">
+                            <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon6.png') }}" alt="service-icon">
+                        </div>
+                        <div class="ts-service-box-info ps-3">
+                            <h3 class="service-box-title">Safety Management</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!--inquiry form-->
-
-    <!--end inquiry-->
-    <section id="main-container" class="main-container">
+    @include('front.inquiry')
+  
+    {{--   <section id="main-container" class="main-container">
         <div class="container">
 
             <div class="row text-center">
@@ -273,7 +406,7 @@
 
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section id="facts" class="facts-area dark-bg py-5">
         <div class="container">
@@ -285,7 +418,7 @@
             <div class="facts-wrapper">
                 <div class="row justify-content-center">
 
-                    <!-- Item 1 -->
+                    
                     <div class="col-lg-2 col-md-4 col-sm-6 ts-facts mb-4">
                         <div class="ts-facts-img mb-2">
                             <img loading="lazy" src="{{ asset('assets/images/icon-image/fact1.png') }}"
@@ -296,7 +429,7 @@
                         </div>
                     </div>
 
-                    <!-- Item 2 -->
+                  
                     <div class="col-lg-2 col-md-4 col-sm-6 ts-facts mb-4">
                         <div class="ts-facts-img mb-2">
                             <img loading="lazy" src="{{ asset('assets/images/icon-image/fact2.png') }}"
@@ -307,7 +440,7 @@
                         </div>
                     </div>
 
-                    <!-- Item 3 -->
+               
                     <div class="col-lg-2 col-md-4 col-sm-6 ts-facts mb-4">
                         <div class="ts-facts-img mb-2">
                             <img loading="lazy" src="{{ asset('assets/images/icon-image/fact3.png') }}"
@@ -318,7 +451,7 @@
                         </div>
                     </div>
 
-                    <!-- Item 4 -->
+                   
                     <div class="col-lg-2 col-md-4 col-sm-6 ts-facts mb-4">
                         <div class="ts-facts-img mb-2">
                             <img loading="lazy" src="{{ asset('assets/images/icon-image/fact4.png') }}"
@@ -329,7 +462,7 @@
                         </div>
                     </div>
 
-                    <!-- Item 5 (NEW) -->
+                
                     <div class="col-lg-2 col-md-4 col-sm-6 ts-facts mb-4">
                         <div class="ts-facts-img mb-2">
                             <img loading="lazy" src="{{ asset('assets/images/icon-image/fact4.png') }}"
@@ -340,7 +473,7 @@
                         </div>
                     </div>
 
-                    <!-- Item 6 (Optional Bonus Example) -->
+                   
                     <div class="col-lg-2 col-md-4 col-sm-6 ts-facts mb-4">
                         <div class="ts-facts-img mb-2">
                             <img loading="lazy" src="{{ asset('assets/images/icon-image/fact4.png') }}"
@@ -432,142 +565,136 @@
                 </div> --}}
 
             </div>
-        </div><!-- Conatiner end -->
+        </div>
     </section>
     <!--blog end-->
     <section class="content  no-padding mb-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h3 class="column-title">What Our Clients Say</h3>
-
-                    <div id="testimonial-slide" class="testimonial-slide">
-                        <div class="item">
-                            <div class="quote-item">
-                                <span class="quote-text">
-                                    Question ran over her cheek When she reached the first hills of the Italic Mountains,
-                                    she had a last
-                                    view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
-                                    Village and the
-                                    subline of her own road.
-                                </span>
-
-                                <div class="quote-item-footer">
-                                    <img loading="lazy" class="testimonial-thumb"
-                                        src="{{ asset('assets/images/clients/testimonial1.png') }}" alt="testimonial">
-                                    <div class="quote-item-info">
-                                        <h3 class="quote-author">Gabriel Denis</h3>
-                                        <span class="quote-subtext">Chairman, OKT</span>
-                                    </div>
-                                </div>
-                            </div><!-- Quote item end -->
-                        </div>
-                        <!--/ Item 1 end -->
-
-                        <div class="item">
-                            <div class="quote-item">
-                                <span class="quote-text">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci
-                                    done idunt ut
-                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitoa tion
-                                    ullamco laboris
-                                    nisi aliquip consequat.
-                                </span>
-
-                                <div class="quote-item-footer">
-                                    <img loading="lazy" class="testimonial-thumb"
-                                        src="{{ asset('assets/images/clients/testimonial2.png') }}" alt="testimonial">
-                                    <div class="quote-item-info">
-                                        <h3 class="quote-author">Weldon Cash</h3>
-                                        <span class="quote-subtext">CFO, First Choice</span>
-                                    </div>
-                                </div>
-                            </div><!-- Quote item end -->
-                        </div>
-                        <!--/ Item 2 end -->
-
-                        <div class="item">
-                            <div class="quote-item">
-                                <span class="quote-text">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci
-                                    done idunt ut
-                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitoa tion
-                                    ullamco laboris
-                                    nisi ut commodo consequat.
-                                </span>
-
-                                <div class="quote-item-footer">
-                                    <img loading="lazy" class="testimonial-thumb"
-                                        src="{{ asset('assets/images/clients/testimonial3.png') }}" alt="testimonial">
-                                    <div class="quote-item-info">
-                                        <h3 class="quote-author">Minter Puchan</h3>
-                                        <span class="quote-subtext">Director, AKT</span>
-                                    </div>
-                                </div>
-                            </div><!-- Quote item end -->
-                        </div>
-                        <!--/ Item 3 end -->
-
+          <div class="row">
+            <div class="col-lg-6">
+              <h3 class="column-title">What Our Clients Say</h3>
+  
+              <div id="testimonial-slide" class="testimonial-slide">
+                <div class="item">
+                  <div class="quote-item">
+                    <span class="quote-text">
+                      Question ran over her cheek When she reached the first hills of the Italic Mountains, she had a last
+                      view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the
+                      subline of her own road.
+                    </span>
+  
+                    <div class="quote-item-footer">
+                      <img loading="lazy" class="testimonial-thumb" src="images/clients/testimonial1.png"
+                        alt="testimonial">
+                      <div class="quote-item-info">
+                        <h3 class="quote-author">Gabriel Denis</h3>
+                        <span class="quote-subtext">Chairman, OKT</span>
+                      </div>
                     </div>
-                    <!--/ Testimonial carousel end-->
-                </div><!-- Col end -->
-
-                <div class="col-lg-6 mt-5 mt-lg-0">
-
-                    <h3 class="column-title">Happy Clients</h3>
-
-                    <div class="row all-clients">
-                        <div class="col-sm-4 col-6">
-                            <figure class="clients-logo">
-                                <a href="#!"><img loading="lazy" class="img-fluid"
-                                        src="{{ asset('assets/images/clients/client1.png') }}" alt="clients-logo" /></a>
-                            </figure>
-                        </div><!-- Client 1 end -->
-
-                        <div class="col-sm-4 col-6">
-                            <figure class="clients-logo">
-                                <a href="#!"><img loading="lazy" class="img-fluid"
-                                        src="{{ asset('assets/images/clients/client2.png') }}" alt="clients-logo" /></a>
-                            </figure>
-                        </div><!-- Client 2 end -->
-
-                        <div class="col-sm-4 col-6">
-                            <figure class="clients-logo">
-                                <a href="#!"><img loading="lazy" class="img-fluid"
-                                        src="{{ asset('assets/images/clients/client3.png') }}" alt="clients-logo" /></a>
-                            </figure>
-                        </div><!-- Client 3 end -->
-
-                        <div class="col-sm-4 col-6">
-                            <figure class="clients-logo">
-                                <a href="#!"><img loading="lazy" class="img-fluid"
-                                        src="{{ asset('assets/images/clients/client4.png') }}" alt="clients-logo" /></a>
-                            </figure>
-                        </div><!-- Client 4 end -->
-
-                        <div class="col-sm-4 col-6">
-                            <figure class="clients-logo">
-                                <a href="#!"><img loading="lazy" class="img-fluid"
-                                        src="{{ asset('assets/images/clients/client5.png') }}" alt="clients-logo" /></a>
-                            </figure>
-                        </div><!-- Client 5 end -->
-
-                        <div class="col-sm-4 col-6">
-                            <figure class="clients-logo">
-                                <a href="#!"><img loading="lazy" class="img-fluid"
-                                        src="{{ asset('assets/images/clients/client6.png') }}" alt="clients-logo" /></a>
-                            </figure>
-                        </div><!-- Client 6 end -->
-
-                    </div><!-- Clients row end -->
-
-                </div><!-- Col end -->
-
-            </div>
-            <!--/ Content row end -->
+                  </div><!-- Quote item end -->
+                </div>
+                <!--/ Item 1 end -->
+  
+                <div class="item">
+                  <div class="quote-item">
+                    <span class="quote-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitoa tion ullamco laboris
+                      nisi aliquip consequat.
+                    </span>
+  
+                    <div class="quote-item-footer">
+                      <img loading="lazy" class="testimonial-thumb" src="images/clients/testimonial2.png"
+                        alt="testimonial">
+                      <div class="quote-item-info">
+                        <h3 class="quote-author">Weldon Cash</h3>
+                        <span class="quote-subtext">CFO, First Choice</span>
+                      </div>
+                    </div>
+                  </div><!-- Quote item end -->
+                </div>
+                <!--/ Item 2 end -->
+  
+                <div class="item">
+                  <div class="quote-item">
+                    <span class="quote-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitoa tion ullamco laboris
+                      nisi ut commodo consequat.
+                    </span>
+  
+                    <div class="quote-item-footer">
+                      <img loading="lazy" class="testimonial-thumb" src="images/clients/testimonial3.png"
+                        alt="testimonial">
+                      <div class="quote-item-info">
+                        <h3 class="quote-author">Minter Puchan</h3>
+                        <span class="quote-subtext">Director, AKT</span>
+                      </div>
+                    </div>
+                  </div><!-- Quote item end -->
+                </div>
+                <!--/ Item 3 end -->
+  
+              </div>
+              <!--/ Testimonial carousel end-->
+            </div><!-- Col end -->
+  
+            <div class="col-lg-6 mt-5 mt-lg-0">
+  
+              <h3 class="column-title">Happy Clients</h3>
+  
+              <div class="row all-clients">
+                <div class="col-sm-4 col-6">
+                  <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client1.png"
+                        alt="clients-logo" /></a>
+                  </figure>
+                </div><!-- Client 1 end -->
+  
+                <div class="col-sm-4 col-6">
+                  <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client2.png"
+                        alt="clients-logo" /></a>
+                  </figure>
+                </div><!-- Client 2 end -->
+  
+                <div class="col-sm-4 col-6">
+                  <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client3.png"
+                        alt="clients-logo" /></a>
+                  </figure>
+                </div><!-- Client 3 end -->
+  
+                <div class="col-sm-4 col-6">
+                  <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client4.png"
+                        alt="clients-logo" /></a>
+                  </figure>
+                </div><!-- Client 4 end -->
+  
+                <div class="col-sm-4 col-6">
+                  <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client5.png"
+                        alt="clients-logo" /></a>
+                  </figure>
+                </div><!-- Client 5 end -->
+  
+                <div class="col-sm-4 col-6">
+                  <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client6.png"
+                        alt="clients-logo" /></a>
+                  </figure>
+                </div><!-- Client 6 end -->
+  
+              </div><!-- Clients row end -->
+  
+            </div><!-- Col end -->
+  
+          </div>
+          <!--/ Content row end -->
         </div>
         <!--/ Container end -->
-    </section><!-- Content end -->
+      </section>
     <!--/ News end -->
     <section class="call-to-action no-padding">
         <div class="container">
@@ -612,4 +739,5 @@
             </div><!-- Action style box -->
         </div><!-- Container end -->
     </section>
-@endsection
+    @include('front.pop-modal')
+    @endsection

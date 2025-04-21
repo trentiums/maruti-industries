@@ -37,7 +37,7 @@
 @include('partials.front.footer')
 <!-- Javascript Files
  -->
-
+ <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <!-- initialize jQuery Library -->
   <script src="{{asset('assets/plugins/jQuery/jquery.min.js')}}"></script>
   <!-- Bootstrap jQuery -->

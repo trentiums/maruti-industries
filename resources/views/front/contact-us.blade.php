@@ -33,83 +33,177 @@
                 <div class="col-md-12">
 
 
-                    <form id="inquiry-form" action="#" method="post" role="form">
+                  {{--   <form id="inquiry-form" action="{{ route('save-inquiry') }}" method="post" role="form">
+                        @csrf
+                        @if ($errors->count() > 0)
+                            <div class="alert alert-danger alert-block">
+                                <ul class="list-unstyled">
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                    
+                        <input type="hidden" name="page_url" value="{{ url()->current() }}">
                         <div class="error-container"></div>
-
+                    
                         <div class="row">
-                        
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="name">Name <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control form-control-name" id="name"
-                                        name="name" required>
+                                    <input type="text" class="form-control form-control-name" id="name" name="name" required value="{{ old('name') }}">
                                 </div>
                             </div>
-
+                    
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="form-group">
                                     <label for="email">Email <span class="text-danger">*</span></label>
-                                    <input type="email" class="form-control form-control-email" id="email"
-                                        name="email" required>
+                                    <input type="email" class="form-control form-control-email" id="email" name="email" required value="{{ old('email') }}">
                                 </div>
                             </div>
-
-
-                          
+                    
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="phone">Phone Number <span class="text-danger">*</span></label>
-                                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                                    <input type="text" class="form-control" id="phone" name="phone" maxlength="10" minlength="10" required value="{{ old('mobile') }}">
                                 </div>
                             </div>
                         </div>
-
+                    
                         <div class="row">
-                           
+                          
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="company">Company Name</label>
-                                    <input type="text" class="form-control" id="company" name="company">
-                                </div>
-                            </div>
-
-                         
-                            <div class="col-md-6 mt-2">
                                 <div class="form-group">
                                     <label for="subject">Subject <span class="text-danger">*</span></label>
                                     <select class="form-control" id="subject" name="subject" required>
                                         <option value="">-- Select Subject --</option>
-                                        <option value="General Inquiry">General Inquiry</option>
-                                        <option value="Request a Quote">Request a Quote</option>
-                                        <option value="Request Callback">Request Callback</option>
+                                        <option value="General Inquiry" {{ old('subject') == 'General Inquiry' ? 'selected' : '' }}>General Inquiry</option>
+                                        <option value="Request a Quote" {{ old('subject') == 'Request a Quote' ? 'selected' : '' }}>Request a Quote</option>
+                                        <option value="Request Callback" {{ old('subject') == 'Request Callback' ? 'selected' : '' }}>Request Callback</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="subject">Subject <span class="text-danger">*</span></label>
+                                    <select class="form-control" id="subject" name="subject" required>
+                                        <option value="">-- Select Subject --</option>
+                                        <option value="General Inquiry" {{ old('subject') == 'General Inquiry' ? 'selected' : '' }}>General Inquiry</option>
+                                        <option value="Request a Quote" {{ old('subject') == 'Request a Quote' ? 'selected' : '' }}>Request a Quote</option>
+                                        <option value="Request Callback" {{ old('subject') == 'Request Callback' ? 'selected' : '' }}>Request Callback</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
+                    
 
-                      
-                        <div class="form-group">
-                            <label for="product">Product of Interest</label>
-                            <select class="form-control" id="product" name="product">
-                                <option value="">-- Optional --</option>
-                                <option value="Flint Paper">Flint Paper</option>
-                                <option value="Sandpaper">Sandpaper</option>
-                                <option value="Emery Paper">Emery Paper</option>
-                                <option value="Aloxide Roll">Aloxide Roll</option>
-                            </select>
-                        </div>
-
-                        
+                    
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea class="form-control form-control-message" name="message" id="message" rows="6" required></textarea>
+                            <textarea class="form-control form-control-message" name="message" id="message" rows="6" required>{{ old('message') }}</textarea>
                         </div>
-
-                        
+                        <div class="col-lg-12">
+                            <div class="g-recaptcha" data-sitekey="{{ config('settings.captcha_site_key') }}"></div>
+                            <div><input type="hidden" name="hiddenRecaptcha" id="hiddenRecaptcha"></div>
+                            @if ($errors->has('g-recaptcha-response'))
+                            <div class="text-danger">
+                                {{ $errors->first('g-recaptcha-response') }}
+                            </div>
+                            @endif
+                        </div>
+                        <div class="text-right mt-3">
+                            <button class="btn btn-primary solid blank" type="submit">Send Message</button>
+                        </div>
+                    </form> --}}
+                    <form id="inquiry-form" action="{{ route('save-inquiry') }}" method="post" role="form">
+                        @csrf
+                    
+                        @if ($errors->count() > 0)
+                            <div class="alert alert-danger alert-block">
+                                <ul class="list-unstyled">
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                    
+                        <input type="hidden" name="page_url" value="{{ url()->current() }}">
+                        <div class="error-container"></div>
+                    
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="name">Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="name" name="name" required value="{{ old('name') }}">
+                                </div>
+                            </div>
+                    
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="email">Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="email" required value="{{ old('email') }}">
+                                </div>
+                            </div>
+                    
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="mobile">Phone Number <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="mobile" name="mobile" maxlength="10" minlength="10" required value="{{ old('mobile') }}">
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="subject">Subject <span class="text-danger">*</span></label>
+                                    <select class="form-control" id="subject" name="subject" required>
+                                        <option value="">-- Select Subject --</option>
+                                        <option value="General Inquiry" {{ old('subject') == 'General Inquiry' ? 'selected' : '' }}>General Inquiry</option>
+                                        <option value="Request a Quote" {{ old('subject') == 'Request a Quote' ? 'selected' : '' }}>Request a Quote</option>
+                                        <option value="Request Callback" {{ old('subject') == 'Request Callback' ? 'selected' : '' }}>Request Callback</option>
+                                    </select>
+                                </div>
+                            </div>
+                    
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="product_interest">Product of Interest</label>
+                                    <select class="form-control" name="product_interest" id="product_interest" required>
+                                        <option value="">-- Select Product --</option>
+                                        <option value="Flint Paper" {{ old('product_interest') == 'Flint Paper' ? 'selected' : '' }}>Flint Paper</option>
+                                        <option value="Sandpaper Sheets" {{ old('product_interest') == 'Sandpaper Sheets' ? 'selected' : '' }}>Sandpaper Sheets</option>
+                                        <option value="Emery Paper" {{ old('product_interest') == 'Emery Paper' ? 'selected' : '' }}>Emery Paper</option>
+                                        <option value="Aloxide Cloth Roll" {{ old('product_interest') == 'Aloxide Cloth Roll' ? 'selected' : '' }}>Aloxide Cloth Roll</option>
+                                        <option value="Emery Roll" {{ old('product_interest') == 'Emery Roll' ? 'selected' : '' }}>Emery Roll</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="description">Message</label>
+                            <textarea class="form-control" name="description" id="description" rows="6" required>{{ old('description') }}</textarea>
+                        </div>
+                    
+                        <div class="col-lg-12">
+                            <div class="g-recaptcha" data-sitekey="{{ config('settings.captcha_site_key') }}"></div>
+                            <input type="hidden" name="hiddenRecaptcha" id="hiddenRecaptcha">
+                            @if ($errors->has('g-recaptcha-response'))
+                                <div class="text-danger">
+                                    {{ $errors->first('g-recaptcha-response') }}
+                                </div>
+                            @endif
+                        </div>
+                    
                         <div class="text-right mt-3">
                             <button class="btn btn-primary solid blank" type="submit">Send Message</button>
                         </div>
                     </form>
+                    
                 </div>
             </div>
         </div>
@@ -151,7 +245,7 @@
                             <p><a href="mailto:{{config('settings.email')}}" title="Email"> {{config('settings.email')}}</a></p>
                         </div>
                     </div>
-                </div><!-- Col 2 end -->
+                </div>
 
                 <div class="col-md-4">
                     <div class="ts-service-box-bg text-center h-100">
@@ -163,7 +257,7 @@
                             <p><a href="tel:{{config('settings.tel_code')}}" title="Mobile Number">{{config('settings.mobile_number')}}</a></p>
                         </div>
                     </div>
-                </div><!-- Col 3 end -->
+                </div>
 
 
             </div><!-- 1st row end -->
@@ -189,16 +283,19 @@
                         </div>
                     </div><!-- Col end -->
                     <div class="col-md-6 text-center text-md-right mt-3 mt-md-0 gap-5">
-                        <div class="call-to-action-btn">
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                        <div
+                            class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end">
+                            <a href="#" class="btn btn-primary mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
                                 data-bs-target="#callbackModal">
-                                Request a Callback
+                                Request Callback
                             </a>
-                            <a href="#inquiry-form" class="btn btn-primary">Send Inquiry</a>
+                            <a href="#inquiry-form" class="btn btn-primary mb-2 mb-md-0 me-md-2">
+                                Send Inquiry
+                            </a>
                             <a href="https://wa.me/1234567890" target="_blank">
-                                <img src="{{asset('assets/images/whatsapp.png')}}" alt="WhatsApp">
+                                <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp"
+                                    class="mt-2 mt-md-0" />
                             </a>
-
                         </div>
                     </div>
                 </div>
@@ -206,7 +303,8 @@
         </div><!-- Container end -->
     </section>
     <!--call back form-->
-    <div class="modal fade enquiry-modal" id="callbackModal" tabindex="-1" role="dialog" aria-hidden="true"
+ 
+    {{--    <div class="modal fade enquiry-modal" id="callbackModal" tabindex="-1" role="dialog" aria-hidden="true"
         data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -239,5 +337,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+    @include('front.pop-modal')
 @endsection

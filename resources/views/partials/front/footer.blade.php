@@ -67,8 +67,8 @@
                 <div
                     class="col-md-6 d-flex justify-content-center justify-content-md-start align-items-center text-center">
                     <div class="copyright-info">
-                        © {{date("Y")}} <a href="https://Marutiindustries.com/" target="_blank" title="vulcanengineer">Maruti
-                            Industries</a>. Developed By <a href="https://www.trentiums.com/" title="Trentium Solution"
+                        © {{date("Y")}}Maruti
+                            Industries. Developed By <a href="https://www.trentiums.com/" title="Trentium Solution"
                             target="_blank">Trentium Solution</a>.
                     </div>
                 </div>
