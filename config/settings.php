@@ -7,9 +7,6 @@ return [
     'address' => 'B, Phase, No 1, 313/8, GIDC Naroda, Ahmedabad, Gujarat 382330 ',
     'tel_code' => '+919974348216',
     'email_copy_rights_text'        => date('Y') . " © " . config('app.name') . ". ALL Rights Reserved.",
-    /* 'cache_data_limit' => [
-        'seconds' => 86400, // 1 Day seconds
-        'days' => 365,  // 1 Year days
-    ],
- */
+   
+ 
 ];

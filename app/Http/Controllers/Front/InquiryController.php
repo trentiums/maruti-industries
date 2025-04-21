@@ -34,9 +34,9 @@ class InquiryController extends Controller
 
             $inquiry = Inquiry::create($userrequest);
             $mail = config('settings.email');
-            $data = $inquiry;
-            return view('email.inquiryMail', compact('data'));
-            //Mail::to($mail)->send(new InquiryMail($inquiry));
+           /*  $data = $inquiry;
+            return view('email.inquiryMail', compact('data')); */
+            Mail::to($mail)->send(new InquiryMail($inquiry));
             $data['meta_title'] = 'We appreciate you getting in touch with us!';
             $data['meta_description'] = 'A member of our staff will get in touch with you as soon as possible.';
             return view('front.thank-you', compact('data'));
@@ -64,11 +64,11 @@ class InquiryController extends Controller
 
             $inquiry = Inquiry::create($userRequest);
 
-            //Mail::to(config('setting.gmail_mail'))->send(new InquiryMail($inquiry));
-
+            $mail = config('settings.email'); 
+            Mail::to($mail)->send(new InquiryMail($inquiry));
             return redirect(url()->previous())->with('success', 'Your inquiry has been successfully submitted. We will contact you soon!');
         } catch (\Exception $e) {
-        
+          
             Log::error($e->getMessage());
             return redirect(url()->previous())->with('error', trans('label.something_went_wrong_error_msg'));
         }
