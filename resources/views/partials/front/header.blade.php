@@ -1,6 +1,18 @@
   <!-- Header start -->
   <style>
-  
+  /* Make dropdown full width below nav item on mobile */
+  @media (min-width: 992px) {
+  .dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    margin-top: 0;
+  }
+}
     </style>
   <header id="header" class="header-two">
     <div class="site-navigation">
@@ -44,7 +56,7 @@
                     </div>
                   </li> --}} 
                   
-                   <li class="nav-item dropdown btn-group">
+                  {{--  <li class="nav-item dropdown btn-group">
     
                     <a class="nav-link" href="{{ route('product') }}">
                         Product
@@ -62,22 +74,38 @@
                         @endforeach
                     </div>
                 
-                </li> 
-              
-              
-                      {{--  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="product.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Product <i class="fa fa-angle-down"></i>
-                      </a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="product_details.html">Flint Paper</a>
-                        <a class="dropdown-item" href="product_details.html">Sandpaper Sheets</a>
-                        <a class="dropdown-item" href="product_details.html">Emery Paper</a>
-                        <a class="dropdown-item" href="product_details.html">Aloxide Cloth Roll</a>
-                        <a class="dropdown-item" href="product_details.html">Emery Roll</a>
-                      </div>
-                    </li>  --}}
-                   <li class="nav-item"><a class="nav-link" href="{{route('about-us')}}">About Us</a></li>
+                </li>   --}}
+                <li class="nav-item dropdown d-none d-sm-block">
+                  <a class="nav-link dropdown-toggle" href="{{route('product')}}">
+                    Product <i class="fa fa-angle-down"></i>
+                  </a>
+                  <div class="dropdown-menu">
+                    @foreach($products as $product)
+                    <a class="dropdown-item" href="{{ route('product', $product->slug) }}"  title="{{ $product->title }}"> {{ $product->title }}</a>
+                 {{--    <a class="dropdown-item" href="product_details.html">Sandpaper Sheets</a>
+                    <a class="dropdown-item" href="product_details.html">Emery Paper</a>
+                    <a class="dropdown-item" href="product_details.html">Aloxide Cloth Roll</a>
+                    <a class="dropdown-item" href="product_details.html">Emery Roll</a> --}}
+                    @endforeach
+                  </div>
+                </li>
+                <li class="nav-item dropdown d-block d-sm-none">
+                    <a class="dropdown-toggle">
+                      Product <i class="fa fa-angle-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      @foreach($products as $product)
+                      <a class="dropdown-item" href="{{ route('product', $product->slug) }}"  title="{{ $product->title }}"> {{ $product->title }}</a>
+                     {{--  <a class="dropdown-item" href="product_details.html">Sandpaper Sheets</a>
+                      <a class="dropdown-item" href="product_details.html">Emery Paper</a>
+                      <a class="dropdown-item" href="product_details.html">Aloxide Cloth Roll</a>
+                      <a class="dropdown-item" href="product_details.html">Emery Roll</a> --}}
+                      @endforeach
+                    </div>
+                  </li>
+
+                   
+             <li class="nav-item"><a class="nav-link" href="{{route('about-us')}}">About Us</a></li>
                   <li class="nav-item"><a class="nav-link" href="{{route('blog')}}">Blog</a></li>
                   <li class="nav-item"><a class="nav-link" href="{{route('faq')}}">FAQs</a></li>
                   <li class="nav-item"><a class="nav-link" href="{{route('contact-us')}}">Contact</a></li>

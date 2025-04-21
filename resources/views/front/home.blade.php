@@ -9,7 +9,7 @@
                         <p class="box-slide-description">Flint Paper, Sandpaper, Emery Paper, Aloxide Rolls, and more –
                             Delivered
                             Across India.</p>
-                        <a href="#" class="btn btn-primary me-2 mb-2" data-bs-toggle="modal"
+                        <a href="javascript:void(0)" class="btn btn-primary me-2 mb-2" data-bs-toggle="modal"
                             data-bs-target="#callbackModal">
                             Request Callback
                         </a>
@@ -584,7 +584,7 @@
                     </span>
   
                     <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="images/clients/testimonial1.png"
+                      <img loading="lazy" class="testimonial-thumb" src="{{asset('assets/images/clients/testimonial1.png')}}"
                         alt="testimonial">
                       <div class="quote-item-info">
                         <h3 class="quote-author">Gabriel Denis</h3>
@@ -604,7 +604,7 @@
                     </span>
   
                     <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="images/clients/testimonial2.png"
+                      <img loading="lazy" class="testimonial-thumb" src="{{asset('assets/images/clients/testimonial2.png')}}"
                         alt="testimonial">
                       <div class="quote-item-info">
                         <h3 class="quote-author">Weldon Cash</h3>
@@ -624,7 +624,7 @@
                     </span>
   
                     <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="images/clients/testimonial3.png"
+                      <img loading="lazy" class="testimonial-thumb" src="{{asset('assets/images/clients/testimonial3.png')}}"
                         alt="testimonial">
                       <div class="quote-item-info">
                         <h3 class="quote-author">Minter Puchan</h3>
@@ -646,42 +646,42 @@
               <div class="row all-clients">
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client1.png"
+                    <a href="javascript:void(0)"><img loading="lazy" class="img-fluid" src="{{asset('assets/images/clients/client1.png')}}"
                         alt="clients-logo" /></a>
                   </figure>
                 </div><!-- Client 1 end -->
   
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client2.png"
+                    <a href="javascript:void(0)"><img loading="lazy" class="img-fluid" src="{{asset('assets/images/clients/client2.png')}}"
                         alt="clients-logo" /></a>
                   </figure>
                 </div><!-- Client 2 end -->
   
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client3.png"
+                    <a href="javascript:void(0)"><img loading="lazy" class="img-fluid" src="{{asset('assets/images/clients/client3.png')}}"
                         alt="clients-logo" /></a>
                   </figure>
                 </div><!-- Client 3 end -->
   
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client4.png"
+                    <a href="javascript:void(0)"><img loading="lazy" class="img-fluid" src="{{asset('assets/images/clients/client4.png')}}"
                         alt="clients-logo" /></a>
                   </figure>
                 </div><!-- Client 4 end -->
   
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client5.png"
+                    <a href="javascript:void(0)"><img loading="lazy" class="img-fluid" src="{{asset('assets/images/clients/client5.png')}}"
                         alt="clients-logo" /></a>
                   </figure>
                 </div><!-- Client 5 end -->
   
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client6.png"
+                    <a href="javascript:void(0)"><img loading="lazy" class="img-fluid" src="{{asset('assets/images/clients/client6.png')}}"
                         alt="clients-logo" /></a>
                   </figure>
                 </div><!-- Client 6 end -->
@@ -721,7 +721,7 @@
                     <div class="col-md-6 text-center text-md-right mt-3 mt-md-0 gap-5">
                         <div
                             class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end">
-                            <a href="#" class="btn btn-primary mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
+                            <a href="javascript:void(0)" class="btn btn-primary mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
                                 data-bs-target="#callbackModal">
                                 Request Callback
                             </a>
