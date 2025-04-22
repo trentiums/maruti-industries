@@ -19,7 +19,6 @@
             </div>
         </div>
     </div>
-
     <!--call back form-->
     {{-- <div class="modal fade enquiry-modal" id="callbackModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -256,7 +255,7 @@
                 </div>
             </div>
     
-            <div class="row align-items-center py-5">
+            <div class="row align-items-center py-0">
                 <!-- Left Column -->
                 <div class="col-lg-4 mt-4">
                     <div class="ts-service-box d-flex mb-4">
@@ -306,7 +305,7 @@
     
                     <div class="ts-service-box d-flex mb-4">
                         <div class="ts-service-box-img">
-                            <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon5.png') }}" alt="service-icon">
+                            <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon6.png') }}" alt="service-icon">
                         </div>
                         <div class="ts-service-box-info ps-3">
                             <h3 class="service-box-title">Technical Support Available</h3>
@@ -493,80 +492,44 @@
 
     <!--blog section-->
 
-    <section id="main-container" class="main-container pb-2 ">
+    <section id="main-container" class="main-container pb-2">
         <div class="container">
-            <div class="row">
-                
-                <div class="row text-center">
-                    <div class="col-12">
-                        <h1 class="section-sub-title">Abrasive Tips & Industry Insights</h1>
-                    </div>
-                </div>
-                @foreach ($blogs as $blog)
-                <div class="col-lg-4 col-md-6 mb-5 mt-5">
-                    <div class="ts-service-box">
-                        <div class="ts-service-image-wrapper">
-                            @if ($blog->main_image && $blog->main_image->getUrl())
-                            <img loading="lazy" class="w-100" src="{{ $blog->main_image->getUrl() }}"
-                                alt="{{ $blog->title }} img">
-                                @else
-                                <img src="{{asset('assets/images/team/team2.jpg')}}" alt="{{ $blog->title }} img">
-                                @endif
-                        </div>
-                        <div class="d-flex">
-
-                            <div class="ts-service-info">
-                                <h2 class="service-box-title"><a href="{{route('blog',$blog->slug)}}" title="{{$blog->title}}">{{$blog->title}}</a></h2>
-                                <p>{{ $blog->sort_description }}</p>
-                                <a class="btn btn-primary mt-2" href="{{route('blog',$blog->slug)}}" title="{{$blog->title}}">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                    </div><!-- Service1 end -->
-                </div>
-                @endforeach
-                {{-- <div class="col-lg-4 col-md-6 mb-5 mt-5">
-                    <div class="ts-service-box">
-                        <div class="ts-service-image-wrapper">
-                            <img loading="lazy" class="w-100" src="{{ asset('assets/images/team/team2') }}.jpg"
-                                alt="service-image">
-                        </div>
-                        <div class="d-flex">
-
-                            <div class="ts-service-info">
-                                <h2 class="service-box-title"><a href="blog.html">Flint Paper</a></h2>
-                                <p>High-adhesion</p>
-                                <a class="btn btn-primary mt-2" href="blog.html" aria-label="service-details">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-5 mt-5">
-                    <div class="ts-service-box">
-                        <div class="ts-service-image-wrapper">
-                            <img loading="lazy" class="w-100" src="{{ asset('assets/images/team/team4') }}.jpg"
-                                alt="service-image">
-                        </div>
-                        <div class="d-flex">
-
-                            <div class="ts-service-info">
-                                <h2 class="service-box-title"><a href="blog.html">Flint Paper</a></h2>
-                                <p>High-adhesion</p>
-                                <a class="btn btn-primary mt-2" href="blog.html" aria-label="service-details">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-
+          <div class="row text-center mb-4">
+            <div class="col-12">
+              <h1 class="section-sub-title">Abrasive Tips & Industry Insights</h1>
             </div>
+          </div>
+      
+          <div class="row">
+            @foreach ($blogs as $blog)
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+              <div class="ts-service-box w-100">
+                <div class="ts-service-image-wrapper">
+                  @if ($blog->main_image && $blog->main_image->getUrl())
+                  <img loading="lazy" class="w-100" src="{{ $blog->main_image->getUrl() }}"
+                    alt="{{ $blog->title }} img">
+                  @else
+                  <img class="w-100" src="{{ asset('assets/images/team/team2.jpg') }}" alt="{{ $blog->title }} img">
+                  @endif
+                </div>
+                <div class="ts-service-info p-3">
+                  <h2 class="service-box-title">
+                    <a href="{{ route('blog', $blog->slug) }}" title="{{ $blog->title }}">
+                      {{ $blog->title }}
+                    </a>
+                  </h2>
+                  <p>{{ $blog->sort_description }}</p>
+                  <a class="btn btn-primary mt-2" href="{{ route('blog', $blog->slug) }}" title="{{ $blog->title }}">
+                    Read More
+                  </a>
+                </div>
+              </div>
+            </div>
+            @endforeach
+          </div>
         </div>
-    </section>
+      </section>
+      
     <!--blog end-->
     <section class="content  no-padding mb-5">
         <div class="container">
@@ -718,7 +681,7 @@
                       
                 </div>
             </div> --><!-- col end -->
-                    <div class="col-md-6 text-center text-md-right mt-3 mt-md-0 gap-5">
+                   {{--  <div class="col-md-6 text-center text-md-right mt-3 mt-md-0 gap-5">
                         <div
                             class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end">
                             <a href="javascript:void(0)" class="btn btn-primary mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
@@ -733,8 +696,26 @@
                                     class="mt-2 mt-md-0" />
                             </a>
                         </div>
+                    </div> --}}
+                    <div class="col-md-6 text-center text-md-right mt-3 mt-md-0">
+                        <div class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end align-items-center gap-2">
+                            <a href="javascript:void(0)" 
+                               class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center"
+                               data-bs-toggle="modal" 
+                               data-bs-target="#callbackModal">
+                                Request Callback
+                            </a>
+                            <a href="#inquiry-form" 
+                               class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center">
+                                Send Inquiry
+                            </a>
+                            <a href="https://wa.me/1234567890" target="_blank" class="d-flex align-items-center">
+                                <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp" style="height: 36px;" />
+                            </a>
+                        </div>
                     </div>
-
+                    
+                    
                 </div><!-- row end -->
             </div><!-- Action style box -->
         </div><!-- Container end -->

@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-12">
 
-                <form id="inquiry-form" action="{{ route('save-inquiry') }}" method="post" role="form">
+                <form id="inquiry-form" class="inquiry-form" action="{{ route('save-inquiry') }}" method="post" role="form">
                     @csrf
                     @if ($errors->count() > 0)
                         <div class="alert alert-danger alert-block">
@@ -81,19 +81,19 @@
                                 </div>
                             </div>
                         </div> --}}
-                        
-                                <div class="form-group">
-                        <label>Select Product </label>
-                        <select class="form-control" name="product" id="product" required>
-                            <option value="" disabled {{ old('product') ? '' : 'selected' }}>Select a product</option>
-                            <option value="Flint Paper" {{ old('product') == 'Flint Paper' ? 'selected' : '' }}>Flint Paper</option>
-                            <option value="Sandpaper Sheets" {{ old('product') == 'Sandpaper Sheets' ? 'selected' : '' }}>Sandpaper Sheets</option>
-                            <option value="Emery Paper" {{ old('product') == 'Emery Paper' ? 'selected' : '' }}>Emery Paper</option>
-                            <option value="Aloxide Cloth Roll" {{ old('product') == 'Aloxide Cloth Roll' ? 'selected' : '' }}>Aloxide Cloth Roll</option>
-                            <option value="Emery Roll" {{ old('product') == 'Emery Roll' ? 'selected' : '' }}>Emery Roll</option>
-                        </select>
-                                </div>
-                          
+                             
+                                    <div class="form-group">
+                                        <label for="product_interest">Product of Interest</label>
+                                        <select class="form-control" name="product_interest" id="product_interest" required>
+                                            <option value="">-- Select Product --</option>
+                                            <option value="Flint Paper" {{ old('product_interest') == 'Flint Paper' ? 'selected' : '' }}>Flint Paper</option>
+                                            <option value="Sandpaper Sheets" {{ old('product_interest') == 'Sandpaper Sheets' ? 'selected' : '' }}>Sandpaper Sheets</option>
+                                            <option value="Emery Paper" {{ old('product_interest') == 'Emery Paper' ? 'selected' : '' }}>Emery Paper</option>
+                                            <option value="Aloxide Cloth Roll" {{ old('product_interest') == 'Aloxide Cloth Roll' ? 'selected' : '' }}>Aloxide Cloth Roll</option>
+                                            <option value="Emery Roll" {{ old('product_interest') == 'Emery Roll' ? 'selected' : '' }}>Emery Roll</option>
+                                        </select>
+                                    </div>
+                                
                         <div class="form-group">
                             <label>Message </label>
                             <textarea class="form-control form-control-message" name="description" id="message"

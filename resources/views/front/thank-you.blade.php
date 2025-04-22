@@ -98,7 +98,7 @@
     }
   </style>
 
-  <!-- Basic Page Needs
+ {{--  <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
   <title>Maruti Industries</title>
@@ -130,7 +130,7 @@
   <link rel="stylesheet" href="plugins/colorbox/colorbox.css">
   <!-- Template styles-->
   <link rel="stylesheet" href="css/style.css">
-</head>
+</head> --}}
 
 <body>
 

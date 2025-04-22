@@ -63,8 +63,8 @@ class HomeController extends Controller
             $blogs = BlogPost::orderBy('id', 'DESC')->paginate(3);
             $latest_blogs = BlogPost::orderBy('created_at', 'desc')->take(3)->get();
             $categoriesWithCounts = BlogCategory::withCount('blogPosts')->get();
-            $data['meta_title'] = 'Vulcan Engineering Blog | Machinery Innovations & Industry Trends';
-            $data['meta_description'] = 'Stay updated with the latest in machinery innovations, engineering breakthroughs, and industry trends from Vulcan Engineering. Read our blog for expert insights.';
+            $data['meta_title'] = ' Maruti Industries Blog |  Tips, Use-Cases & Industry Insights ';
+            $data['meta_description'] = 'Explore expert tips, product use-cases, grit selection guides, and industry applications of abrasives like Flint Paper, Emery Paper, and Aloxide Rolls from Maruti Industries. Stay informed and make the right industrial choices.';
             return view('front.blog', compact('data', 'blogs', 'latest_blogs', 'categoriesWithCounts'));
         }
     }

@@ -65,39 +65,39 @@
                         <div class="card-body">
                             <h4 class="card-title text-center text-warning mb-4">Product Information</h4>
                             {!! $product->features !!}
-                            {{-- <table class="table table-bordered align-middle">
+                          {{--    <table class="table table-bordered align-middle">
 
                                 <tbody class="bg-light text-dark">
                                     <tr>
-                                        <th scope="row" class="bg-warning text-dark">Available Forms</th>
-                                        <td>Roll / Sheet</td>
+                                        <th scope="row" class="bg-warning text-dark">Abrasive Type	</th>
+                                        <td>Aluminum Oxide</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row" class="bg-warning text-dark">Available Sizes</th>
-                                        <td>9" x 11", 230mm x 50m</td>
+                                        <th scope="row" class="bg-warning text-dark">Backing Type</th>
+                                        <td>Cloth (J-Weight, X-Weight)</td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="bg-warning text-dark">Grit Range</th>
-                                        <td>60 to 1200</td>
+                                        <td>36 to 320</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row" class="bg-warning text-dark">Material Type</th>
-                                        <td>Aluminum Oxide / Silicon Carbide</td>
+                                        <th scope="row" class="bg-warning text-dark">Forms Available</th>
+                                        <td>Rolls (standard or custom widths)</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row" class="bg-warning text-dark">Backing</th>
-                                        <td>Paper / Cloth</td>
+                                        <th scope="row" class="bg-warning text-dark">Waterproof</th>
+                                        <td>Light wet use supported</td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="bg-warning text-dark">Bond</th>
-                                        <td>Resin / Glue</td>
+                                        <td>Resin over Resin</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row" class="bg-warning text-dark">Application</th>
-                                        <td>Wood | Metal | Plastic | Paint Removal</td>
+                                        <th scope="row" class="bg-warning text-dark">Application </th>
+                                        <td>Metal, Wood, Paint, Plastics</td>
                                     </tr>
                                 </tbody>
-                            </table> --}}
+                            </table>  --}}
                         </div>
                     </div>
 
@@ -105,7 +105,7 @@
                     <div class="card shadow-sm bg-light">
                         <div class="card-body p-4">
                             <h4 class="text-center text-warning fw-bold mb-4">Inquiry Form</h4>
-                            <form action="{{ route('save-inquiry') }}" method="POST" id="inquiry-form">
+                            <form action="{{ route('save-inquiry') }}" method="POST" id="inquiry-form" class="inquiry-form">
                                 @csrf
                             
                                 @if ($errors->count() > 0)

@@ -128,99 +128,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-
-
-                 {{--    <form id="inquiry-form" action="{{ route('save-inquiry') }}" method="post" role="form">
-                        @csrf
-                    
-                        @if ($errors->count() > 0)
-                            <div class="alert alert-danger alert-block">
-                                <ul class="list-unstyled">
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-                    
-                        <input type="hidden" name="page_url" value="{{ url()->current() }}">
-                        <div class="error-container"></div>
-                    
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="name">Name <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control form-control-name" id="name"
-                                        name="name" required value="{{ old('name') }}">
-                                </div>
-                            </div>
-                    
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="email">Email <span class="text-danger">*</span></label>
-                                    <input type="email" class="form-control form-control-email" id="email"
-                                        name="email" required value="{{ old('email') }}">
-                                </div>
-                            </div>
-                    
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="phone">Phone Number <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="phone" name="phone"
-                                        maxlength="10" minlength="10" required value="{{ old('phone') }}">
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <!-- Subject and Product of Interest side by side -->
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="subject">Subject</label>
-                                    <select class="form-control" id="subject" name="subject" required>
-                                        <option value="">-- Select Subject --</option>
-                                        <option value="General Inquiry" {{ old('subject') == 'General Inquiry' ? 'selected' : '' }}>General Inquiry</option>
-                                        <option value="Request a Quote" {{ old('subject') == 'Request a Quote' ? 'selected' : '' }}>Request a Quote</option>
-                                        <option value="Request Callback" {{ old('subject') == 'Request Callback' ? 'selected' : '' }}>Request Callback</option>
-                                    </select>
-                                </div>
-                            </div>
-                    
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="product">Product of Interest</label>
-                                    <select class="form-control" name="product" id="product" required>
-                                        <option value="" disabled {{ old('product') ? '' : 'selected' }}>Select a product</option>
-                                        <option value="Flint Paper" {{ old('product') == 'Flint Paper' ? 'selected' : '' }}>Flint Paper</option>
-                                        <option value="Sandpaper Sheets" {{ old('product') == 'Sandpaper Sheets' ? 'selected' : '' }}>Sandpaper Sheets</option>
-                                        <option value="Emery Paper" {{ old('product') == 'Emery Paper' ? 'selected' : '' }}>Emery Paper</option>
-                                        <option value="Aloxide Cloth Roll" {{ old('product') == 'Aloxide Cloth Roll' ? 'selected' : '' }}>Aloxide Cloth Roll</option>
-                                        <option value="Emery Roll" {{ old('product') == 'Emery Roll' ? 'selected' : '' }}>Emery Roll</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control form-control-message" name="message" id="message" rows="6" required>{{ old('message') }}</textarea>
-                        </div>
-                    
-                        <div class="col-lg-12">
-                            <div class="g-recaptcha" data-sitekey="{{ config('settings.captcha_site_key') }}"></div>
-                            <div><input type="hidden" name="hiddenRecaptcha" id="hiddenRecaptcha"></div>
-                            @if ($errors->has('g-recaptcha-response'))
-                                <div class="text-danger">
-                                    {{ $errors->first('g-recaptcha-response') }}
-                                </div>
-                            @endif
-                        </div>
-                    
-                        <div class="text-right mt-3">
-                            <button class="btn btn-primary solid blank" type="submit">Send Message</button>
-                        </div>
-                    </form> --}}
-                    <form id="inquiry-form" action="{{ route('save-inquiry') }}" method="POST" role="form">
+                    <form id="inquiry-form" action="{{ route('save-inquiry') }}" method="POST" role="form" class="inquiry-form">
                         @csrf
                     
                         @if ($errors->count() > 0)
@@ -330,19 +238,20 @@
                             <h3 class="action-title">We understand your needs on construction</h3>
                         </div>
                     </div><!-- Col end -->
-                    <div class="col-md-6 text-center text-md-right mt-3 mt-md-0 gap-5">
-                        <div
-                            class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end">
-                            <a href="javascript:void(0)" class="btn btn-primary mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
-                                data-bs-target="#callbackModal">
+                    <div class="col-md-6 text-center text-md-right mt-3 mt-md-0">
+                        <div class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end align-items-center gap-2">
+                            <a href="javascript:void(0)" 
+                               class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center"
+                               data-bs-toggle="modal" 
+                               data-bs-target="#callbackModal">
                                 Request Callback
                             </a>
-                           {{--  <a href="#inquiry-form" class="btn btn-primary mb-2 mb-md-0 me-md-2">
+                            <a href="#inquiry-form" 
+                               class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center">
                                 Send Inquiry
-                            </a> --}}
-                            <a href="https://wa.me/1234567890" target="_blank">
-                                <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp"
-                                    class="mt-2 mt-md-0" />
+                            </a>
+                            <a href="https://wa.me/1234567890" target="_blank" class="d-flex align-items-center">
+                                <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp" style="height: 36px;" />
                             </a>
                         </div>
                     </div>
