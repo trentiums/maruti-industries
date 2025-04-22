@@ -213,118 +213,168 @@
   </div><!-- Banner text end -->
 </div><!-- Banner area end --> 
 
-<section id="main-container" class="main-container pb-2 ">
+
+<!-- <section id="main-container" class="main-container pb-2">
   <div class="container">
+    
+    <div class="row text-center mb-4">
+      <div class="col-12">
+        <h1 class="section-sub-title">Our Abrasive Product Range</h1>
+        <p class="section-title">
+          High-quality abrasive solutions for every industrial and workshop need.
+          Browse our catalog below and request a quote directly from the product detail pages.
+        </p>
+      </div>
+    </div>
+
     <div class="row">
-        <div class="row text-center">
-            <div class="col-12">
-              <h1 class="section-sub-title">Our Abrasive Product Range</h1>
-           <p class="section-title"> High-quality abrasive solutions for every industrial and workshop need. Browse our catalog below and request a quote directly from the product detail pages.</p>
+      @php
+        $products = [
+          ['title' => 'Flint Paper', 'desc' => 'High-adhesion', 'img' => 'service1.jpg', 'icon' => 'service-icon1.png'],
+          ['title' => 'Sandpaper Sheets', 'desc' => 'Waterproof available', 'img' => 'service2.jpg', 'icon' => 'service-icon2.png'],
+          ['title' => 'Emery Paper', 'desc' => 'Polishing solution', 'img' => 'service3.jpg', 'icon' => 'service-icon3.png'],
+          ['title' => 'Aloxide Cloth Roll', 'desc' => 'Ideal for metal use', 'img' => 'service4.jpg', 'icon' => 'service-icon4.png'],
+          ['title' => 'Emery Roll', 'desc' => 'For polishing & buffing', 'img' => 'service5.jpg', 'icon' => 'service-icon5.png'],
+        ];
+      @endphp
+
+      @foreach ($products as $product)
+        <div class="col-lg-4 col-md-6 mb-5">
+          <div class="ts-service-box h-100">
+            <div class="ts-service-image-wrapper mb-3">
+              <img loading="lazy" class="w-100" src="images/services/{{ $product['img'] }}" alt="{{ $product['title'] }}">
             </div>
+            <div class="d-flex">
+              <div class="ts-service-box-img me-3">
+                <img loading="lazy" src="images/icon-image/{{ $product['icon'] }}" alt="icon">
+              </div>
+              <div class="ts-service-info">
+                <h2 class="service-box-title">
+                  <a href="product_details.html">{{ $product['title'] }}</a>
+                </h2>
+                <p>{{ $product['desc'] }}</p>
+                <a class="btn btn-primary mt-2" href="product_details.html">View Details</a>
+              </div>
+            </div>
+          </div>
         </div>
-      <div class="col-lg-4 col-md-6 mb-5 mt-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service1.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon1.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h2 class="service-box-title"><a href="product_details.html">Flint Paper</a></h2>
-                  <p>High-adhesion</p>
-                 <a class="btn btn-primary mt-2" href="product_details.html" aria-label="service-details">
-  View Details
-</a>
-              </div>
-            </div>
-        </div><!-- Service1 end -->
-      </div><!-- Col 1 end -->
+      @endforeach
+    </div>
 
-      <div class="col-lg-4 col-md-6 mb-5 mt-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service2.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon2.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h2 class="service-box-title"><a href="product_details.html">Sandpaper Sheets</a></h2>
-                  <p>Waterproof available</p>
-                  <a class="btn btn-primary mt-2" href="product_details.html" aria-label="service-details">
-                    View Details
-                  </a>
-              </div>
-            </div>
-        </div><!-- Service2 end -->
-      </div><!-- Col 2 end -->
+  </div>
+</section> -->
+<section id="main-container" class="main-container pb-2">
+  <div class="container">
+    
+    <div class="row text-center mb-4">
+      <div class="col-12">
+        <h1 class="section-sub-title">Our Abrasive Product Range</h1>
+        <p class="section-title">
+          High-quality abrasive solutions for every industrial and workshop need.
+          Browse our catalog below and request a quote directly from the product detail pages.
+        </p>
+      </div>
+    </div>
 
-      <div class="col-lg-4 col-md-6 mb-5 mt-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service3.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon3.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h2 class="service-box-title"><a href="product_details.html">Emery Paper</a></h2>
-                  <p>Polishing solution</p>
-                  <a class="btn btn-primary mt-2" href="product_details.html" aria-label="service-details">
-                    View Details
-                  </a>
-              </div>
-            </div>
-        </div><!-- Service3 end -->
-      </div><!-- Col 3 end -->
-
+    <div class="row">
+      <!-- Product 1 -->
       <div class="col-lg-4 col-md-6 mb-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service4.jpg" alt="service-image">
+        <div class="ts-service-box h-100">
+          <div class="ts-service-image-wrapper mb-3">
+            <img loading="lazy" class="w-100" src="images/services/service1.jpg" alt="Flint Paper">
+          </div>
+          <div class="d-flex">
+            <div class="ts-service-box-img me-3">
+              <img loading="lazy" src="images/icon-image/service-icon1.png" alt="icon">
             </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon4.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h2 class="service-box-title"><a href="product_details.html">Aloxide Cloth Roll</a></h2>
-                  <p>Ideal for metal use</p>
-                  <a class="btn btn-primary mt-2" href="product_details.html" aria-label="service-details">
-                    View Details
-                  </a>
-              </div>
+            <div class="ts-service-info">
+              <h2 class="service-box-title"><a href="product_details.html">Flint Paper</a></h2>
+              <p>High-adhesion</p>
+              <a class="btn btn-primary mt-2" href="product_details.html">View Details</a>
             </div>
-        </div><!-- Service1 end -->
-      </div><!-- Col 4 end -->
+          </div>
+        </div>
+      </div>
 
+      <!-- Product 2 -->
       <div class="col-lg-4 col-md-6 mb-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service5.jpg" alt="service-image">
+        <div class="ts-service-box h-100">
+          <div class="ts-service-image-wrapper mb-3">
+            <img loading="lazy" class="w-100" src="images/services/service2.jpg" alt="Sandpaper Sheets">
+          </div>
+          <div class="d-flex">
+            <div class="ts-service-box-img me-3">
+              <img loading="lazy" src="images/icon-image/service-icon2.png" alt="icon">
             </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon5.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h2 class="service-box-title"><a href="product_details.html">Emery Roll</a></h2>
-                  <p>For polishing & buffing</p>
-                  <a class="btn btn-primary mt-2" href="product_details.html" aria-label="service-details">
-                    View Details
-                  </a>
-              </div>
+            <div class="ts-service-info">
+              <h2 class="service-box-title"><a href="product_details.html">Sandpaper Sheets</a></h2>
+              <p>Waterproof available</p>
+              <a class="btn btn-primary mt-2" href="product_details.html">View Details</a>
             </div>
-        </div><!-- Service2 end -->
-      </div><!-- Col 5 end -->
+          </div>
+        </div>
+      </div>
 
-    </div><!-- Main row end -->
-  </div><!-- Conatiner end -->
-</section><!-- Main container end -->
+      <!-- Product 3 -->
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="ts-service-box h-100">
+          <div class="ts-service-image-wrapper mb-3">
+            <img loading="lazy" class="w-100" src="images/services/service3.jpg" alt="Emery Paper">
+          </div>
+          <div class="d-flex">
+            <div class="ts-service-box-img me-3">
+              <img loading="lazy" src="images/icon-image/service-icon3.png" alt="icon">
+            </div>
+            <div class="ts-service-info">
+              <h2 class="service-box-title"><a href="product_details.html">Emery Paper</a></h2>
+              <p>Polishing solution</p>
+              <a class="btn btn-primary mt-2" href="product_details.html">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="ts-service-box h-100">
+          <div class="ts-service-image-wrapper mb-3">
+            <img loading="lazy" class="w-100" src="images/services/service4.jpg" alt="Aloxide Cloth Roll">
+          </div>
+          <div class="d-flex">
+            <div class="ts-service-box-img me-3">
+              <img loading="lazy" src="images/icon-image/service-icon4.png" alt="icon">
+            </div>
+            <div class="ts-service-info">
+              <h2 class="service-box-title"><a href="product_details.html">Aloxide Cloth Roll</a></h2>
+              <p>Ideal for metal use</p>
+              <a class="btn btn-primary mt-2" href="product_details.html">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="ts-service-box h-100">
+          <div class="ts-service-image-wrapper mb-3">
+            <img loading="lazy" class="w-100" src="images/services/service5.jpg" alt="Emery Roll">
+          </div>
+          <div class="d-flex">
+            <div class="ts-service-box-img me-3">
+              <img loading="lazy" src="images/icon-image/service-icon5.png" alt="icon">
+            </div>
+            <div class="ts-service-info">
+              <h2 class="service-box-title"><a href="product_details.html">Emery Roll</a></h2>
+              <p>For polishing & buffing</p>
+              <a class="btn btn-primary mt-2" href="product_details.html">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- End .row -->
+  </div> <!-- End .container -->
+</section>
 
 <!---inquiry section form-->
 <section id="main-container" class="main-container">

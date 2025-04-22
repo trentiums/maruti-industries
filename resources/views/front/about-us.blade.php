@@ -1,7 +1,7 @@
 @extends('layouts.front')
 @section('content')
     <!--breadcrum-->
-    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner/banner1.jpg')"
+    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner/banner1.jpg')">
         <div class="banner-text">
             <div class="container">
                 <div class="row">
@@ -23,6 +23,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Banner area end -->
         <section id="main-container" class="main-container">
             <div class="container">
