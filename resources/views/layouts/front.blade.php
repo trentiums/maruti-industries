@@ -2,7 +2,33 @@
 <html lang="en">
 
 <head>
-
+  <style>
+    .nav-link {
+      position: relative;
+      z-index: 1;
+      transition: color 0.3s ease;
+      color: #000; /* default text color */
+    }
+  
+    .nav-link:hover,
+    .nav-link:focus,
+    .nav-item:hover .nav-link {
+      color: #ffb600 !important; /* Maruti Industries red */
+    }
+  
+    .dropdown-menu {
+      position: absolute;
+      z-index: 1050;
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+  
+    .dropdown-menu a.dropdown-item:hover {
+      background-color: #f8f9fa;
+      color: #ffb600;
+    }
+  </style>
+  
   <meta charset="utf-8">
   <title>{{ $data['meta_title'] }}</title>
 
@@ -13,7 +39,7 @@
   <meta name=generator content="Themefisher Constra HTML Template v1.0">
 
   <!-- Favicon-->
-  <link rel="icon" type="image/png" href="{{asset('assets/images/favicon.png')}}">
+  <link rel="icon" type="image/png" href="{{asset('favicon.png')}}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- CSS-->
   <!-- Bootstrap -->
@@ -21,14 +47,15 @@
   <!-- FontAwesome -->
   <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome/css/all.min.css')}}">
   <!-- Animation -->
-  <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+ <link rel="stylesheet" href="{{asset('assets/css/style.css')}}"> 
   <!-- slick Carousel -->
   <link rel="stylesheet" href="{{asset('assets/plugins/slick/slick.css')}}">
   <link rel="stylesheet" href="{{asset('assets/plugins/slick/slick-theme.css')}}">
   <!-- Colorbox -->
-  <link rel="stylesheet" href="{{asset('assets/plugins/colorbox/colorbox.css')}}">
+  {{-- <link rel="stylesheet" href="{{asset('assets/plugins/colorbox/colorbox.css')}}"> --}}
   <!-- Template styles-->
   <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+
 @yield('styles')
 </head>
 <body>
@@ -88,6 +115,11 @@
   </div><!-- Body inner end -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
+  <!--validation-->
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script src="{{ asset('assets/js/jquery-validation.js') }}"></script>
+
   @yield('scripts')
 </body>
 

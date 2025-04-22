@@ -33,7 +33,7 @@
                                 <img loading="lazy" src="{{ $blog_details->main_image->getUrl() }}" class="img-fluid"
                                     alt="{{ $blog_details->title }} img">
                             @else
-                                <img src="{{ asset('assets/images/news/news2.jpg') }}" alt="{{ $blog->title }} img">
+                                <img src="{{ asset('assets/images/news/news2.jpg') }}" alt="{{ $blog_details->title }} img">
                             @endif
                         </div>
                         <div class="post-body">

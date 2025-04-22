@@ -160,7 +160,7 @@
                                 </div>
                                 <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
                             </form>  --}}
-                            <form action="{{ route('save-inquiry') }}" method="POST">
+                            <form action="{{ route('save-inquiry') }}" method="POST" class="inquiry-form">
                                 @csrf
                             
                                 @if ($errors->count() > 0)
@@ -449,19 +449,20 @@
                             <h3 class="action-title">Request a quote for Flint Paper, Sandpaper, or Emery Rolls today.</h3>
                         </div>
                     </div><!-- Col end -->
-                    <div class="col-md-6 text-center text-md-right mt-3 mt-md-0 gap-5">
-                        <div
-                            class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end">
-                            <a href="javascript:void(0)" class="btn btn-primary mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
-                                data-bs-target="#callbackModal">
+                    <div class="col-md-6 text-center text-md-right mt-3 mt-md-0">
+                        <div class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end align-items-center gap-2">
+                            <a href="javascript:void(0)" 
+                               class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center"
+                               data-bs-toggle="modal" 
+                               data-bs-target="#callbackModal">
                                 Request Callback
                             </a>
-                            <a href="#inquiry-form" class="btn btn-primary mb-2 mb-md-0 me-md-2">
+                            <a href="#inquiry-form" 
+                               class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center">
                                 Send Inquiry
                             </a>
-                            <a href="https://wa.me/1234567890" target="_blank">
-                                <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp"
-                                    class="mt-2 mt-md-0" />
+                            <a href="https://wa.me/1234567890" target="_blank" class="d-flex align-items-center">
+                                <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp" style="height: 36px;" />
                             </a>
                         </div>
                     </div>
