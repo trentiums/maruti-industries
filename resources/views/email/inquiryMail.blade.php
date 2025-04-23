@@ -53,7 +53,7 @@
                                                     style="color: #596167; font-family: Arial, Helvetica, sans-serif; font-size: 13px;">
                                                     <font face="Arial, Helvetica, sans-seri; font-size: 13px;"
                                                         size="3" color="#596167">
-                                                        <img src="{{ url('assets/images/maruti-industries-logo-header.png') }}" height="64px" width="150px"
+                                                        <img src="{{ url('assets/images/maruti-industries-logo-header.png') }}"
                                                             alt="Maruti Industries Image"> </font>
                                                 </a>
                                             </div>
@@ -231,6 +231,60 @@
                                                                 <span
                                                                     style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
                                                                     {{ isset($data['subject']) ? $data['subject'] : 'N/A' }}
+
+                                                                </span>
+                                                            </font>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                @endif
+                                                @if(isset($data['qty']))
+                                                <tr>
+                                                    <th align="center">
+                                                        <div style="line-height: 24px;">
+                                                            <font face="Arial, Helvetica, sans-serif" size="4"
+                                                                color="#57697e" style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                  Quantity
+                                                                </span>
+                                                            </font>
+                                                        </div>
+                                                    </th>
+                                                    <td align="center">
+                                                        <div style="line-height: 24px;">
+                                                            <font face="Arial, Helvetica, sans-serif" size="4"
+                                                                color="#57697e" style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                    {{ isset($data['qty']) ? $data['qty'] : 'N/A' }}
+
+                                                                </span>
+                                                            </font>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                @endif
+                                                @if(isset($data['product_interest']))
+                                                <tr>
+                                                    <th align="center">
+                                                        <div style="line-height: 24px;">
+                                                            <font face="Arial, Helvetica, sans-serif" size="4"
+                                                                color="#57697e" style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                    Product_Interest
+                                                                </span>
+                                                            </font>
+                                                        </div>
+                                                    </th>
+                                                    <td align="center">
+                                                        <div style="line-height: 24px;">
+                                                            <font face="Arial, Helvetica, sans-serif" size="4"
+                                                                color="#57697e" style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                    {{ isset($data['product_interest']) ? $data['product_interest'] : 'N/A' }}
 
                                                                 </span>
                                                             </font>
