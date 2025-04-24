@@ -541,17 +541,14 @@
                 <div class="item">
                   <div class="quote-item">
                     <span class="quote-text">
-                      Question ran over her cheek When she reached the first hills of the Italic Mountains, she had a last
-                      view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the
-                      subline of her own road.
+                        "Maruti Industries has been our go-to for sanding and polishing materials. Their emery papers are perfect for the fine finishing our premium furniture demands. The durability and grit quality are unmatched."
                     </span>
   
                     <div class="quote-item-footer">
                       <img loading="lazy" class="testimonial-thumb" src="{{asset('assets/images/clients/testimonial1.png')}}"
                         alt="testimonial">
                       <div class="quote-item-info">
-                        <h3 class="quote-author">Gabriel Denis</h3>
-                        <span class="quote-subtext">Chairman, OKT</span>
+                        <h3 class="quote-author">Anita Deshmukh</h3>
                       </div>
                     </div>
                   </div><!-- Quote item end -->
@@ -561,17 +558,15 @@
                 <div class="item">
                   <div class="quote-item">
                     <span class="quote-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitoa tion ullamco laboris
-                      nisi aliquip consequat.
+                        "We've used a variety of abrasives in our garage, but nothing matches the performance of Maruti's sandpapers. They cut cleanly and last longer, especially during bodywork and paint prep."
                     </span>
   
                     <div class="quote-item-footer">
                       <img loading="lazy" class="testimonial-thumb" src="{{asset('assets/images/clients/testimonial2.png')}}"
                         alt="testimonial">
                       <div class="quote-item-info">
-                        <h3 class="quote-author">Weldon Cash</h3>
-                        <span class="quote-subtext">CFO, First Choice</span>
+                        <h3 class="quote-author"> Vikram Solanki</h3>
+                      
                       </div>
                     </div>
                   </div><!-- Quote item end -->
@@ -581,17 +576,15 @@
                 <div class="item">
                   <div class="quote-item">
                     <span class="quote-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitoa tion ullamco laboris
-                      nisi ut commodo consequat.
+                        "Surface prep is everything in our line of work, and Maruti Industries delivers every time. Their aloxide rolls are essential in achieving a smooth, weld-ready finish on metal sheets."
                     </span>
   
                     <div class="quote-item-footer">
                       <img loading="lazy" class="testimonial-thumb" src="{{asset('assets/images/clients/testimonial3.png')}}"
                         alt="testimonial">
                       <div class="quote-item-info">
-                        <h3 class="quote-author">Minter Puchan</h3>
-                        <span class="quote-subtext">Director, AKT</span>
+                        <h3 class="quote-author">Suresh Nair</h3>
+               
                       </div>
                     </div>
                   </div><!-- Quote item end -->

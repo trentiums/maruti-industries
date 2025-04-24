@@ -5,8 +5,7 @@
             <div class="row justify-content-between">
                 <div class="col-lg-4 col-md-6 footer-widget footer-about">
                     <a href="{{route('home')}}">
-                        <img class="footer-logo" src="{{asset
-                        ('assets/images/maruti-industries-logo-footer.png')}}" alt="Constra"
+                        <img class="footer-logo" src="{{asset('assets/images/maruti-industries-logo-footer.png')}}" alt="Maruti-Industries-logo"
                             width="300px"> </a>
                     <p>  {{config('settings.address')}}</p>
                     <div class="footer-social">
@@ -67,7 +66,7 @@
                 <div
                     class="col-md-6 d-flex justify-content-center justify-content-md-start align-items-center text-center">
                     <div class="copyright-info">
-                        © {{date("Y")}}<a href="https://emeryroll.in/" target="_blank" title="MarutiIndustries">Maruti
+                        © {{date("Y")}} <a href="https://emeryroll.in/" target="_blank" title="MarutiIndustries">Maruti
                             Industries</a>. Developed By <a href="https://www.trentiums.com/" title="Trentium Solution"
                             target="_blank">Trentium Solution</a>.
                     </div>
