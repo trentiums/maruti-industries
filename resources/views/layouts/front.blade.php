@@ -34,10 +34,21 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="{{ $data['meta_description'] }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <meta name=author content="Themefisher">
-  <meta name=generator content="Themefisher Constra HTML Template v1.0">
-
+  {{-- <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" /> --}}
+    <meta property="og:title" content="{{ $data['meta_title'] }}">
+    <meta property="og:description" content="{{ $data['meta_description'] }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{url()->current()}}">
+    <meta property="og:image" content="{{ route('home') }}/assets/images/maruti-industries-logo-header.png">
+    <meta property="og:image:secure_url" content="{{ route('home') }}/assets/images/maruti-industries-logo-header.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Maruti Industries">
+    <link rel="canonical" href="{{url()->current()}}">
+    <meta name="description" content="{{ $data['meta_description'] }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Maruti Industries">
+    <meta name="robots" content="noindex, nofollow">
   <!-- Favicon-->
   <link rel="icon" type="image/png" href="{{asset('favicon.png')}}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
