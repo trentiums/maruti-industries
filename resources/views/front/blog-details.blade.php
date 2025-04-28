@@ -1,4 +1,62 @@
 @extends('layouts.front')
+@section('styles')
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "{{route('home')}}/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "{{route('home')}}/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "{{$blog_details->title}}",
+                "item": "{{route('home')}}/blog/{{$blog_details->slug}}"
+              }
+            ]
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "{{$blog_details->title}}",
+            "description": "{{$data['meta_description']}}",
+            "image": "{{ $blog_details->main_image ? $blog_details->main_image->getUrl() : asset(route('home') . '/assets/images/news/news1.jpg') }}",
+            "author": {
+              "@type": "Person",
+              "name": "Author Name"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Maruti Industries",
+              "url": "{{route('home')}}/",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "{{route('home')}}/assets/images/maruti-industries-logo-header.png"
+              }
+            },
+            "datePublished": "{{ $blog_details->created_at->format('Y-m-d') }}",
+            "dateModified": "{{ $blog_details->updated_at->format('Y-m-d') }}",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "{{route('home')}}/blog/{{$blog_details->slug}}"
+            }
+          }
+        ]
+      }
+
+</script>
+@endsection
 @section('content')
     <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner/banner1.jpg')">
         <div class="banner-text">

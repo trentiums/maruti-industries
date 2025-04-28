@@ -7,7 +7,7 @@
   </style>
 @endsection
 @section('content')
-<div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner/banner1.jpg')">
+<div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner-image-privacy-policy.jpg')">
     <div class="banner-text">
       <div class="container">
           <div class="row">

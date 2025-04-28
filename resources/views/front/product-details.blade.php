@@ -17,6 +17,66 @@
            
         }
     </style>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "{{ url()->current() }}#webpage",
+              "url": "{{ url()->current() }}",
+              "name": "{{ $product->name }} | Industrial Abrasive Supplier | Request a Quote",
+              "description": "High-quality {{ $product->name }} available in custom sizes & grits. Used in {{ $product->application }}. Get pricing and availability today.",
+              "isPartOf": {
+                "@id": "{{ url('/') }}#website"
+              },
+              "about": {
+                "@id": "{{ url('/') }}#organization"
+              },
+              "keywords": [
+                "buy {{ strtolower($product->name) }}",
+                "industrial {{ strtolower($product->name) }}",
+                "{{ strtolower($product->name) }} manufacturer India",
+                "abrasive supplier",
+                "{{ strtolower($product->name) }} roll"
+              ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  @foreach($product->faqs as $faq)
+                  {
+                    "@type": "Question",
+                    "name": "{{ $faq->question }}",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "{{ strip_tags($faq->answer) }}"
+                    }
+                  }@if (!$loop->last),@endif
+                  @endforeach
+                ]
+              },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "{{ url('/') }}"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "{{ $product->name }}",
+                  "item": "{{ url()->current() }}"
+                }
+              ]
+            }
+          ]
+        }
+        </script>
+        
 @endsection
 @section('content')
     <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner/banner1.jpg')">
@@ -137,7 +197,7 @@
                                     </div>
                             
                                     <div class="col-md-6">
-                                        <label for="qty">Quantity (optional)</label>
+                                        <label for="qty">Quantity</label>
                                         <input type="number" class="form-control" name="qty" id="qty" value="{{ old('qty') }}">
                                     </div>
                             
@@ -146,7 +206,7 @@
                                         <textarea class="form-control form-control-sm" id="description" name="description" rows="4">{{ old('description') }}</textarea>
                                     </div>
                             
-                                    <div class="col-lg-12">
+                                    {{--  <div class="col-md-12">
                                         <div class="g-recaptcha" data-sitekey="{{ config('settings.captcha_site_key') }}"></div>
                                         <input type="hidden" name="hiddenRecaptcha" id="hiddenRecaptcha">
                                         @if ($errors->has('g-recaptcha-response'))
@@ -154,7 +214,22 @@
                                                 {{ $errors->first('g-recaptcha-response') }}
                                             </div>
                                         @endif
+                                    </div>  --}}
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-center">
+                                            <div style="width: 100%; max-width: 100%; overflow: hidden;">
+                                                <div style="transform: scale(0.77); transform-origin: 0 0;">
+                                                    <div class="g-recaptcha" data-sitekey="{{ config('settings.captcha_site_key') }}"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @if ($errors->has('g-recaptcha-response'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('g-recaptcha-response') }}
+                                        </div>
+                                    @endif
                                     </div>
+                                   
                             
                                     <div class="col-md-12">
                                         <button type="submit" class="btn btn-primary w-100 mt-2">Request a Quote</button>
@@ -266,7 +341,7 @@
         </div>
     </section>
      <!----faqs---->
-     <section id="main-container" class="main-container">
+     {{-- <section id="main-container" class="main-container">
         <div class="container">
             @if (count($product->faqs) > 0)
           <div class="row">
@@ -295,44 +370,9 @@
                 </div>
                 @endif
                 @endforeach
-                {{-- <div class="card">
-                  <div class="card-header p-0 bg-transparent" id="headingTwo">
-                    <h2 class="mb-0">
-                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        What are the first aid requirements for sites?
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#construction-accordion">
-                    <div class="card-body">
-                      Anemi nim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                      Excepteur sint occaecat cupid henderit in voluptate velit esse cillu oris nisi ut aliquip ex ea com
-                      matat.
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header p-0 bg-transparent" id="headingThree">
-                    <h2 class="mb-0">
-                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        What is an appointed person?
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                    data-parent="#construction-accordion">
-                    <div class="card-body">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                      industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                      scrambled it to make a type specimen book.
-                    </div>
-                  </div>
-                </div> --}}
+               
               </div>
-              <!--/ Accordion end -->
+              
       
               <div class="gap-40"></div>
      
@@ -342,7 +382,46 @@
           </div>
       @endif
         </div>
-      </section>
+      </section> --}}
+
+      <section id="main-container" class="main-container">
+        <div class="container">
+            @if (count($product->faqs) > 0)
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3 class="border-title border-left mar-t0">FAQ’s</h3>
+    
+                        <div class="accordion accordion-group accordion-classic" id="construction-accordion">
+                            @foreach ($product->faqs as $k => $faq)
+                            <div class="card">
+                                <div class="card-header p-0 bg-transparent" id="heading{{ $k }}">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block text-left" type="button" data-toggle="collapse"
+                                            data-target="#collapse{{ $k }}" aria-expanded="false"
+                                            aria-controls="collapse{{ $k }}">
+                                            {{ $faq->question }}
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapse{{ $k }}" class="collapse" aria-labelledby="heading{{ $k }}"
+                                    data-parent="#construction-accordion">
+                                    <div class="card-body">
+                                        {{ $faq->answer }}
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+                        <!--/ Accordion end -->
+    
+                        <div class="gap-40"></div>
+                    </div>
+                </div>
+            @endif
+        </div>
+    </section>
+    
     <!--technical spacification-->
 {{--     <section id="technical-specifications" class="technical-specifications py-5">
         <div class="container">

@@ -1,4 +1,64 @@
 @extends('layouts.front')
+@section('styles')
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "{{ url()->current() }}#webpage",
+          "url": "{{ url()->current() }}",
+          "name": "Abrasive Products | Flint, Sandpaper, Emery, Aloxide Cloth & Rolls",
+          "description": "{{ $product->meta_description ?? 'Explore our full range of industrial abrasives including Flint Paper, Sandpaper, Emery Paper, Emery Roll, and Aloxide Cloth Roll. Request a quote directly from each product page.' }}",
+          "keywords": [
+            "abrasive products",
+            "flint paper",
+            "emery roll",
+            "sandpaper sheet",
+            "aloxide roll supplier"
+          ],
+          "isPartOf": { "@id": "{{ url('/') }}#website" },
+          "about":    { "@id": "{{ url('/') }}#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "{{ url('/') }}"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Product",
+              "item": "{{ url()->current() }}"
+            }
+          ]
+        },
+        "product": [
+        @foreach($products as $product)
+        {
+          "@type": "Product",
+          "@id": "{{ url('product/' . $product->slug) }}#product",
+          "name": "{{ $product->title }}",
+          "image": "{{$product->main_image}}",
+          "description": "{{ Str::limit(strip_tags($product->short_description), 150) }}",
+          "url": "{{ url('product/' . $product->slug) }}"
+        }
+        @endforeach
+        ]
+        
+      ]
+    }
+    </script>
+    
+    
+ 
+    
+@endsection
 @section('content')
     <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner/banner1.jpg')">
         <div class="banner-text">

@@ -1,7 +1,56 @@
 @extends('layouts.front')
+@section('styles')
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ContactPage",
+          "@id": "{{ url('/contact-us') }}#contactpage",
+          "url": "{{ url('/contact-us') }}",
+          "name": "Contact Us | Request a Quote for Abrasive Products",
+          "description": "Get in touch with us to inquire about Flint Paper, Emery Rolls, Sandpaper, and more. Request a callback, ask for a quote, or message us on WhatsApp.",
+          "keywords": [
+            "abrasive supplier contact",
+            "flint paper quote",
+            "request callback",
+            "emery paper inquiry",
+            "sandpaper supplier India"
+          ],
+          "isPartOf": {
+            "@id": "{{ url('/') }}#website"
+          },
+          "mainEntity": {
+            "@type": "Organization",
+            "@id": "{{ url('/') }}#organization"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "{{ url('/contact-us') }}#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "{{ url('/') }}"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Contact Us",
+              "item": "{{ url('/contact-us') }}"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+         
+@endsection
 @section('content')
     <!--breadcrum-->
-    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner/banner1.jpg')">
+    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner- image-contact-us.jpg')">
         <div class="banner-text">
             <div class="container">
                 <div class="row">
@@ -159,7 +208,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="subject">Subject <span class="text-danger">*</span></label>
+                                    <label for="subject">Subject</label>
                                     <select class="form-control" id="subject" name="subject" required>
                                         <option value="">-- Select Subject --</option>
                                         <option value="General Inquiry" {{ old('subject') == 'General Inquiry' ? 'selected' : '' }}>General Inquiry</option>
@@ -172,7 +221,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="product_interest">Product of Interest</label>
-                                    <select class="form-control" name="product_interest" id="product_interest" required>
+                                    <select class="form-control" name="product_interest" id="product_interest">
                                         <option value="">-- Select Product --</option>
                                         <option value="Flint Paper" {{ old('product_interest') == 'Flint Paper' ? 'selected' : '' }}>Flint Paper</option>
                                         <option value="Sandpaper Sheets" {{ old('product_interest') == 'Sandpaper Sheets' ? 'selected' : '' }}>Sandpaper Sheets</option>
@@ -233,20 +282,34 @@
                     </div>
                 </div><!-- Col 1 end -->
 
-
-
-                <div class="col-md-4">
+               {{--  <div class="col-md-4">
                     <div class="ts-service-box-bg text-center h-100">
                         <span class="ts-service-icon icon-round">
-                            <i class="fa fa-envelope mr-0"></i>
+                            <i class="fas fa-map-marker-alt mr-0"></i>
                         </span>
                         <div class="ts-service-box-content">
                             <h4>Email Us</h4>
-                            <p><a href="mailto:{{config('settings.email')}}" title="Email"> {{config('settings.email')}}</a></p>
+                            <p>  <a href="mailto:{{config('settings.email')}}" title="Email"> {{config('settings.email')}} </a>
+                            </p>
+                        </div>
+                    </div>
+                </div> --}}
+                <div class="col-md-4">
+                    <div class="ts-service-box-bg text-center h-100">
+                        <span class="ts-service-icon icon-round">
+                            <i class="fas fa-map-marker-alt mr-0"></i>
+                        </span>
+                        <div class="ts-service-box-content">
+                            <h4>Email Us</h4>
+                            <p>
+                                <a href="mailto:{{config('settings.email')}}" title="Email" class="text-break">
+                                    {{config('settings.email')}}
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-4">
                     <div class="ts-service-box-bg text-center h-100">
                         <span class="ts-service-icon icon-round">

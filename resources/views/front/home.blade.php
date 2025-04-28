@@ -1,7 +1,44 @@
 @extends('layouts.front')
+@section('styles')
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "{{ url('/') }}#website",
+          "url": "{{ url('/') }}",
+          "name": "{{ config('app.name', 'Maruti Industries') }}",
+          "description": "Leading supplier of abrasive products – Flint Paper, Sandpaper, Emery Paper, Aloxide Cloth Rolls, Emery Rolls. Request a quote or callback today.",
+          "keywords": [
+            "flint paper supplier",
+            "abrasive rolls",
+            "emery paper quote",
+            "buy sandpaper in bulk",
+            "aloxide roll manufacturer"
+          ],
+          
+        },
+        {
+          "@type": "WebPage",
+          "@id": "{{ url('/') }}#webpage",
+          "url": "{{ url('/') }}",
+          "name": "Industrial Abrasive Products | Flint, Sandpaper, Emery & Aloxide Rolls",
+          "isPartOf": {
+            "@id": "{{ url('/') }}#website"
+          },
+          "about": {
+            "@id": "{{ url('/') }}#organization"
+          },
+          "description": "Leading supplier of abrasive products – Flint Paper, Sandpaper, Emery Paper, Aloxide Cloth Rolls, Emery Rolls. Request a quote or callback today."
+        }
+      ]
+    }
+    </script>    
+@endsection
 @section('content')
     <div class="banner-carousel banner-carousel-2 mb-0">
-        <div class="banner-carousel-item" style="background-image:url('../assets/images/slider-main/bg4.jpg')">
+        <div class="banner-carousel-item" style="background-image:url('../assets/images/home_banner_image.jpg')">
             <div class="container">
                 <div class="box-slider-content">
                     <div class="box-slider-text">
@@ -260,7 +297,7 @@
                 <div class="col-lg-4 mt-4">
                     <div class="ts-service-box d-flex mb-4">
                         <div class="ts-service-box-img">
-                            <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon1.png') }}" alt="service-icon">
+                            <img loading="lazy" src="{{ asset('assets/images/industrial-grade-abrasive-materials.png') }}" alt="service-icon">
                         </div>
                         <div class="ts-service-box-info ps-3">
                             <h3 class="service-box-title">Industrial-Grade Abrasive Materials</h3>
@@ -269,7 +306,7 @@
     
                     <div class="ts-service-box d-flex mb-4">
                         <div class="ts-service-box-img">
-                            <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon2.png') }}" alt="service-icon">
+                            <img loading="lazy" src="{{ asset('assets/images/bulk-supply-across-india.png') }}" alt="service-icon">
                         </div>
                         <div class="ts-service-box-info ps-3">
                             <h3 class="service-box-title">Bulk Supply Across India</h3>
@@ -278,7 +315,7 @@
     
                     <div class="ts-service-box d-flex mb-4">
                         <div class="ts-service-box-img">
-                            <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon3.png') }}" alt="service-icon">
+                            <img loading="lazy" src="{{ asset('assets/images/custom-sizes-grit-options.png') }}" alt="service-icon">
                         </div>
                         <div class="ts-service-box-info ps-3">
                             <h3 class="service-box-title">Custom Sizes & Grit Options</h3>
@@ -288,7 +325,7 @@
     
                 <!-- Center Image -->
                 <div class="col-lg-4 text-center mt-4 mb-4">
-                    <img loading="lazy" class="img-fluid" src="{{ asset('assets/images/services/service-center.jpg') }}"
+                    <img loading="lazy" class="img-fluid" src="{{ asset('assets/images/why-work-with-us.png') }}"
                         alt="service-avatar-image" height="100px" width="200px">
                 </div>
     
@@ -296,7 +333,7 @@
                 <div class="col-lg-4 mt-4">
                     <div class="ts-service-box d-flex mb-4">
                         <div class="ts-service-box-img">
-                            <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon4.png') }}" alt="service-icon">
+                            <img loading="lazy" src="{{ asset('assets/images/quick-turnaround-times.png') }}" alt="service-icon">
                         </div>
                         <div class="ts-service-box-info ps-3">
                             <h3 class="service-box-title">Quick Turnaround Times</h3>
@@ -305,7 +342,7 @@
     
                     <div class="ts-service-box d-flex mb-4">
                         <div class="ts-service-box-img">
-                            <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon6.png') }}" alt="service-icon">
+                            <img loading="lazy" src="{{ asset('assets/images/technical-support-available.png') }}" alt="service-icon">
                         </div>
                         <div class="ts-service-box-info ps-3">
                             <h3 class="service-box-title">Technical Support Available</h3>
@@ -314,7 +351,7 @@
     
                     <div class="ts-service-box d-flex mb-4">
                         <div class="ts-service-box-img">
-                            <img loading="lazy" src="{{ asset('assets/images/icon-image/service-icon6.png') }}" alt="service-icon">
+                            <img loading="lazy" src="{{ asset('assets/images/safety-management.png') }}" alt="service-icon" height="60px" width="60px">
                         </div>
                         <div class="ts-service-box-info ps-3">
                             <h3 class="service-box-title">Safety Management</h3>
@@ -420,7 +457,7 @@
                     
                     <div class="col-lg-2 col-md-4 col-sm-6 ts-facts mb-4">
                         <div class="ts-facts-img mb-2">
-                            <img loading="lazy" src="{{ asset('assets/images/icon-image/fact1.png') }}"
+                            <img loading="lazy" src="{{ asset('assets/images/automotive.png') }}"
                                 alt="Automotive">
                         </div>
                         <div class="ts-facts-content text-center">
@@ -431,7 +468,7 @@
                   
                     <div class="col-lg-2 col-md-4 col-sm-6 ts-facts mb-4">
                         <div class="ts-facts-img mb-2">
-                            <img loading="lazy" src="{{ asset('assets/images/icon-image/fact2.png') }}"
+                            <img loading="lazy" src="{{ asset('assets/images/wood-working.png') }}"
                                 alt="Woodworking">
                         </div>
                         <div class="ts-facts-content text-center">
@@ -442,7 +479,7 @@
                
                     <div class="col-lg-2 col-md-4 col-sm-6 ts-facts mb-4">
                         <div class="ts-facts-img mb-2">
-                            <img loading="lazy" src="{{ asset('assets/images/icon-image/fact3.png') }}"
+                            <img loading="lazy" src="{{ asset('assets/images/metal-fabrication.png') }}"
                                 alt="Metal Fabrication">
                         </div>
                         <div class="ts-facts-content text-center">
@@ -453,7 +490,7 @@
                    
                     <div class="col-lg-2 col-md-4 col-sm-6 ts-facts mb-4">
                         <div class="ts-facts-img mb-2">
-                            <img loading="lazy" src="{{ asset('assets/images/icon-image/fact4.png') }}"
+                            <img loading="lazy" src="{{ asset('assets/images/construction.png') }}"
                                 alt="Construction">
                         </div>
                         <div class="ts-facts-content text-center">
@@ -464,7 +501,7 @@
                 
                     <div class="col-lg-2 col-md-4 col-sm-6 ts-facts mb-4">
                         <div class="ts-facts-img mb-2">
-                            <img loading="lazy" src="{{ asset('assets/images/icon-image/fact4.png') }}"
+                            <img loading="lazy" src="{{ asset('assets/images/retail-tools- hardware.png') }}"
                                 alt="Retail Tools & Hardware">
                         </div>
                         <div class="ts-facts-content text-center">
@@ -475,7 +512,7 @@
                    
                     <div class="col-lg-2 col-md-4 col-sm-6 ts-facts mb-4">
                         <div class="ts-facts-img mb-2">
-                            <img loading="lazy" src="{{ asset('assets/images/icon-image/fact4.png') }}"
+                            <img loading="lazy" src="{{ asset('assets/images/marine-industry.png') }}"
                                 alt="Marine Industry">
                         </div>
                         <div class="ts-facts-content text-center">
@@ -492,7 +529,7 @@
 
     <!--blog section-->
 
-    <section id="main-container" class="main-container pb-2">
+{{--     <section id="main-container" class="main-container pb-2">
         <div class="container">
           <div class="row text-center mb-4">
             <div class="col-12">
@@ -528,7 +565,47 @@
             @endforeach
           </div>
         </div>
+      </section> --}}
+      <section id="main-container" class="main-container pb-2">
+        <div class="container">
+          <div class="row text-center mb-4">
+            <div class="col-12">
+              <h1 class="section-sub-title">Abrasive Tips & Industry Insights</h1>
+            </div>
+          </div>
+      
+          <div class="row">
+            @foreach ($blogs as $blog)
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+              <div class="ts-service-box w-100 d-flex flex-column">
+                <div class="ts-service-image-wrapper">
+                  @if ($blog->main_image && $blog->main_image->getUrl())
+                    <img loading="lazy" class="w-100" src="{{ $blog->main_image->getUrl() }}" alt="{{ $blog->title }} img">
+                  @else
+                    <img class="w-100" src="{{ asset('assets/images/team/team2.jpg') }}" alt="{{ $blog->title }} img">
+                  @endif
+                </div>
+                <div class="ts-service-info p-3 d-flex flex-column flex-grow-1">
+                  <h2 class="service-box-title mb-2">
+                    <a href="{{ route('blog', $blog->slug) }}" title="{{ $blog->title }}">
+                      {{ $blog->title }}
+                    </a>
+                  </h2>
+                  <p class="flex-grow-1">{{ $blog->sort_description }}</p>
+                  <div class="mt-auto">
+                    <a class="btn btn-primary mt-2" href="{{ route('blog', $blog->slug) }}" title="{{ $blog->title }}">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            @endforeach
+          </div>
+        </div>
       </section>
+      
+      
       
     <!--blog end-->
     <section class="content  no-padding mb-5">
@@ -545,7 +622,7 @@
                     </span>
   
                     <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="{{asset('assets/images/clients/testimonial1.png')}}"
+                      <img loading="lazy" class="testimonial-thumb" src="{{asset('assets/images/Testimonials-02.jpg')}}"
                         alt="testimonial">
                       <div class="quote-item-info">
                         <h3 class="quote-author">Anita Deshmukh</h3>
@@ -562,7 +639,7 @@
                     </span>
   
                     <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="{{asset('assets/images/clients/testimonial2.png')}}"
+                      <img loading="lazy" class="testimonial-thumb" src="{{asset('assets/images/Testimonials-01.jpg')}}"
                         alt="testimonial">
                       <div class="quote-item-info">
                         <h3 class="quote-author"> Vikram Solanki</h3>
@@ -580,7 +657,7 @@
                     </span>
   
                     <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="{{asset('assets/images/clients/testimonial3.png')}}"
+                      <img loading="lazy" class="testimonial-thumb" src="{{asset('assets/images/Testimonials-03.jpg')}}"
                         alt="testimonial">
                       <div class="quote-item-info">
                         <h3 class="quote-author">Suresh Nair</h3>
@@ -658,7 +735,7 @@
                 <div class="row">
                     <div class="col-md-6 text-center text-md-left">
                         <div class="call-to-action-text">
-                            <h3 class="action-title">Have a question about grit, quantity, or pricing? Let’s talk.</h3>
+                            <h3 class="action-title">Have a question about grit, quantity or pricing? Let’s talk.</h3>
                         </div>
                     </div><!-- Col end -->
                     <!--
