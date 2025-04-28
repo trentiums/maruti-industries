@@ -50,7 +50,7 @@
 @endsection
 @section('content')
     <!--breadcrum-->
-    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner- image-contact-us.jpg')">
+    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner-image-contact-us.jpg')">
         <div class="banner-text">
             <div class="container">
                 <div class="row">

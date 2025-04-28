@@ -73,6 +73,10 @@ $(document).ready(function () {
 
         },
         messages: {
+            name: {
+                required: "Please enter your name", // Custom message for name
+                maxlength: "Name cannot exceed 255 characters"
+            },
             email: {
                 required: "Please enter your email",
                 emailRFCdns: "Please enter a valid email address"
@@ -99,25 +103,63 @@ $(document).ready(function () {
             form.submit(); // Submit the form when it's valid
         }
     });
-    $(document).ready(function () {
-        $('input[name="mobile"]').on('input', function () {
-            this.value = this.value.replace(/\D/g, ''); // Replace non-digit characters with empty string
-        });
-    });
+    $(".modal-form").validate({
+        ignore: ":hidden:not(#hiddenRecaptcha)",
+        rules: {
+            name: {
+                required: true,
+                maxlength: 255
+            },
+            description: {
+                required: false
+            },
+            mobile: {
+                required: true,
+                digits: true
+            },
+            grecaptcha: {
+                required: true
+            },
+            hiddenRecaptcha: {
+                required: function () {
+                    if (grecaptcha.getResponse() == '') {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            },
 
 
-    // Additional event listener (if needed) for specific input validation
-    $("input[name='name']").on("keypress", function (event) {
-        var keyCode = event.keyCode;
-        // Allow alphabets (letters), spaces, and hyphens
-        if (
-            (keyCode < 65 || keyCode > 90) &&
-            (keyCode < 97 || keyCode > 122) &&
-            keyCode !== 32 &&
-            keyCode !== 45
-        ) {
-            event.preventDefault();
+        },
+        messages: {
+            name: {
+                required: "Please enter your name", // Custom message for name
+                maxlength: "Name cannot exceed 255 characters"
+            },
+            mobile: {
+                required: "Please enter your mobile number",
+                minlength: "Mobile number must be exactly 10 digits",
+                maxlength: "Mobile number must be exactly 10 digits",
+                digits: "Please enter only digits"
+            },
+            grecaptcha: {
+                required: "Please complete the captcha challenge."
+            },
+            hiddenRecaptcha: {
+                required: "Security Verification Pending...!"
+            }
+        },
+        errorElement: 'div',
+        errorPlacement: function (error, element) {
+            error.addClass('text-danger');
+            error.insertAfter(element); // Place error message after the input element
+        },
+        submitHandler: function (form) {
+            form.submit(); // Submit the form when it's valid
         }
     });
+  
 });
 
+   
