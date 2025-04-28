@@ -53,7 +53,7 @@
                                                     style="color: #596167; font-family: Arial, Helvetica, sans-serif; font-size: 13px;">
                                                     <font face="Arial, Helvetica, sans-seri; font-size: 13px;"
                                                         size="3" color="#596167">
-                                                        <img src="{{ url('assets/images/maruti-industries-logo-header.png') }}"
+                                                        <img src="{{ url('/assets/images/maruti-industries-logo-header.png') }}"
                                                             alt="Maruti Industries Image"> </font>
                                                 </a>
                                             </div>

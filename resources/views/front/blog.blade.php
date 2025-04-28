@@ -1,6 +1,48 @@
 @extends('layouts.front')
+@section('styles')
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ url()->current() }}"
+      },
+      "name": "Maruti Industries Blog",
+      "url": "{{ url('/blog') }}",
+      "description": "Explore expert insights, product use-cases, grit selection tips, and industrial applications from Maruti Industries.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Maruti Industries",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{asset('assets/images/maruti-industries-logo-header.png')}}" // Adjust based on your logo location
+        }
+      },
+      "blogPost": [
+        @foreach($blogs as $blog)
+          {
+            "@type": "BlogPosting",
+            "headline": "{{ $blog->title }}",
+            "image": "{{ $blog->main_image}}",
+            "author": {
+              "@type": "Organization",
+              "name": "Maruti Industries"
+            },
+            "datePublished": "{{ $blog->created_at->toW3cString() }}",
+            "dateModified": "{{ $blog->updated_at->toW3cString() }}",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id" :"{{ route('blog', $blog->slug) }}"
+            }
+          }@if (!$loop->last),@endif
+        @endforeach
+      ]
+    }
+    </script>
+@endsection
 @section('content')
-    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner/banner1.jpg')">
+    <div id="banner-area" class="banner-area" style="background-image:url('../../assets/images/banner/banner1.jpg')" alt="banner_image_blog">
         <div class="banner-text">
             <div class="container">
                 <div class="row">
@@ -51,7 +93,7 @@
                                         </div>
                                         <div class="post-info">
                                             <h4 class="entry-title">
-                                                {{--    <a href="#">{{$blog->Sort_descripation}}</a> --}}
+                                                {{$blog->title}}
                                             </h4>
                                         </div>
                                     </li>
@@ -83,23 +125,35 @@
                         </div><!-- Recent post end -->
 
                         <!-- Categories -->
-                        <div class="widget">
+                        {{-- <div class="widget">
                             <h3 class="widget-title">Categories</h3>
 
                             <ul class="arrow nav nav-tabs">
                                 @foreach ($categoriesWithCounts as $category)
                                     <li>
-                                        {{--  <li><a href="#">Product Use-Cases</a></li>
-                      <li><a href="#">Industry Applications</a></li>
-                      <li><a href="#">Grit Selection Tips</a></li>
-                      <li><a href="#">Buying Guides</a></li> --}}
                                         <a href="javascript:void(0)">{{ $category->title }} </a>
                                         <span>{{ $category->blogPosts->count() }}</span>
                                     </li>
                                 @endforeach
                             </ul>
-                        </div><!-- Categories end -->
-
+                        </div> --}}<!-- Categories end -->
+                       
+                        <div class="widget">
+                            <h3 class="widget-title">Categories</h3>
+                        
+                            <ul class="nav nav-pills flex-column">
+                                @foreach ($categoriesWithCounts as $category)
+                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                        <a href="{{ route('category.blogs',$category->slug) }}" class="text-decoration-none">
+                                            <span>{{ $category->title }}</span>
+                                        </a>
+                                        <span class="badge bg-secondary">{{ $category->blogPosts->count() }}</span>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        
+                        
                         <!-- Tags -->
                         {{--     <div class="widget">
                             <h3 class="widget-title">Tags</h3>
@@ -113,53 +167,7 @@
                         <!-- Inquiry Form -->
                         <div id="inquiry-form" class="widget p-3 border rounded">
                             <h3 class="widget-title">Inquiry Form</h3>
-                           {{--   <form action="{{ route('save-inquiry') }}" method="POST">
-                                @csrf
-                                @if ($errors->count() > 0)
-                                    <div class="alert alert-danger alert-block">
-                                        <ul class="list-unstyled">
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                @endif
-                                <input type="hidden" name="page_url" value="{{ url()->current() }}">
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Name<span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="name" name="name" required value="{{ old('name') }}">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
-                                    <input type="email" class="form-control" id="email" name="email" required value="{{ old('email') }}">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="phone" class="form-label">Phone<span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="phone" name="phone" maxlength="10" minlength="10" required value="{{ old('mobile') }}">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="quantity" class="form-label">Quantity Required</label>
-                                    <input type="text" class="form-control" id="quantity" name="quantity">
-                                </div>
-                                 <div class="mb-3">
-                                    <label for="size" class="form-label">Grit Size Needed</label>
-                                    <input type="text" class="form-control" id="size" name="size" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" name="message" rows="3" {{ old('description') }}></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <div class="g-recaptcha" data-sitekey="{{ config('settings.captcha_site_key') }}"></div>
-                                    <div><input type="hidden" name="hiddenRecaptcha" id="hiddenRecaptcha"></div>
-                                    @if ($errors->has('g-recaptcha-response'))
-                                    <div class="text-danger">
-                                        {{ $errors->first('g-recaptcha-response') }}
-                                    </div>
-                                    @endif
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
-                            </form>  --}}
+                          
                             <form action="{{ route('save-inquiry') }}" method="POST" class="inquiry-form">
                                 @csrf
                             
@@ -202,7 +210,7 @@
                                     <textarea class="form-control" id="description" name="description" rows="3">{{ old('description') }}</textarea>
                                 </div>
                             
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <div class="g-recaptcha" data-sitekey="{{ config('settings.captcha_site_key') }}"></div>
                                     <input type="hidden" name="hiddenRecaptcha" id="hiddenRecaptcha">
                                     @if ($errors->has('g-recaptcha-response'))
@@ -210,7 +218,23 @@
                                             {{ $errors->first('g-recaptcha-response') }}
                                         </div>
                                     @endif
+                                </div> --}}
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-center">
+                                        <div style="width: 100%; max-width: 100%; overflow: hidden;">
+                                            <div style="transform: scale(0.77); transform-origin: 0 0;">
+                                                <div class="g-recaptcha" data-sitekey="{{ config('settings.captcha_site_key') }}"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @if ($errors->has('g-recaptcha-response'))
+                                    <div class="text-danger">
+                                        {{ $errors->first('g-recaptcha-response') }}
+                                    </div>
+                                @endif
                                 </div>
+                                
+                                
                             
                                 <button type="submit" class="btn btn-primary w-100">Send Inquiry</button>
                             </form>
@@ -446,7 +470,7 @@
                 <div class="row">
                     <div class="col-md-6 text-center text-md-left">
                         <div class="call-to-action-text">
-                            <h3 class="action-title">Request a quote for Flint Paper, Sandpaper, or Emery Rolls today.</h3>
+                            <h3 class="action-title">Request a quote for Flint Paper, Sandpaper or Emery Rolls today.</h3>
                         </div>
                     </div><!-- Col end -->
                     <div class="col-md-6 text-center text-md-right mt-3 mt-md-0">

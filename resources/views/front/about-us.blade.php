@@ -1,4 +1,52 @@
 @extends('layouts.front')
+@section('styles')
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "AboutPage",
+          "@id": "{{ url('/about-us') }}#aboutpage",
+          "url": "{{ url('/about-us') }}",
+          "name": "About Us | Leading Abrasive Products Supplier in India",
+          "description": "Learn more about our experience, manufacturing standards, and commitment to quality in delivering Flint Paper, Emery Paper, Sandpaper Rolls, and more.",
+          "keywords": [
+            "abrasive manufacturer India",
+            "about abrasive company",
+            "flint paper supplier",
+            "emery roll company background"
+          ],
+          "isPartOf": {
+            "@id": "{{ url('/') }}#website"
+          },
+          "mainEntity": {
+            "@type": "Organization",
+            "@id": "{{ url('/') }}#organization"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "{{ url('/about-us') }}#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "{{ url('/') }}"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About Us",
+              "item": "{{ url('/about-us') }}"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    
+@endsection
 @section('content')
     <!--breadcrum-->
     <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner/banner1.jpg')">
@@ -109,7 +157,7 @@
                     <div class="col-md-4 col-sm-6 mb-4">
                         <div class="core-box p-4 shadow rounded bg-light h-100">
                             <div class="core-icon mb-3">
-                                <img src="{{ asset('assets/images/bulk-buy') }}ing.png" alt="Quality Control"
+                                <img src="{{ asset('assets/images/in-house-quality -control.png') }}" alt="Quality Control"
                                     style="height: 50px;">
                             </div>
                             <h5 class="core-label">In-House Quality Control</h5>
@@ -119,7 +167,7 @@
                     <div class="col-md-4 col-sm-6 mb-4">
                         <div class="core-box p-4 shadow rounded bg-light h-100">
                             <div class="core-icon mb-3">
-                                <img src="{{ asset('assets/images/grit.png') }}" alt="Bulk Order" style="height: 50px;">
+                                <img src="{{ asset('assets/images/bulk-order- capability.png') }}" alt="Bulk Order" style="height: 50px;">
                             </div>
                             <h5 class="core-label">Bulk Order Capability</h5>
                         </div>
@@ -128,7 +176,7 @@
                     <div class="col-md-4 col-sm-6 mb-4">
                         <div class="core-box p-4 shadow rounded bg-light h-100">
                             <div class="core-icon mb-3">
-                                <img src="{{ asset('assets/images/bulk-buy') }}ing.png" alt="Grit Sizes"
+                                <img src="{{ asset('assets/images/wide-range-of -grit-sizes.png') }}" alt="Grit Sizes"
                                     style="height: 50px;">
                             </div>
                             <h5 class="core-label">Wide Range of Grit Sizes</h5>
@@ -138,7 +186,7 @@
                     <div class="col-md-4 col-sm-6 mb-4">
                         <div class="core-box p-4 shadow rounded bg-light h-100">
                             <div class="core-icon mb-3">
-                                <img src="{{ asset('assets/images/bulk-buy') }}ing.png" alt="Delivery"
+                                <img src="{{ asset('assets/images/timely-dispatch- delivery.png') }}" alt="Delivery"
                                     style="height: 50px;">
                             </div>
                             <h5 class="core-label">Timely Dispatch & Delivery</h5>
@@ -148,7 +196,7 @@
                     <div class="col-md-4 col-sm-6 mb-4">
                         <div class="core-box p-4 shadow rounded bg-light h-100">
                             <div class="core-icon mb-3">
-                                <img src="{{ asset('assets/images/delivery') }}-icon.jpg" alt="Custom Cut"
+                                <img src="{{ asset('assets/images/custom-cut-size- options.png') }}" alt="Custom Cut"
                                     style="height: 50px;">
                             </div>
                             <h5 class="core-label">Custom Cut & Size Options</h5>
@@ -158,7 +206,7 @@
                     <div class="col-md-4 col-sm-6 mb-4">
                         <div class="core-box p-4 shadow rounded bg-light h-100">
                             <div class="core-icon mb-3">
-                                <img src="{{ asset('assets/images/grit.png') }} "alt="Trusted Clients"
+                                <img src="{{ asset('assets/images/trusted-by-industrial-clients.png') }} "alt="Trusted Clients"
                                     style="height: 50px;">
                             </div>
                             <h5 class="core-label">Trusted by 100+ Industrial Clients</h5>
@@ -175,7 +223,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/icon-image/fact1.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector served-furniture- manufacturers.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">
@@ -186,7 +234,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/icon-image/fact2.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector served-fabrication units.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">
@@ -197,7 +245,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/icon-image/fact3.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector served-paint shops.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">
@@ -208,7 +256,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/icon-image/fact4.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector served-auto-body -workshops.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">
@@ -219,7 +267,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/icon-image/fact4.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector served-construction-supply-chains.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">
@@ -311,7 +359,7 @@
                 </div><!-- Content row -->
             </div><!-- Conatiner end -->
         </section> --}}
-        <section id="ts-team" class="ts-team">
+    {{--     <section id="ts-team" class="ts-team">
             <div class="container">
                 <div class="row text-center">
                     <div class="col-lg-12">
@@ -419,7 +467,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!--/ Team end -->
         <section class="call-to-action no-padding">
             <div class="container">
@@ -427,7 +475,7 @@
                     <div class="row">
                         <div class="col-md-6 text-center text-md-left">
                             <div class="call-to-action-text">
-                                <h3 class="action-title">Request a quote for Flint Paper, Sandpaper, or Emery Rolls today.
+                                <h3 class="action-title">Request a quote for Flint Paper, Sandpaper or Emery Rolls today.
                                 </h3>
                             </div>
                         </div><!-- Col end -->

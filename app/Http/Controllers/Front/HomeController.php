@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
@@ -16,7 +17,7 @@ class HomeController extends Controller
         $blogs = BlogPost::orderBy('id', 'DESC')->take(3)->get();
         $data['meta_title'] = 'Industrial Abrasive Products | Flint, Sandpaper, Emery & Aloxide Rolls';
         $data['meta_description'] = 'Leading supplier of abrasive products – Flint Paper, Sandpaper, Emery Paper, Aloxide Cloth Rolls, Emery Rolls. Request a quote or callback today.';
-        return view('front.home', compact('data','blogs')); 
+        return view('front.home', compact('data', 'blogs'));
     }
     public function about_us()
     {
@@ -24,7 +25,7 @@ class HomeController extends Controller
         $data['meta_description'] = 'Learn more about our experience, manufacturing standards, and commitment to quality in delivering Flint Paper, Emery Paper, Sandpaper Rolls, and more.';
         return view('front.about-us', compact('data'));
     }
-    
+
     public function contact_us()
     {
         $data['meta_title'] = 'Contact Us | Request a Quote for Abrasive Products';
@@ -33,21 +34,21 @@ class HomeController extends Controller
     }
     public function faq()
     {
-        $data['meta_title']='Maruti Industries | Industrial Abrasives & Solutions';
-        $data['meta_description']='Find answers to frequently asked questions about Maruti Industries eabrasive products like Flint Paper, Sandpaper, Emery Paper, and Aloxide Rolls. Get expert insights, product support, and more.';
-        return view('front.faq',compact('data'));
+        $data['meta_title'] = 'Maruti Industries | Industrial Abrasives & Solutions';
+        $data['meta_description'] = 'Find answers to frequently asked questions about Maruti Industries eabrasive products like Flint Paper, Sandpaper, Emery Paper, and Aloxide Rolls. Get expert insights, product support, and more.';
+        return view('front.faq', compact('data'));
     }
     public function terms_condition()
     {
-        $data['meta_title']='Maruti Industries | Industrial Abrasives & Solutions';
-        $data['meta_description']='Find answers to frequently asked questions about Maruti Industries eabrasive products like Flint Paper, Sandpaper, Emery Paper, and Aloxide Rolls. Get expert insights, product support, and more.';
-        return view('front.terms-condition',compact('data'));
+        $data['meta_title'] = 'Maruti Industries | Industrial Abrasives & Solutions';
+        $data['meta_description'] = 'Find answers to frequently asked questions about Maruti Industries eabrasive products like Flint Paper, Sandpaper, Emery Paper, and Aloxide Rolls. Get expert insights, product support, and more.';
+        return view('front.terms-condition', compact('data'));
     }
     public function privacy_policy()
     {
-        $data['meta_title']='Maruti Industries | Industrial Abrasives & Solutions';
-        $data['meta_description']='Find answers to frequently asked questions about Maruti Industries eabrasive products like Flint Paper, Sandpaper, Emery Paper, and Aloxide Rolls. Get expert insights, product support, and more.';
-        return view('front.privacy-policy',compact('data'));
+        $data['meta_title'] = 'Maruti Industries | Industrial Abrasives & Solutions';
+        $data['meta_description'] = 'Find answers to frequently asked questions about Maruti Industries eabrasive products like Flint Paper, Sandpaper, Emery Paper, and Aloxide Rolls. Get expert insights, product support, and more.';
+        return view('front.privacy-policy', compact('data'));
     }
     public function blog(Request $request, $any = NULL)
     {
@@ -68,22 +69,29 @@ class HomeController extends Controller
             return view('front.blog', compact('data', 'blogs', 'latest_blogs', 'categoriesWithCounts'));
         }
     }
+    public function blogsByCategory($slug)
+    {
+        $category = BlogCategory::where('slug', $slug)->firstOrFail();
+        $blogs = $category->blogPosts()->orderBy('id', 'DESC')->paginate(6);
+        $latest_blogs = BlogPost::orderBy('created_at', 'desc')->take(3)->get();
+        $categoriesWithCounts = BlogCategory::withCount('blogPosts')->get();
+        $data['meta_title'] = $category->title . ' | Blog';
+        $data['meta_keywords'] = $category->meta_keywords ?? '';
+        $data['meta_description'] = $category->meta_description ?? '';
+        return view('front.blog', compact('blogs', 'latest_blogs', 'categoriesWithCounts', 'data'));
+    }
     public function product($product = NULL)
     {
 
-        if ((isset($product) && !empty($product)) ){
+        if ((isset($product) && !empty($product))) {
             $product = Product::where('slug', $product)->first();
             $data['meta_title'] = $product->meta_title;
             $data['meta_description'] = $product->meta_description;
-            return view('front.product-details', compact('data','product'));
+            return view('front.product-details', compact('data', 'product'));
+        } else {
+            $data['meta_title'] = 'Abrasive Products | Flint, Sandpaper, Emery, Aloxide Cloth & Rolls';
+            $data['meta_description'] = 'Explore our full range of industrial abrasives including Flint Paper, Sandpaper, Emery Paper, Emery Roll, and Aloxide Cloth Roll. Request a quote directly from each product page.';
+            return view('front.product', compact('data'));
         }
-        else
-        {
-            $data['meta_title']='Abrasive Products | Flint, Sandpaper, Emery, Aloxide Cloth & Rolls';
-            $data['meta_description']='Explore our full range of industrial abrasives including Flint Paper, Sandpaper, Emery Paper, Emery Roll, and Aloxide Cloth Roll. Request a quote directly from each product page.';
-            return view('front.product',compact('data'));
-        }
-
     }
 }
-?>
