@@ -105,7 +105,7 @@
                             <h3 class="widget-title">Categories</h3>
 
                             <ul class="nav nav-pills flex-column">
-                                @foreach ($categoriesWithCounts as $category)
+                               {{--  @foreach ($categoriesWithCounts as $category)
                                     <li class="d-flex justify-content-between align-items-center py-2">
                                         <a href="{{ route('category.blogs', $category->slug) }}"
                                             class="text-decoration-none">
@@ -113,7 +113,8 @@
                                         </a>
                                         <span class="badge bg-secondary">{{ $category->blogPosts->count() }}</span>
                                     </li>
-                                @endforeach
+                                @endforeach --}}
+                                @include('front.dynamic-categories')
                             </ul>
                         </div>
 

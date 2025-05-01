@@ -7,6 +7,9 @@ return [
     'address' => 'Plot No. 313/8/ B,Phase No.1,GIDC , Naroda, Nr.Lions School Opp.Asopalav Flat, Naroda,Ahmedabad',
     'tel_code' => '+919974348216',
     'email_copy_rights_text'        => date('Y') . " © " . config('app.name') . ". ALL Rights Reserved.",
-   
+    'cache_data_limit' => [
+      'seconds' => 86400, // 1 Day seconds
+      'days' => 365,  // 1 Year days
+  ],
  
 ];

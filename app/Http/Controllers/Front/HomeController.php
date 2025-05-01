@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Traits\CatgoryUploadingTrait;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
@@ -12,6 +13,7 @@ use Illuminate\Support\Facades\Cache;
 
 class HomeController extends Controller
 {
+     use CatgoryUploadingTrait;
     public function index()
     {
         $blogs = BlogPost::orderBy('id', 'DESC')->take(3)->get();
@@ -60,6 +62,7 @@ class HomeController extends Controller
             $categoriesWithCounts = BlogCategory::withCount('blogPosts')->get();
             $data['meta_title'] = $blog_details->meta_title;
             $data['meta_description'] = $blog_details->meta_description;
+            $this->generate_dynamic_categories();
             return view('front.blog-details', compact('blog_details', 'data', 'latest_blogs', 'categoriesWithCounts'));
         } else {
             $blogs = BlogPost::orderBy('id', 'DESC')->paginate(3);
@@ -67,6 +70,7 @@ class HomeController extends Controller
             $categoriesWithCounts = BlogCategory::withCount('blogPosts')->get();
             $data['meta_title'] = ' Maruti Industries Blog |  Tips, Use-Cases & Industry Insights ';
             $data['meta_description'] = 'Explore expert tips, product use-cases, grit selection guides, and industry applications of abrasives like Flint Paper, Emery Paper, and Aloxide Rolls from Maruti Industries. Stay informed and make the right industrial choices.';
+            $this->generate_dynamic_categories();
             return view('front.blog', compact('data', 'blogs', 'latest_blogs', 'categoriesWithCounts'));
         }
     }
