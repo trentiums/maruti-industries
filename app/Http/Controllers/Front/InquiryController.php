@@ -29,12 +29,20 @@ class InquiryController extends Controller
             }
 
             $userrequest = $request->all();
+            if (!isset($userrequest['bot']) || !empty($userrequest['bot_capture'])) {
+                return back()->with('error', 'Bot captured, wrong form data submit, please try again.');
+            }
+            if (isset($userrequest['bot']) && !empty($userrequest['bot'])) {
+                if ($userrequest['bot'] != "bot") {
+                    return back()->with('error', 'Bot captured, wrong form data submit, please try again.');
+                }
+            }
 
             $request->input('page_url');
 
             $inquiry = Inquiry::create($userrequest);
             $mail = config('settings.email');
-           /*  $data = $inquiry;
+            /*  $data = $inquiry;
             return view('email.inquiryMail', compact('data')); */
             Mail::to($mail)->send(new InquiryMail($inquiry));
             $data['meta_title'] = 'We appreciate you getting in touch with us!';
@@ -64,11 +72,11 @@ class InquiryController extends Controller
 
             $inquiry = Inquiry::create($userRequest);
 
-            $mail = config('settings.email'); 
+            $mail = config('settings.email');
             Mail::to($mail)->send(new InquiryMail($inquiry));
             return redirect(url()->previous())->with('success', 'Your inquiry has been successfully submitted. We will contact you soon!');
         } catch (\Exception $e) {
-          
+
             Log::error($e->getMessage());
             return redirect(url()->previous())->with('error', trans('label.something_went_wrong_error_msg'));
         }

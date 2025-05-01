@@ -11,10 +11,10 @@ Route::get('privacy-policy',[HomeController::class,'privacy_policy'])->name('pri
 Route::get('terms-condition',[HomeController::class,'terms_condition'])->name('terms-condition');
 Route::get('blog/{any?}',[HomeController::class,'blog'])->name('blog');
 Route::get('blog/category/{slug}', [HomeController::class, 'blogsByCategory'])->name('category.blogs');
+Route::get('/blog/page/{page}', [HomeController::class, 'blogPaginated'])->name('blog.paginated');
 Route::get('product/{product?}',[HomeController::class,'product'])->name('product');
 Route::post('/save-inquiry', [InquiryController::class, 'saveInquiry'])->name('save-inquiry');
 Route::post('/save-modal-inquiry',[InquiryController::class,'saveModalInquiry'])->name('save-modal-inquiry');
-
 
 
 use App\Http\Middleware\AuthGates;

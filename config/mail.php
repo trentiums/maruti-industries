@@ -43,7 +43,7 @@ return [
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('MAIL_USERNAME','marutinaroda@gmail.com'),
-            'password' => env('MAIL_PASSWORD','qmzacflualpuezf'),
+            'password' => env('MAIL_PASSWORD','efticxekwcaxxlta'),
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],

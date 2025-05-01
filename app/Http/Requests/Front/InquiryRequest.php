@@ -30,8 +30,16 @@ class InquiryRequest extends FormRequest
             'subject' => 'nullable|string|max:255',
             'description' => 'nullable|string',
             'product_interest' => 'nullable|string',
-            'qty'=>'nullable|integer',
+            'qty' => 'nullable|integer',
             'page_url' => 'required|string|max:255|url',
+            'bot' => [
+                'required',
+                'string',
+                'in:bot'
+            ],
+            'bot_capture' => [
+                'nullable',
+            ],
             'g-recaptcha-response' => [
                 'required',
                 function (string $attribute, mixed $value, Closure $fail) {

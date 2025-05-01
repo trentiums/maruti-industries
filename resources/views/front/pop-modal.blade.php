@@ -45,15 +45,7 @@
                         <label for="description" class="form-label">Message</label>
                         <textarea class="form-control" id="description" name="description" rows="4" placeholder="Enter your message" style="max-height: 150px; overflow-y: auto;">{{ old('description') }}</textarea>
                     </div>
-                    <div class="mb-3">
-                        <div class="g-recaptcha" data-sitekey="{{ config('settings.captcha_site_key') }}"></div>
-                        <div><input type="hidden" name="hiddenRecaptcha" id="hiddenRecaptcha"></div>
-                        @if ($errors->has('g-recaptcha-response'))
-                        <div class="text-danger">
-                            {{ $errors->first('g-recaptcha-response') }}
-                        </div>
-                        @endif
-                    </div>
+                    
                     <button type="submit" class="btn btn-primary">Request Callback</button>
                 </form>
                 

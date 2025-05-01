@@ -2,113 +2,7 @@
 <html lang="en">
 
 <head>
-    <style>
-        .nav-link {
-            position: relative;
-            z-index: 1;
-            transition: color 0.3s ease;
-            color: #000;
-            /* default text color */
-        }
-
-        .nav-link:hover,
-        .nav-link:focus,
-        .nav-item:hover .nav-link {
-            color: #ffb600 !important;
-            /* Maruti Industries red */
-        }
-
-        .dropdown-menu {
-            position: absolute;
-            z-index: 1050;
-            background-color: #fff;
-            border: 1px solid #ddd;
-        }
-
-        .dropdown-menu a.dropdown-item:hover {
-            background-color: #f8f9fa;
-            color: #ffb600;
-        }
-    </style>
-    <!-----thankyou----------->
-    <style>
-        .thank-you-fullscreen {
-            height: 100vh;
-            width: 100%;
-            background-color: #f4f4f4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            box-sizing: border-box;
-            text-align: center;
-        }
-
-        .thank-you-container {
-            max-width: 700px;
-        }
-
-        .thank-you-fullscreen h2 {
-            color: #1a1a1a;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .thank-you-fullscreen p {
-            font-size: 18px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .thank-you-links {
-            margin-top: 30px;
-            font-size: 16px;
-            color: #333;
-        }
-
-        .thank-you-links p {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .thank-you-links ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .thank-you-links li {
-            margin: 8px 0;
-        }
-
-        .thank-you-links a {
-            color: #007bff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .thank-you-links a:hover {
-            color: #0056b3;
-        }
-
-        .thank-you-button {
-            margin-top: 40px;
-        }
-
-        .thank-you-button .btn-primary {
-            padding: 12px 30px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: #fff;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-        }
-
-        .thank-you-button .btn-primary:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    
     <meta charset="utf-8">
     <title>{{ $data['meta_title'] }}</title>
 
@@ -142,11 +36,13 @@
     <!-- slick Carousel -->
     <link rel="stylesheet" href="{{ asset('assets/plugins/slick/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/slick/slick-theme.css') }}">
+    <!----mycss--->
+    <link rel="stylesheet" href="{{asset('assets/css/custome.css')}}">
     <!-- Colorbox -->
     {{-- <link rel="stylesheet" href="{{asset('assets/plugins/colorbox/colorbox.css')}}"> --}}
     <!-- Template styles-->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-
+    <link rel="canonical" href="{{url()->current()}}"/>
     @yield('styles')
     <script type="application/ld+json">
   {
@@ -195,30 +91,8 @@
     <!-- Template custom -->
     <script src="{{ asset('assets/js/script.js') }}"></script>
     <!--request Quote-->
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelector('a[href="#inquiry-form"]').addEventListener("click", function(e) {
-                e.preventDefault();
-                document.querySelector("#inquiry-form").scrollIntoView({
-                    behavior: "smooth"
-                });
-            });
-        });
-    </script>
-
-    <!--browser to product-->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelector('slider.btn').addEventListener('click', function(event) {
-                event.preventDefault();
-                document.querySelector('#ts-features').scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-    <!-- Bootstrap JS -->
+  <!--myjs---->
+  <script src="{{ asset('assets/js/myjs.js') }}"></script>
 
 
     </div><!-- Body inner end -->

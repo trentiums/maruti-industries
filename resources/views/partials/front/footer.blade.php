@@ -1,5 +1,5 @@
 <!--footersection-->
-<footer id="footer" class="footer bg-overlay mt-5">
+<footer id="footer" class="footer bg-overlay">
     <div class="footer-main">
         <div class="container">
             <div class="row justify-content-between">
@@ -28,7 +28,7 @@
                     <h3 class="widget-title">Contact Info</h3>
                     <div class="contact-buttons">
                         <div class="mb-2">
-                            <a href="https://wa.me/9974348216" class="btn btn-success w-100" aria-label="WhatsApp">
+                            <a href="https://wa.me/9974348216" class="btn btn-success w-100" aria-label="WhatsApp" target="_blank">
                                 <i class="fab fa-whatsapp"></i> WhatsApp
                             </a>
                         </div>

@@ -127,7 +127,10 @@
                     <!-- Mission -->
                     <div class="col-md-5 col-sm-12 mb-4">
                         <div class="p-4 shadow rounded h-100 text-center bg-white">
-                            <div class="mb-3" style="font-size: 2rem;">🎯</div>
+                            <div class="mb-3">
+                                <img src="{{ asset('assets/images/icon-vision.png') }}" alt="ourvission"
+                                style="height: 50px;">
+                            </div>
                             <h4 class="mb-3">Our Mission</h4>
                             <p>To provide superior abrasive products that help manufacturers, craftsmen, and industries
                                 achieve precision finishing with reliability and efficiency.</p>
@@ -137,7 +140,10 @@
                     <!-- Vision -->
                     <div class="col-md-5 col-sm-12 mb-4">
                         <div class="p-4 shadow rounded h-100 text-center bg-white">
-                            <div class="mb-3" style="font-size: 2rem;">🌟</div>
+                            <div class="mb-3">
+                                <img src="{{ asset('assets/images/icon-mission.png') }}" alt="ourvission"
+                                style="height: 50px;">
+                            </div>
                             <h4 class="mb-3">Our Vision</h4>
                             <p>To be recognized as the most trusted name in abrasives by delivering unmatched product
                                 quality and customer service.</p>
@@ -223,7 +229,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/sector served-furniture- manufacturers.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector-served-furniture- manufacturers.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">
@@ -234,7 +240,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/sector served-fabrication units.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector-served-fabrication units.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">
@@ -245,7 +251,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/sector served-paint shops.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector-served-paint-shops.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">
@@ -256,7 +262,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/sector served-auto-body -workshops.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector-served-auto-body -workshops.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">
@@ -267,7 +273,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/sector served-construction-supply-chains.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector-served-construction-supply-chains.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">
@@ -281,194 +287,7 @@
             </div> <!-- container end -->
         </section>
         @include('front.inquiry')
-       {{--  <section id="main-container" class="main-container">
-            <div class="container">
-
-                <div class="row text-center">
-                    <div class="col-12">
-                        <h3 class="section-sub-title">Need a Quote for Your Next Bulk Order?</h3>
-                    </div>
-                </div>
-                <!--/ Title row end -->
-                <div class="row">
-                    <div class="col-md-12">
-
-                        <form id="inquiry-form" action="#" method="post" role="form">
-                            <div class="error-container"></div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Name <span class="text-danger">*</span></label>
-                                        <input class="form-control form-control-name" name="name" id="name"
-                                            placeholder="Enter your name" type="text" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Email <span class="text-danger">*</span></label>
-                                        <input class="form-control form-control-email" name="email" id="email"
-                                            placeholder="Enter your email" type="email" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Phone Number <span class="text-danger">*</span></label>
-                                        <input class="form-control form-control-phone" name="phone" id="phone"
-                                            placeholder="Enter your phone number" type="tel" required>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Select Product <span class="text-danger">*</span></label>
-                                        <select class="form-control" name="product" id="product" required>
-                                            <option value="" disabled selected>Select a product</option>
-                                            <option value="Flint Paper">Flint Paper</option>
-                                            <option value="Sandpaper Sheets">Sandpaper Sheets</option>
-                                            <option value="Emery Paper">Emery Paper</option>
-                                            <option value="Aloxide Cloth Roll">Aloxide Cloth Roll</option>
-                                            <option value="Emery Roll">Emery Roll</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Product Quantity</label>
-                                        <input class="form-control" name="quantity" id="quantity"
-                                            placeholder="Enter quantity" type="number" min="1" required>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Message <span class="text-danger">*</span></label>
-                                <textarea class="form-control form-control-message" name="message" id="message" placeholder="Enter your message"
-                                    rows="5" required></textarea>
-                            </div>
-
-                            <div class="text-right"><br>
-                                <button class="btn btn-primary solid blank" type="submit">Send Inquiry</button>
-                            </div>
-                        </form>
-
-                    </div>
-
-                </div><!-- Content row -->
-            </div><!-- Conatiner end -->
-        </section> --}}
-    {{--     <section id="ts-team" class="ts-team">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-lg-12">
-                        <h2 class="section-title">Quality Service</h2>
-                        <h3 class="section-sub-title">Professional Team</h3>
-                    </div>
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div id="team-slide" class="team-slide">
-                            <div class="item">
-                                <div class="ts-team-wrapper">
-                                    <div class="team-img-wrapper">
-                                        <img loading="lazy" class="w-100"
-                                            src="{{ asset('assets/images/team/team1.jpg') }}" alt="team-img">
-                                    </div>
-                                    <div class="ts-team-content">
-                                        <h3 class="ts-name">Nats Stenman</h3>
-                                        <p class="ts-designation">Chief Operating Officer</p>
-                                        <p class="ts-description">Nats Stenman began his career in construction with boots
-                                            on the ground</p>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="ts-team-wrapper">
-                                    <div class="team-img-wrapper">
-                                        <img loading="lazy" class="w-100"
-                                            src="{{ asset('assets/images/team/team2.jpg') }}" alt="team-img">
-                                    </div>
-                                    <div class="ts-team-content">
-                                        <h3 class="ts-name">Angela Lyouer</h3>
-                                        <p class="ts-designation">Innovation Officer</p>
-                                        <p class="ts-description">Nats Stenman began his career in construction with boots
-                                            on the ground</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="ts-team-wrapper">
-                                    <div class="team-img-wrapper">
-                                        <img loading="lazy" class="w-100"
-                                            src="{{ asset('assets/images/team/team3.jpg') }}" alt="team-img">
-                                    </div>
-                                    <div class="ts-team-content">
-                                        <h3 class="ts-name">Mark Conter</h3>
-                                        <p class="ts-designation">Safety Officer</p>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="ts-team-wrapper">
-                                    <div class="team-img-wrapper">
-                                        <img loading="lazy" class="w-100"
-                                            src="{{ asset('assets/images/team/team4.jpg') }}" alt="team-img">
-                                    </div>
-                                    <div class="ts-team-content">
-                                        <h3 class="ts-name">Ayesha Stewart</h3>
-                                        <p class="ts-designation">Finance Officer</p>
-                                        <p class="ts-description">Nats Stenman began his career in construction with boots
-                                            on the ground</p>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="ts-team-wrapper">
-                                    <div class="team-img-wrapper">
-                                        <img loading="lazy" class="w-100"
-                                            src="{{ asset('assets/images/team/team5.jpg') }}" alt="team-img">
-                                    </div>
-                                    <div class="ts-team-content">
-                                        <h3 class="ts-name">Dave Clarkte</h3>
-                                        <p class="ts-designation">Civil Engineer</p>
-                                        <p class="ts-description">Nats Stenman began his career in construction with boots
-                                            on the ground</p>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="ts-team-wrapper">
-                                    <div class="team-img-wrapper">
-                                        <img loading="lazy" class="w-100"
-                                            src="{{ asset('assets/images/team/team6.jpg') }}" alt="team-img">
-                                    </div>
-                                    <div class="ts-team-content">
-                                        <h3 class="ts-name">Elton Joe</h3>
-                                        <p class="ts-designation">Site Supervisor</p>
-                                        <p class="ts-description">Nats Stenman began his career in construction with boots
-                                            on the ground</p>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
-        <!--/ Team end -->
+      
         <section class="call-to-action no-padding">
             <div class="container">
                 <div class="action-style-box">
@@ -491,7 +310,7 @@
                                    class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center">
                                     Send Inquiry
                                 </a>
-                                <a href="https://wa.me/1234567890" target="_blank" class="d-flex align-items-center">
+                                <a href="https://wa.me/9974348216" target="_blank" class="d-flex align-items-center">
                                     <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp" style="height: 36px;" />
                                 </a>
                             </div>

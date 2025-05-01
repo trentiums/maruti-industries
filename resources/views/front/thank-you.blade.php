@@ -27,10 +27,20 @@
               <li><a href="{{ route('contact-us') }}"><i class="fas fa-phone-alt"></i>Contact Us Again</a></li>
           </ul>
       </div>
-
+      <div class="thank-you-cta">
+       
+        <a href="tel:{{config('settings.tel_code')}}"class="btn btn-success me-2 aria" label="Phone">
+            <i class="fas fa-phone"></i> Call Us
+        </a>
+        
+        <a href="https://wa.me/9974348216" class="btn btn-success" aria-label="WhatsApp" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
       <div class="thank-you-button">
           <a href="{{ route('home') }}" class="btn btn-warning">Back to Home</a>
       </div>
+
   </div>
  </section>
 @endsection

@@ -81,7 +81,7 @@
                     </div>
                   </li> --}}
 
-                                    {{--  <li class="nav-item dropdown btn-group">
+                     {{--  <li class="nav-item dropdown btn-group">
     
                     <a class="nav-link" href="{{ route('product') }}">
                         Product
@@ -100,7 +100,8 @@
                     </div>
                 
                 </li>   --}}
-                                    {{-- <li class="nav-item dropdown d-none d-sm-block">
+                                
+                <li class="nav-item dropdown d-md-none d-none d-lg-block d-sm-block">
                     <a class="nav-link dropdown-toggle" href="{{route('product')}}">
                       Product <i class="fa fa-angle-down"></i>
                     </a>
@@ -112,7 +113,7 @@
                         @endforeach
                     </div>
                   </li>
-                  <li class="nav-item dropdown d-block d-sm-none">
+                  <li class="nav-item dropdown d-md-block d-block d-lg-none d-sm-none">
                       <a class="dropdown-toggle">
                         Product <i class="fa fa-angle-down"></i>
                       </a>
@@ -123,44 +124,9 @@
                               </a>
                           @endforeach
                       </div>
-                    </li> --}}
-                                    <!-- Desktop Product Dropdown -->
-                                    <li class="nav-item dropdown d-none d-sm-block">
-                                        <a class="nav-link dropdown-toggle" href="javascript:void(0);"
-                                            id="desktopProductDropdown" role="button" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                            Product <i class="fa fa-angle-down"></i>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="desktopProductDropdown">
-                                            <a class="dropdown-item" href="{{ route('product') }}">View All Products</a>
-                                            <div class="dropdown-divider"></div>
-                                            @foreach ($products as $product)
-                                                <a class="dropdown-item" href="{{ route('product', $product->slug) }}"
-                                                    title="{{ $product->title }}">
-                                                    {{ $product->title }}
-                                                </a>
-                                            @endforeach
-                                        </div>
-                                    </li>
-
-                                    <!-- Mobile Product Dropdown -->
-                                    <li class="nav-item dropdown d-block d-sm-none">
-                                        <a class="nav-link dropdown-toggle" href="javascript:void(0);"
-                                            id="mobileProductDropdown" role="button" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                            Product <i class="fa fa-angle-down"></i>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="mobileProductDropdown">
-                                            <a class="dropdown-item" href="{{ route('product') }}">View All Products</a>
-                                            <div class="dropdown-divider"></div>
-                                            @foreach ($products as $product)
-                                                <a class="dropdown-item" href="{{ route('product', $product->slug) }}"
-                                                    title="{{ $product->title }}">
-                                                    {{ $product->title }}
-                                                </a>
-                                            @endforeach
-                                        </div>
-                                    </li>
+                    </li> 
+                                  
+                                    
 
                                     <li class="nav-item"><a class="nav-link" href="{{ route('about-us') }}">About
                                             Us</a></li>
