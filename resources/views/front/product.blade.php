@@ -321,7 +321,7 @@
                                 class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center">
                                 Send Inquiry
                             </a>
-                            <a href="https://wa.me/1234567890" target="_blank" class="d-flex align-items-center">
+                            <a href="https://wa.me/9974348216" target="_blank" class="d-flex align-items-center">
                                 <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp"
                                     style="height: 36px;" />
                             </a>

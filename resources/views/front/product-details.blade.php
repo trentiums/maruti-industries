@@ -316,7 +316,7 @@
 
                 <div class="col-md-4">
                     <div class="application-box border rounded p-3 text-center shadow">
-                        <img src="{{ asset('assets/images/sector-served-auto-body -workshops}}" alt="Automotive Bodywork"
+                        <img src="{{ asset('assets/images/sector-served-auto-body -workshops')}}" alt="Automotive Bodywork"
                             class="mb-2" width="50">
                         <h4>Automotive Bodywork</h4>
                     </div>
@@ -406,7 +406,7 @@
                                 class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center">
                                 Send Inquiry
                             </a>
-                            <a href="https://wa.me/1234567890" target="_blank" class="d-flex align-items-center">
+                            <a href="https://wa.me/9974348216" target="_blank" class="d-flex align-items-center">
                                 <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp"
                                     style="height: 36px;" />
                             </a>
