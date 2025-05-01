@@ -316,7 +316,7 @@
 
                 <div class="col-md-4">
                     <div class="application-box border rounded p-3 text-center shadow">
-                        <img src="{{ asset('assets/images/sector-served-auto-body -workshops')}}" alt="Automotive Bodywork"
+                        <img src="{{ asset('assets/images/sector-served-auto-body -workshops.png')}}" alt="Automotive Bodywork"
                             class="mb-2" width="50">
                         <h4>Automotive Bodywork</h4>
                     </div>
