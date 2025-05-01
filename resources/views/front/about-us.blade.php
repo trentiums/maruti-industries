@@ -229,7 +229,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/sector served-furniture- manufacturers.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector-served-furniture- manufacturers.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">
@@ -240,7 +240,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/sector served-fabrication units.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector-served-fabrication units.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">
@@ -251,7 +251,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/sector served-paint shops.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector-served-paint-shops.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">
@@ -262,7 +262,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/sector served-auto-body -workshops.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector-served-auto-body -workshops.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">
@@ -273,7 +273,7 @@
 
                         <div class="col-lg-2 col-md-4 col-sm-6 ts-facts">
                             <div class="ts-facts-img">
-                                <img loading="lazy" src="{{ asset('assets/images/sector served-construction-supply-chains.png') }}"
+                                <img loading="lazy" src="{{ asset('assets/images/sector-served-construction-supply-chains.png') }}"
                                     alt="facts-img">
                             </div>
                             <div class="ts-facts-content">

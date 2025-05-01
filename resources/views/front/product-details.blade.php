@@ -240,6 +240,7 @@
         </div>
     </section>
     <!--gallery-->
+    @if ($product->gallery && $product->gallery->count() > 0)
     <section id="project-area" class="project-area solid-bg">
         <div class="container">
             <div class="row text-center">
@@ -285,13 +286,14 @@
         </div>
 
     </section>
+    @endif
     <!--end gallery-->
 
 
 
     <section id="common-applications" class="common-applications py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Common Applications</h2>
+            <h2 class=" section-sub-title text-center mb-4">Common Applications</h2>
             <div class="row">
 
                 <div class="col-md-4">
@@ -314,7 +316,7 @@
 
                 <div class="col-md-4">
                     <div class="application-box border rounded p-3 text-center shadow">
-                        <img src={{ asset('assets/images/metal-fabrication.png') }} alt="Automotive Bodywork"
+                        <img src="{{ asset('assets/images/sector-served-auto-body -workshops}}" alt="Automotive Bodywork"
                             class="mb-2" width="50">
                         <h4>Automotive Bodywork</h4>
                     </div>
@@ -332,7 +334,7 @@
 
                 <div class="col-md-4 mt-3">
                     <div class="application-box border rounded p-3 text-center shadow">
-                        <img src="{{ asset('assets/images/metal-fabrication.png') }}" alt="Paint Preparation"
+                        <img src="{{ asset('assets/images/sector-served-paint-shops.png') }}" alt="Paint Preparation"
                             class="mb-2" width="50">
                         <h4>Paint Preparation</h4>
                     </div>
