@@ -44,7 +44,7 @@ class InquiryRequest extends FormRequest
                 'required',
                 function (string $attribute, mixed $value, Closure $fail) {
                     $response = Http::withOptions([
-                        'verify' => false // Disable SSL certificate verification
+                        'verify' => true // Disable SSL certificate verification
                     ])->post('https://www.google.com/recaptcha/api/siteverify', [
                         'secret' => config('settings.captcha_secret_key'),
                         'response' => $value,
