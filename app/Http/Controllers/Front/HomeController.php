@@ -38,6 +38,7 @@ class HomeController extends Controller
         $data['meta_description'] = 'Find answers to frequently asked questions about Maruti Industries eabrasive products like Flint Paper, Sandpaper, Emery Paper, and Aloxide Rolls. Get expert insights, product support, and more.';
         return view('front.faq', compact('data'));
     }
+    
     public function terms_condition()
     {
         $data['meta_title'] = 'Maruti Industries | Industrial Abrasives & Solutions';
@@ -94,4 +95,17 @@ class HomeController extends Controller
             return view('front.product', compact('data'));
         }
     }
+    public function blogPaginated($page = 1)
+{
+    $blogs = BlogPost::orderBy('id', 'DESC')->paginate(3, ['*'], 'page', $page);
+    $latest_blogs = BlogPost::orderBy('created_at', 'desc')->take(3)->get();
+    $categoriesWithCounts = BlogCategory::withCount('blogPosts')->get();
+
+    $data['meta_title'] = ' Maruti Industries Blog |  Tips, Use-Cases & Industry Insights ';
+    $data['meta_description'] = 'Explore expert tips, product use-cases, grit selection guides, and industry applications of abrasives like Flint Paper, Emery Paper, and Aloxide Rolls from Maruti Industries. Stay informed and make the right industrial choices.';
+
+    return view('front.blog', compact('data', 'blogs', 'latest_blogs', 'categoriesWithCounts'));
+}
+
+
 }

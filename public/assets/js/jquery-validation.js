@@ -103,6 +103,7 @@ $(document).ready(function () {
             form.submit(); // Submit the form when it's valid
         }
     });
+
     $(".modal-form").validate({
         ignore: ":hidden:not(#hiddenRecaptcha)",
         rules: {
@@ -110,25 +111,15 @@ $(document).ready(function () {
                 required: true,
                 maxlength: 255
             },
-            description: {
-                required: false
+            email: {
+                required: false,
+                emailRFCdns: true
             },
             mobile: {
                 required: true,
                 digits: true
             },
-            grecaptcha: {
-                required: true
-            },
-            hiddenRecaptcha: {
-                required: function () {
-                    if (grecaptcha.getResponse() == '') {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                }
-            },
+         
 
 
         },
@@ -143,12 +134,7 @@ $(document).ready(function () {
                 maxlength: "Mobile number must be exactly 10 digits",
                 digits: "Please enter only digits"
             },
-            grecaptcha: {
-                required: "Please complete the captcha challenge."
-            },
-            hiddenRecaptcha: {
-                required: "Security Verification Pending...!"
-            }
+           
         },
         errorElement: 'div',
         errorPlacement: function (error, element) {
@@ -159,7 +145,7 @@ $(document).ready(function () {
             form.submit(); // Submit the form when it's valid
         }
     });
-  
+
 });
 
    

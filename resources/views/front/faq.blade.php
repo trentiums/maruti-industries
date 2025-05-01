@@ -197,7 +197,42 @@
   
     </div>
   </section>
-  <!-- Main container end -->
   @include('front.inquiry')
-  
+
+  <!-- Main container end -->
+
+  <section class="call-to-action no-padding">
+    <div class="container">
+        <div class="action-style-box">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left">
+                    <div class="call-to-action-text">
+                        <h3 class="action-title">Have a question about grit, quantity or pricing?</h3>
+                    </div>
+                </div>
+             
+                <div class="col-md-6 text-center text-md-right mt-3 mt-md-0">
+                    <div class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end align-items-center gap-2">
+                        <a href="javascript:void(0)" 
+                           class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center"
+                           data-bs-toggle="modal" 
+                           data-bs-target="#callbackModal">
+                            Request Callback
+                        </a>
+                        <a href="#inquiry-form" 
+                           class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center">
+                            Send Inquiry
+                        </a>
+                        <a href="https://wa.me/1234567890" target="_blank" class="d-flex align-items-center">
+                            <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp" style="height: 36px;" />
+                        </a>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+@include('front.pop-modal')
   @endsection

@@ -57,6 +57,7 @@
 
 </script>
 @endsection
+
 @section('content')
     <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner/banner1.jpg')">
         <div class="banner-text">
@@ -127,74 +128,7 @@
 
 
 
-                    {{-- <div class="comments-form border-box mt-5">
-                        <h3 class="title-normal">Ask Us About [Flint Paper / Emery Roll / Sandpaper, etc.]</h3>
-
-                        <form role="form" id="inquiry-form">
-                            <div class="row">
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="name">Name</label>
-                                        <input class="form-control" name="name" id="name" placeholder="Your Name"
-                                            type="text" required>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="phone">Phone</label>
-                                        <input class="form-control" name="phone" id="phone" placeholder="Your Phone"
-                                            type="tel" required>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input class="form-control" name="email" id="email" placeholder="Your Email"
-                                            type="email" required>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="product">Product/Topic of Interest</label>
-                                        <select class="form-control" id="product" name="product" required>
-                                            <option value="" disabled selected>Select Product/Topic</option>
-                                            <option value="Flint Paper">Flint Paper</option>
-                                            <option value="Emery Roll">Emery Roll</option>
-                                            <option value="Sandpaper">Sandpaper</option>
-                                            <option value="Aloxide Roll">Aloxide Roll</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="subject">Subject</label>
-                                        <input class="form-control" name="subject" id="subject"
-                                            placeholder="Inquiry Subject" type="text" required>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="message">Message</label>
-                                        <textarea class="form-control required-field" id="message" placeholder="Your Message" rows="5" required></textarea>
-                                    </div>
-                                </div>
-
-                            </div>
-                            < <div class="clearfix text-center">
-                                <button class="btn btn-primary" type="submit" aria-label="send-inquiry">Send
-                                    Inquiry</button>
-                    </div> --}}
+                
                 </div>
 
 
@@ -207,4 +141,36 @@
         </div>
     </section>
     @include('front.inquiry')
+    <section class="call-to-action no-padding">
+        <div class="container">
+            <div class="action-style-box">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-left">
+                        <div class="call-to-action-text">
+                            <h3 class="action-title">Have a question about grit, quantity or pricing?</h3>
+                        </div>
+                    </div><!-- Col end -->
+                    <div class="col-md-6 text-center text-md-right mt-3 mt-md-0">
+                        <div class="call-to-action-btn d-flex flex-column flex-md-row justify-content-center justify-content-md-end align-items-center gap-2">
+                            <a href="javascript:void(0)" 
+                               class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center"
+                               data-bs-toggle="modal" 
+                               data-bs-target="#callbackModal">
+                                Request Callback
+                            </a>
+                            <a href="#inquiry-form" 
+                               class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center">
+                                Send Inquiry
+                            </a>
+                            <a href="https://wa.me/1234567890" target="_blank" class="d-flex align-items-center">
+                                <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp" style="height: 36px;" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Container end -->
+    </section>
+  
+    @include('front.pop-modal')
 @endsection
