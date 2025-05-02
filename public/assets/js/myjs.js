@@ -8,11 +8,8 @@
             });
         });
 
-
-/* browse_product */
-
         document.addEventListener("DOMContentLoaded", function() {
-            document.querySelector('slider.btn').addEventListener('click', function(event) {
+            document.querySelector('a[href="#ts-features"]').addEventListener('click', function(event) {
                 event.preventDefault();
                 document.querySelector('#ts-features').scrollIntoView({
                     behavior: 'smooth'

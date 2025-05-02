@@ -53,6 +53,7 @@
                             Request Callback
                         </a>
                         <a href="#ts-features" class=" btn btn-primary mb-2 ">Browse Products </a>
+                        
                     </div>
                 </div>
             </div>
@@ -307,8 +308,8 @@
                       {{ $blog->title }}
                     </a>
                   </h2>
-                  <p class="flex-grow-1">{{ $blog->sort_description }}</p>
-                  <div class="mt-auto">
+                  <p>{{ $blog->sort_description }}</p>
+                  <div>
                     <a class="btn btn-primary mt-2" href="{{ route('blog', $blog->slug) }}" title="{{ $blog->title }}">
                       Read More
                     </a>

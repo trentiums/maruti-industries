@@ -55,7 +55,7 @@
     </script>
 @endsection
 @section('content')
-    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/product_banner_image.jpg')">
+    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/product_banner_ image.jpg')">
         <div class="banner-text">
             <div class="container">
 
