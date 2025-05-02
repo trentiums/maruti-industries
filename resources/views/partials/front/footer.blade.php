@@ -17,7 +17,7 @@
                             <li><a href="https://www.instagram.com/maruti_industries_?igsh=MW82cXJldmRvZ2huNg=="
                                     aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
 
-                            <li><a href="https://wa.me/9974348216" aria-label="WhatsApp" target="_blank"><i
+                            <li><a href="https://wa.me/{{config('settings.wp_number')}}" aria-label="WhatsApp" target="_blank"><i
                                         class="fab fa-whatsapp"></i></a>
                             </li>
                         </ul>
@@ -28,7 +28,7 @@
                     <h3 class="widget-title">Contact Info</h3>
                     <div class="contact-buttons">
                         <div class="mb-2">
-                            <a href="https://wa.me/9974348216" class="btn btn-success w-100" aria-label="WhatsApp" target="_blank">
+                            <a href="https://wa.me/{{config('settings.wp_number')}}" class="btn btn-success w-100" aria-label="WhatsApp" target="_blank">
                                 <i class="fab fa-whatsapp"></i> WhatsApp
                             </a>
                         </div>

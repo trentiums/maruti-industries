@@ -33,7 +33,7 @@
             <i class="fas fa-phone"></i> Call Us
         </a>
         
-        <a href="https://wa.me/9974348216" class="btn btn-success" aria-label="WhatsApp" target="_blank">
+        <a href="https://wa.me/{{config('settings.wp_number')}}" class="btn btn-success" aria-label="WhatsApp" target="_blank">
             <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
     </div>

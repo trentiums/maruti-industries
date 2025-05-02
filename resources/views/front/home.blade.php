@@ -295,9 +295,9 @@
                 <div class="ts-service-image-wrapper">
                     <a href="{{ route('blog', $blog->slug) }}" title="{{ $blog->title }}">
                   @if ($blog->main_image && $blog->main_image->getUrl())
-                    <img loading="lazy" class="w-100" src="{{ $blog->main_image->getUrl() }}" alt="{{ $blog->title }} img">
+                    <img loading="lazy" class="w-100" src="{{ $blog->main_image->getUrl() }}" alt="{{ $blog->title }}">
                   @else
-                    <img class="w-100" src="{{ asset('assets/images/team/team2.jpg') }}" alt="{{ $blog->title }} img">
+                    <img class="w-100" src="{{ asset('assets/images/team/team2.jpg') }}" alt="{{ $blog->title }}" height="210px" width="350px">
                   @endif
                     </a>
                 </div>
@@ -339,7 +339,7 @@
   
                     <div class="quote-item-footer">
                       <img loading="lazy" class="testimonial-thumb" src="{{asset('assets/images/Testimonials-02.jpg')}}"
-                        alt="testimonial">
+                        alt="testimonial" >
                       <div class="quote-item-info">
                         <h3 class="quote-author">Anita Deshmukh</h3>
                       </div>
@@ -466,7 +466,7 @@
                                class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center">
                                 Send Inquiry
                             </a>
-                            <a href="https://wa.me/9974348216" target="_blank" class="d-flex align-items-center">
+                            <a href="https://wa.me/{{config('settings.wp_number')}}" target="_blank" class="d-flex align-items-center">
                                 <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp" style="height: 36px;" />
                             </a>
                         </div>

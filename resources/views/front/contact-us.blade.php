@@ -117,7 +117,7 @@
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <label>Product of Interest <span class="text-danger">*</span></label>
+                                    <label>Product of Interest </label>
                                     <select class="form-control" name="product_interest" required>
                                         <option value="">-- Select Product --</option>
                                         <option value="Flint Paper"
@@ -145,7 +145,7 @@
 
                             <div class="col-md-6 d-flex flex-column justify-content-between">
                                 <div class="form-group mb-3">
-                                    <label>Subject <span class="text-danger">*</span></label>
+                                    <label>Subject </label>
                                     <select class="form-control" id="subject" name="subject" required>
                                         <option value="">-- Select Subject --</option>
                                         <option value="General Inquiry"
@@ -278,7 +278,7 @@
                                 class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center">
                                 Send Inquiry
                             </a>
-                            <a href="https://wa.me/9974348216" target="_blank" class="d-flex align-items-center">
+                            <a href="https://wa.me/{{config('settings.wp_number')}}" target="_blank" class="d-flex align-items-center">
                                 <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp"
                                     style="height: 36px;" />
                             </a>

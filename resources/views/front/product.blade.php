@@ -225,7 +225,7 @@
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <label>Product of Interest <span class="text-danger">*</span></label>
+                                    <label>Product of Interest</label>
                                     <select class="form-control" name="product_interest" required>
                                         <option value="">-- Select Product --</option>
                                         <option value="Flint Paper"
@@ -247,7 +247,7 @@
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <label>Subject <span class="text-danger">*</span></label>
+                                    <label>Subject</label>
                                     <select class="form-control" id="subject" name="subject" required>
                                         <option value="">-- Select Subject --</option>
                                         <option value="General Inquiry"
@@ -269,7 +269,7 @@
                                     <textarea class="form-control" name="description" placeholder="Enter your message" rows="8">{{ old('description') }}</textarea>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label>Quantity <span class="text-danger">*</span></label>
+                                    <label>Quantity </label>
                                     <input class="form-control" name="quantity" placeholder="Enter the quantity"
                                         type="number" min="1" required value="{{ old('quantity') }}">
                                 </div>
@@ -321,7 +321,7 @@
                                 class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center">
                                 Send Inquiry
                             </a>
-                            <a href="https://wa.me/9974348216" target="_blank" class="d-flex align-items-center">
+                            <a href="https://wa.me/{{config('settings.wp_number')}}" target="_blank" class="d-flex align-items-center">
                                 <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp"
                                     style="height: 36px;" />
                             </a>
