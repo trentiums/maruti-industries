@@ -49,7 +49,7 @@
                             </div>
 
                             <div class="form-group mb-3">
-                                <label>Product of Interest <span class="text-danger">*</span></label>
+                                <label>Product of Interest</label>
                                 <select class="form-control" name="product_interest" required>
                                     <option value="">-- Select Product --</option>
                                     <option value="Flint Paper"

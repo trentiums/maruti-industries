@@ -117,7 +117,7 @@
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <label>Product of Interest <span class="text-danger">*</span></label>
+                                    <label>Product of Interest </label>
                                     <select class="form-control" name="product_interest" required>
                                         <option value="">-- Select Product --</option>
                                         <option value="Flint Paper"
@@ -145,7 +145,7 @@
 
                             <div class="col-md-6 d-flex flex-column justify-content-between">
                                 <div class="form-group mb-3">
-                                    <label>Subject <span class="text-danger">*</span></label>
+                                    <label>Subject </label>
                                     <select class="form-control" id="subject" name="subject" required>
                                         <option value="">-- Select Subject --</option>
                                         <option value="General Inquiry"

@@ -49,7 +49,7 @@
 @endsection
 @section('content')
     <!--breadcrum-->
-    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner/banner1.jpg')">
+    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/about-us-banner.jpg')">
         <div class="banner-text">
             <div class="container">
                 <div class="row">
@@ -99,7 +99,7 @@
                         <div class="page-slider small-bg">
 
                             <div class="item"
-                                style="background-image:url('../assets/images/slider-pages/slide-page1.jpg')">
+                                style="background-image:url('../assets/images/about-us-side-image.jpg')">
                                 <div class="container">
                                     <div class="box-slider-content">
                                         <!--  <div class="box-slider-text">

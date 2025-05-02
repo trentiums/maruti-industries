@@ -325,7 +325,7 @@
 
                 <div class="col-md-4 mt-3">
                     <div class="application-box border rounded p-3 text-center shadow">
-                        <img src="{{ asset('assets/images/metal-fabrication.png') }}" alt="Stainless Steel Finishing"
+                        <img src="{{ asset('assets/images/steelnesssteel.png') }}" alt="Stainless Steel Finishing"
                             class="mb-2" width="50">
                         <h4>Stainless Steel Finishing</h4>
                     </div>
