@@ -22,7 +22,6 @@
     <meta name="description" content="{{ $data['meta_description'] }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Maruti Industries">
-    <meta name="robots" content="noindex, nofollow">
     <!-- Favicon-->
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
