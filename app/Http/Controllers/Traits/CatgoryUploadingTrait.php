@@ -18,7 +18,7 @@ trait CatgoryUploadingTrait{
         foreach ($categories as $category) {
             $strRoutes .= "
             <li class=\"d-flex justify-content-between align-items-center py-2\">
-                <a href=\"" . url('/' . $category->slug) . "\" class=\"text-decoration-none\">
+                <a href=\"" . route('category.blogs', ['slug' => $category->slug]) . "\" class=\"text-decoration-none\">
                     <span>{$category->title}</span>
                 </a>
                 <span class=\"badge bg-secondary\">{$category->blogposts_count}</span>

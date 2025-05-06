@@ -22,6 +22,7 @@
     <meta name="description" content="{{ $data['meta_description'] }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Maruti Industries">
+    <meta name="google-site-verification" content="-4N_eovriWB1kr_gOqoK1d5hoLKBhmpk-XChVzhk6FQ" />
     <!-- Favicon-->
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -60,8 +61,16 @@
     }
   }
 </script>
-</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62RDW6S0VM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-62RDW6S0VM');
+</script>
+</head>
 <body>
     @include('partials.front.header')
     @yield('content')
