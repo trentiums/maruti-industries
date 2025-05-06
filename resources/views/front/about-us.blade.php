@@ -128,7 +128,7 @@
                     <div class="col-md-5 col-sm-12 mb-4">
                         <div class="p-4 shadow rounded h-100 text-center bg-white">
                             <div class="mb-3">
-                                <img src="{{ asset('assets/images/icon-vision.png') }}" alt="ourvission"
+                                <img src="{{ asset('assets/images/icon-mission.png') }}" alt="ourvission"
                                 style="height: 50px;">
                             </div>
                             <h4 class="mb-3">Our Mission</h4>
@@ -141,7 +141,7 @@
                     <div class="col-md-5 col-sm-12 mb-4">
                         <div class="p-4 shadow rounded h-100 text-center bg-white">
                             <div class="mb-3">
-                                <img src="{{ asset('assets/images/icon-mission.png') }}" alt="ourvission"
+                                <img src="{{ asset('assets/images/icon-vision.png') }}" alt="ourvission"
                                 style="height: 50px;">
                             </div>
                             <h4 class="mb-3">Our Vision</h4>
