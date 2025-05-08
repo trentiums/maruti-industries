@@ -234,7 +234,7 @@
                                 <div class="entry-header">
                                     <div class="post-meta">
                                         <span class="post-author">
-                                            <i class="far fa-user"></i> Admin
+                                            <i class="far fa-user"></i>Maruti Team
                                         </span>
 
                                         <span class="post-cat">
@@ -257,7 +257,7 @@
                                 </div>
 
                                 <div class="entry-content">
-                                    <p>{{ $blog->sort_description }}</p>
+                                    <p>{{ $blog->small_description }}</p>
                                 </div>
 
                                 <div class="post-footer">
