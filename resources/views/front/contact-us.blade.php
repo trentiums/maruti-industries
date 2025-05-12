@@ -209,8 +209,10 @@
                         </span>
                         <div class="ts-service-box-content">
                             <h4>Visit Our Office</h4>
+                            <a href="https://maps.app.goo.gl/HnCaAkovKL3rWvXd8">
                             <p> {{ config('settings.address') }}
                             </p>
+                            </a>
                         </div>
                     </div>
                 </div>

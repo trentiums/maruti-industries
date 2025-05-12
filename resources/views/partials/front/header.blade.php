@@ -131,9 +131,9 @@
                                     <li class="nav-item"><a class="nav-link" href="{{ route('about-us') }}">About
                                             Us</a></li>
                                     <li class="nav-item"><a class="nav-link" href="{{ route('blog') }}">Blog</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('faq') }}">FAQs</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('faq') }}">FAQ</a></li>
                                     <li class="nav-item"><a class="nav-link"
-                                            href="{{ route('contact-us') }}">Contact</a></li>
+                                            href="{{ route('contact-us') }}">Contact Us</a></li>
 
                                     <li class="header-get-a-quote">
                                         <a class="btn btn-primary" href="#inquiry-form" data-toggle="collapse"

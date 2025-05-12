@@ -213,6 +213,7 @@
                                                     <div class="g-recaptcha"
                                                         data-sitekey="{{ config('settings.captcha_site_key') }}"></div>
                                                 </div>
+                                                 <input type="hidden" name="hiddenRecaptcha" id="hiddenRecaptcha">
                                                 <input type="hidden" name="bot" value="bot">
                                                 <input type="hidden" name="bot_capture" value="">
                                             </div>
