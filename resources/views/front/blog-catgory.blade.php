@@ -1,46 +1,33 @@
 @extends('layouts.front')
 @section('styles')
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{ url()->current() }}"
-      },
-      "name": "Maruti Industries Blog",
-      "url": "{{ url('/blog') }}",
-      "description": "Explore expert insights, product use-cases, grit selection tips, and industrial applications from Maruti Industries.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Maruti Industries",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{asset('assets/images/maruti-industries-logo-header.png')}}" // Adjust based on your logo location
-        }
-      },
-      "blogPost": [
-        @foreach($blogs as $blog)
-          {
-            "@type": "BlogPosting",
-            "headline": "{{ $blog->title }}",
-            "image": "{{ $blog->main_image}}",
-            "author": {
-              "@type": "Organization",
-              "name": "Maruti Industries"
-            },
-            "datePublished": "{{ $blog->created_at->toW3cString() }}",
-            "dateModified": "{{ $blog->updated_at->toW3cString() }}",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id" :"{{ route('blog', $blog->slug) }}"
-            }
-          }@if (!$loop->last),@endif
-        @endforeach
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ route('home') }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "{{ route('blog') }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ $category->title }}",
+      "item": "{{ url()->current() }}"
     }
-    </script>
+  ]
+}
+</script>
 @endsection
+
 @section('content')
     <div id="banner-area" class="banner-area" style="background-image:url('../../assets/images/blog_banner_image.jpg')"
         alt="banner_image_blog">
@@ -53,7 +40,8 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center">
                                     <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                                    <li class="breadcrumb-item"><a href="{{ route('blog') }}">Blog</a></li>
+                                      <li class="breadcrumb-item active" aria-current="page">{{$category->title}}</li>
                                 </ol>
                             </nav>
                         </div>

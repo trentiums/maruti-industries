@@ -83,7 +83,7 @@ class HomeController extends Controller
         $data['meta_title'] = $category->title . ' | Blog';
         $data['meta_keywords'] = $category->meta_keywords ?? '';
         $data['meta_description'] = $category->meta_description ?? '';
-        return view('front.blog', compact('blogs', 'latest_blogs', 'categoriesWithCounts', 'data'));
+        return view('front.blog-catgory', compact('blogs','category','latest_blogs', 'categoriesWithCounts', 'data'));
     }
     public function product($product = NULL)
     {
