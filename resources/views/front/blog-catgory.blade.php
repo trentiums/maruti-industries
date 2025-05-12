@@ -1,54 +1,33 @@
 @extends('layouts.front')
 @section('styles')
 <script type="application/ld+json">
-  {
+{
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "mainEntity": {
-    "@type": "Blog",
-    "name": "Maruti Industries Blog",
-    "description": "Insights, guides, and tips related to industrial abrasives like Flint Paper, Sandpaper, Emery Paper, and Aloxide Rolls.",
-    "blogPost": []
-  },
-  "name": "Category Name Here",
-  "url": "{{route('home')}}/blog/category/{{$category->slug}}",
-  "description": "Brief description of what this category covers (e.g., Grit selection tips for various industrial sanding applications).",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Maruti Industries",
-    "url": "{{ route('home') }}",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{asset('assets/images/maruti-industries-logo-header.png')}}"
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ route('home') }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "{{ route('blog') }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ $category->title }}",
+      "item": "{{ url()->current() }}"
     }
-  },
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "{{route('home')}}/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "{{route('blog')}}"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "{{$category->title}}",
-        "item": "{{ url()->current() }}"
-      }
-    ]
-  },
- 
+  ]
 }
 </script>
 @endsection
+
 @section('content')
     <div id="banner-area" class="banner-area" style="background-image:url('../../assets/images/blog_banner_image.jpg')"
         alt="banner_image_blog">
