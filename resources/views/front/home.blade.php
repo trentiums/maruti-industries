@@ -40,7 +40,7 @@
 @endsection
 @section('content')
     <div class="banner-carousel banner-carousel-2 mb-0">
-        <div class="banner-carousel-item" style="background-image:url('../assets/images/home_banner_image.jpg')">
+        <div class="banner-carousel-item" style="background-image:url('../assets/images/home-banner-image-new.jpg')">
             <div class="container">
                 <div class="box-slider-content">
                     <div class="box-slider-text">

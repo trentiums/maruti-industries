@@ -50,10 +50,12 @@
                     <h3 class="widget-title">Quick links</h3>
                     <ul class="list-arrow">
                         <li><a href="{{route('product')}}">Products</a></li>
+                         <li><a href="{{route('about-us')}}">About Us</a></li>
                         <li><a href="{{route('blog')}}">Blogs</a></li>
+                         <li><a href="{{route('faq')}}">FAQs </a></li>
                         <li><a href="{{route('contact-us')}}">Contact US</a></li>
-                        <li><a href="{{route('about-us')}}">About Us</a></li>
-                        <li><a href="{{route('faq')}}">FAQs </a></li>
+                       
+                       
                     </ul>
                 </div>
             </div>

@@ -99,7 +99,7 @@
                         <div class="page-slider small-bg">
 
                             <div class="item"
-                                style="background-image:url('../assets/images/about-us-side-image.jpg')">
+                                style="background-image:url('../assets/images/about-us-side.jpg')">
                                 <div class="container">
                                     <div class="box-slider-content">
                                         <!--  <div class="box-slider-text">

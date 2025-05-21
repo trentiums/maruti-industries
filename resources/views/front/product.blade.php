@@ -55,7 +55,7 @@
     </script>
 @endsection
 @section('content')
-    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/product_banner_ image.jpg')">
+    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/product-banner-image.jpg')">
         <div class="banner-text">
             <div class="container">
 
@@ -67,7 +67,7 @@
                                 <ol class="breadcrumb justify-content-center">
                                     <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
 
-                                    <li class="breadcrumb-item active" aria-current="page">Products</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Product</li>
                                 </ol>
                             </nav>
                         </div>
