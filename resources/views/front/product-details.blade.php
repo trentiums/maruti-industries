@@ -61,17 +61,17 @@
         </script>
 @endsection
 @section('content')
-    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/banner/banner1.jpg')">
+    <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/product-detais-banner-images.jpg')">
         <div class="banner-text">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="banner-heading">
-                            <h1 class="banner-title">Products</h1>
+                            <h1 class="banner-title">{{ $product->title }}</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center">
                                     <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="{{ route('product') }}">Products</a></li>
+                                    <li class="breadcrumb-item"><a href="{{ route('product') }}">Product</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">{{ $product->title }}</li>
                                 </ol>
                             </nav>
