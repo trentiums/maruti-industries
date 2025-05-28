@@ -27,9 +27,6 @@
           "isPartOf": {
             "@id": "{{ url('/') }}#website"
           },
-          "about": {
-            "@id": "{{ url('/') }}#organization"
-          },
           "description": "Leading supplier of abrasive products – Flint Paper, Sandpaper, Emery Paper, Aloxide Cloth Rolls, Emery Rolls. Request a quote or callback today."
         }
       ]
