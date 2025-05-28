@@ -16,7 +16,7 @@
             "emery paper quote",
             "buy sandpaper in bulk",
             "aloxide roll manufacturer"
-          ],
+          ]
           
         },
         {
