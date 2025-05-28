@@ -13,9 +13,6 @@
               "isPartOf": {
                 "@id": "{{ url('/') }}#website"
               },
-              "about": {
-                "@id": "{{ url('/') }}#organization"
-              },
               "keywords": [
                 "buy {{ strtolower($product->name) }}",
                 "industrial {{ strtolower($product->name) }}",

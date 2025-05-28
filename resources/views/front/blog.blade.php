@@ -16,8 +16,9 @@
         "name": "Maruti Industries",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{asset('assets/images/maruti-industries-logo-header.png')}}" // Adjust based on your logo location
+          "url": "{{asset('assets/images/maruti-industries-logo-header.png')}}" 
         }
+    }
       },
       "blogPost": [
         @foreach($blogs as $blog)
