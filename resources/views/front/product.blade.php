@@ -1,6 +1,6 @@
 @extends('layouts.front')
 @section('styles')
-  <script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -17,8 +17,7 @@
         "sandpaper sheet",
         "aloxide roll supplier"
       ],
-      "isPartOf": { "@id": "{{ url('/') }}#website" },
-      "about":    { "@id": "{{ url('/') }}#organization" }
+      "isPartOf": { "@id": "{{ url('/') }}#website" }
     },
     {
       "@type": "BreadcrumbList",
@@ -42,15 +41,14 @@
       "@type": "Product",
       "@id": "{{ url('product/' . $product->slug) }}#product",
       "name": "{{ $product->title }}",
-      "image": "{{ $product->main_image }}",
+      "image": "{{ $product->main_image->getUrl() }}",
       "description": "{{ Str::limit(strip_tags($product->short_description), 150) }}",
       "url": "{{ url('product/' . $product->slug) }}"
-    }@if(!$loop->last),@endif
+    }
     @endforeach
   ]
 }
 </script>
-
 @endsection
 @section('content')
     <div id="banner-area" class="banner-area" style="background-image:url('../assets/images/product-banner-image.jpg')">
@@ -319,7 +317,8 @@
                                 class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center">
                                 Send Inquiry
                             </a>
-                            <a href="https://wa.me/{{config('settings.wp_number')}}" target="_blank" class="d-flex align-items-center">
+                            <a href="https://wa.me/{{ config('settings.wp_number') }}" target="_blank"
+                                class="d-flex align-items-center">
                                 <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp"
                                     style="height: 36px;" />
                             </a>
