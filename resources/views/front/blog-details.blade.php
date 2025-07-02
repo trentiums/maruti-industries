@@ -99,7 +99,7 @@
                             <div class="entry-header">
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <i class="far fa-user"></i> Admin
+                                        <i class="far fa-user"></i> Emeryroll
                                     </span>
                                     <span class="post-cat">
                                         <i class="far fa-folder-open"></i>
