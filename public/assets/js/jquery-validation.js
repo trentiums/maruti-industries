@@ -39,7 +39,7 @@ $(document).ready(function () {
             },
             email: {
                 required: false,
-                emailRFCdns: true
+               
             },
             subject: {
                 required: false,

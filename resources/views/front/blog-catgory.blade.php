@@ -133,8 +133,9 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">Email <span
-                                            class="text-danger">*</span></label>
+                                    <label for="email" class="form-label">Email
+                                        
+                                    </label>
                                     <input type="email" class="form-control" id="email" name="email" required
                                         value="{{ old('email') }}">
                                 </div>
@@ -228,7 +229,7 @@
                                 <div class="entry-header">
                                     <div class="post-meta">
                                         <span class="post-author">
-                                            <i class="far fa-user"></i>Maruti Team
+                                            <i class="far fa-user"></i>Emeryroll
                                         </span>
 
                                         <span class="post-cat">

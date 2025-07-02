@@ -209,7 +209,7 @@
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <label>Email <span class="text-danger">*</span></label>
+                                    <label>Email</label>
                                     <input class="form-control" name="email" placeholder="Enter your email" type="email"
                                         required value="{{ old('email') }}">
                                 </div>

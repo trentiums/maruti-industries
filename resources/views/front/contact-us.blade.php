@@ -105,7 +105,7 @@
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <label>Email <span class="text-danger">*</span></label>
+                                    <label>Email </label>
                                     <input class="form-control" name="email" placeholder="Enter your email" type="email"
                                         required value="{{ old('email') }}">
                                 </div>
@@ -200,31 +200,40 @@
                 </div>
             </div>
 
-
             <div class="row">
+              
                 <div class="col-md-4">
                     <div class="ts-service-box-bg text-center h-100">
-                        <span class="ts-service-icon icon-round">
-                            <i class="fas fa-map-marker-alt mr-0"></i>
-                        </span>
+                        <a href="https://maps.app.goo.gl/HnCaAkovKL3rWvXd8" target="_blank" rel="noopener noreferrer">
+                            <span class="ts-service-icon icon-round">
+                                <i class="fas fa-map-marker-alt mr-0"></i>
+                            </span>
+                        </a>
                         <div class="ts-service-box-content">
                             <h4>Visit Our Office</h4>
-                            <a href="https://maps.app.goo.gl/HnCaAkovKL3rWvXd8">
-                            <p> {{ config('settings.address') }}
-                            </p>
+                            <a href="https://maps.app.goo.gl/HnCaAkovKL3rWvXd8" target="_blank"
+                                rel="noopener noreferrer">
+                                <p>{{ config('settings.address') }}</p>
                             </a>
                         </div>
                     </div>
                 </div>
+
+         
                 <div class="col-md-4">
                     <div class="ts-service-box-bg text-center h-100">
-                        <span class="ts-service-icon icon-round">
-                            <i class="fas fa-map-marker-alt mr-0"></i>
-                        </span>
+                        <a href="https://mail.google.com/mail/?view=cm&to={{ config('settings.email') }}" target="_blank"
+                            rel="noopener noreferrer" title="Send Email via Gmail">
+                            <span class="ts-service-icon icon-round">
+                                <i class="fas fa-envelope mr-0"></i>
+                            </span>
+                        </a>
                         <div class="ts-service-box-content">
                             <h4>Email Us</h4>
                             <p>
-                                <a href="mailto:{{ config('settings.email') }}" title="Email" class="text-break">
+                                <a href="https://mail.google.com/mail/?view=cm&to={{ config('settings.email') }}"
+                                    target="_blank" rel="noopener noreferrer" class="text-break"
+                                    title="Send Email via Gmail">
                                     {{ config('settings.email') }}
                                 </a>
                             </p>
@@ -232,21 +241,28 @@
                     </div>
                 </div>
 
+      
                 <div class="col-md-4">
                     <div class="ts-service-box-bg text-center h-100">
-                        <span class="ts-service-icon icon-round">
-                            <i class="fa fa-phone-square mr-0"></i>
-                        </span>
+                        <a href="tel:{{ config('settings.tel_code') }}" target="_blank" rel="noopener noreferrer">
+                            <span class="ts-service-icon icon-round">
+                                <i class="fa fa-phone-square mr-0"></i>
+                            </span>
+                        </a>
                         <div class="ts-service-box-content">
                             <h4>Call Us</h4>
-                            <p><a href="tel:{{ config('settings.tel_code') }}"
-                                    title="Mobile Number">{{ config('settings.mobile_number') }}</a></p>
+                            <p>
+                                <a href="tel:{{ config('settings.tel_code') }}" target="_blank"
+                                    rel="noopener noreferrer" title="Call Us">
+                                    {{ config('settings.mobile_number') }}
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
-
-
             </div>
+
+
 
             <div class="gap-60"></div>
 
@@ -280,7 +296,8 @@
                                 class="btn btn-warning fw-bold text-white text-uppercase py-2 px-4 d-flex align-items-center justify-content-center">
                                 Send Inquiry
                             </a>
-                            <a href="https://wa.me/{{config('settings.wp_number')}}" target="_blank" class="d-flex align-items-center">
+                            <a href="https://wa.me/{{ config('settings.wp_number') }}" target="_blank"
+                                class="d-flex align-items-center">
                                 <img src="{{ asset('assets/images/whatsapp.png') }}" alt="WhatsApp"
                                     style="height: 36px;" />
                             </a>

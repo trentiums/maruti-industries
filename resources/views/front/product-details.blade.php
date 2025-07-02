@@ -169,8 +169,7 @@
                                     </div>
 
                                     <div class="col-md-6">
-                                        <label for="email" class="form-label">Email <span
-                                                class="text-danger">*</span></label>
+                                        <label for="email" class="form-label">Email </label>
                                         <input type="email" class="form-control form-control-sm" id="email"
                                             name="email" required value="{{ old('email') }}">
                                     </div>
