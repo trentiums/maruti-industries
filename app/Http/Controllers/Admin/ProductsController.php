@@ -13,10 +13,11 @@ use Illuminate\Http\Request;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Symfony\Component\HttpFoundation\Response;
 use Yajra\DataTables\Facades\DataTables;
+use App\Traits\SitemapUploadingTrait;
 class ProductsController extends Controller
 {
     use MediaUploadingTrait;
-
+   use SitemapUploadingTrait;
     public function index(Request $request)
     {
         abort_if(Gate::denies('product_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
@@ -120,7 +121,7 @@ class ProductsController extends Controller
         if ($media = $request->input('ck-media', false)) {
             Media::whereIn('id', $media)->update(['model_id' => $product->id]);
         }
-
+         $this->generate_xml_products();
         return redirect()->route('admin.products.index');
     }
 
@@ -173,7 +174,7 @@ class ProductsController extends Controller
                 $product->addMedia(storage_path('tmp/uploads/' . basename($file)))->toMediaCollection('documents');
             }
         }
-
+          $this->generate_xml_products();
         return redirect()->route('admin.products.index');
     }
 
@@ -189,7 +190,7 @@ class ProductsController extends Controller
         abort_if(Gate::denies('product_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $product->delete();
-
+          $this->generate_xml_products();
         return back();
     }
 
@@ -200,7 +201,7 @@ class ProductsController extends Controller
         foreach ($products as $product) {
             $product->delete();
         }
-
+          $this->generate_xml_products();
         return response(null, Response::HTTP_NO_CONTENT);
     }
 

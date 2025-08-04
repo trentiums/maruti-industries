@@ -13,10 +13,12 @@ use Illuminate\Http\Request;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Symfony\Component\HttpFoundation\Response;
 use Yajra\DataTables\Facades\DataTables;
+use App\Traits\SitemapUploadingTrait;
 
 class BlogCategoryController extends Controller
 {
     use MediaUploadingTrait;
+    use SitemapUploadingTrait;
 
     public function index(Request $request)
     {
@@ -100,7 +102,7 @@ class BlogCategoryController extends Controller
         if ($media = $request->input('ck-media', false)) {
             Media::whereIn('id', $media)->update(['model_id' => $blogCategory->id]);
         }
-
+        $this->generate_blog_category_sitemap();
         return redirect()->route('admin.blog-categories.index');
     }
 
@@ -125,7 +127,7 @@ class BlogCategoryController extends Controller
         } elseif ($blogCategory->main_image) {
             $blogCategory->main_image->delete();
         }
-
+         $this->generate_blog_category_sitemap();
         return redirect()->route('admin.blog-categories.index');
     }
 
@@ -141,7 +143,7 @@ class BlogCategoryController extends Controller
         abort_if(Gate::denies('blog_category_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $blogCategory->delete();
-
+         $this->generate_blog_category_sitemap();
         return back();
     }
 
@@ -152,7 +154,7 @@ class BlogCategoryController extends Controller
         foreach ($blogCategories as $blogCategory) {
             $blogCategory->delete();
         }
-
+          $this->generate_blog_category_sitemap();
         return response(null, Response::HTTP_NO_CONTENT);
     }
 

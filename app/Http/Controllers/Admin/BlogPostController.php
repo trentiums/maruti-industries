@@ -14,11 +14,11 @@ use Illuminate\Http\Request;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Symfony\Component\HttpFoundation\Response;
 use Yajra\DataTables\Facades\DataTables;
-
+use App\Traits\SitemapUploadingTrait;
 class BlogPostController extends Controller
 {
     use MediaUploadingTrait;
-
+        use SitemapUploadingTrait;
     public function index(Request $request)
     {
         abort_if(Gate::denies('blog_post_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
@@ -111,7 +111,8 @@ class BlogPostController extends Controller
         if ($media = $request->input('ck-media', false)) {
             Media::whereIn('id', $media)->update(['model_id' => $blogPost->id]);
         }
-
+       
+        $this->generate_xml_blogs();
         return redirect()->route('admin.blog-posts.index');
     }
 
@@ -122,7 +123,7 @@ class BlogPostController extends Controller
         $blog_categories = BlogCategory::pluck('title', 'id');
 
         $blogPost->load('blog_categories');
-
+       
         return view('admin.blogPosts.edit', compact('blogPost', 'blog_categories'));
     }
 
@@ -140,7 +141,7 @@ class BlogPostController extends Controller
         } elseif ($blogPost->main_image) {
             $blogPost->main_image->delete();
         }
-
+         $this->generate_xml_blogs();
         return redirect()->route('admin.blog-posts.index');
     }
 
@@ -158,7 +159,7 @@ class BlogPostController extends Controller
         abort_if(Gate::denies('blog_post_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $blogPost->delete();
-
+          $this->generate_xml_blogs();
         return back();
     }
 
@@ -169,7 +170,7 @@ class BlogPostController extends Controller
         foreach ($blogPosts as $blogPost) {
             $blogPost->delete();
         }
-
+        $this->generate_xml_blogs();
         return response(null, Response::HTTP_NO_CONTENT);
     }
 
