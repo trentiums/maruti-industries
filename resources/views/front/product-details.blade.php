@@ -8,17 +8,17 @@
               "@type": "WebPage",
               "@id": "{{ url()->current() }}#webpage",
               "url": "{{ url()->current() }}",
-              "name": "{{ $product->name }} | Industrial Abrasive Supplier | Request a Quote",
-              "description": "High-quality {{ $product->name }} available in custom sizes & grits. Used in {{ $product->application }}. Get pricing and availability today.",
+              "name": "{{ $product->title }} | Industrial Abrasive Supplier | Request a Quote",
+              "description": "High-quality {{ $product->title }} available in custom sizes & grits. Used in {{ $product->application }}. Get pricing and availability today.",
               "isPartOf": {
                 "@id": "{{ url('/') }}#website"
               },
               "keywords": [
-                "buy {{ strtolower($product->name) }}",
-                "industrial {{ strtolower($product->name) }}",
-                "{{ strtolower($product->name) }} manufacturer India",
+                "buy {{ strtolower($product->title) }}",
+                "industrial {{ strtolower($product->title) }}",
+                "{{ strtolower($product->title) }} manufacturer India",
                 "abrasive supplier",
-                "{{ strtolower($product->name) }} roll"
+                "{{ strtolower($product->title) }} roll"
               ]
             },
             {
@@ -48,7 +48,7 @@
                 {
                   "@type": "ListItem",
                   "position": 2,
-                  "name": "{{ $product->name }}",
+                  "name": "{{ $product->title }}",
                   "item": "{{ url()->current() }}"
                 }
               ]
