@@ -127,7 +127,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: white;
+  color:black;
 }
 
 a.read-more {
